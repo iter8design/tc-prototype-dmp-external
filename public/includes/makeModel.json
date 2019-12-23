@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "text": "Aeryon Labs Skyranger"
+    },
+    {
+      "id": 3,
+      "text": "Draganfly X4ES"
+    },
+	{
+      "id": 4,
+      "text": "Draganfly X4P"
+    },
+	{
+      "id": 5,
+      "text": "Draganfly Guardian"
+    },
+	{
+      "id": 6,
+      "text": "Draganfly Commander"
+    },
+	{
+      "id": 7,
+      "text": "Infinit Jib Surveyor 630"
+    },
+	{
+      "id": 8,
+      "text": "Indro Robotics Scout Mk III"
+    },
+	{
+      "id": 9,
+      "text": "Kesprey Drone 1.0"
+    },
+	{
+      "id": 10,
+      "text": "Lockheed Martin Indago 2"
+    },
+	{
+      "id": 11,
+      "text": "Microdrones Canada MD4-1000"
+    },
+	    {
+      "id": 2,
+      "text": "SenseFly Ebee"
+    }
+  ]
+}

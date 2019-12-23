@@ -1,0 +1,27 @@
+{
+	"data" : [
+		{
+			"Manufacturer" : 
+				{
+					"Name_EN": "Test 1",
+					"Name_FR": "[FR] Test 1"
+				},
+			"Model" :
+				{
+					"Name_EN": "Model 1",
+					"Name_FR": "[FR] Model 1",
+					"Type_EN": "Fixed wing",
+					"Type_FR": "[FR] Fixed wing",
+					"SafetyAssurance" :
+						{
+							"ControlledAirspace_EN": "Yes",
+							"ControlledAirspace_FR": "Oui",
+							"NearPeople_EN": "Yes",
+							"NearPeople_FR": "Oui",
+							"OverPeople_EN": "Yes",
+							"OverPeople_FR": "Oui"
+						}
+				}
+		}
+	]
+}

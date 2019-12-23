@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>View drones</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <div class="brand col-xs-9 col-sm-8 col-md-6">
+                    <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
+                    </object>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline margin-bottom-none">
+                        <li><a lang="fr" href="#">Français</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-7">
+                        <h2 class="wb-inv">Transport Canada Drone Management Portal</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            Drone Management Portal</a>
+                    </section>
+                    <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+                        <h2 class="wb-inv">Account menu</h2>
+                        <ul class="app-list-account list-unstyled">
+                            <li><a href="../accountSettings/accountSettings.html" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
+                            <li><a href="../signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="welcome.html">Home</a></li>
+                            <!-- InstanceBeginEditable name="Breadcrumbs" -->
+                            <li>View drones</li>
+                            <!-- InstanceEndEditable -->
+                        </ol>
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <nav id="acct-switch" class="expose">
+
+            <a href="#dlg-switchAccount" class="lbx-modal wb-lbx"><i class="fa fa-user-circle mrgn-rght-sm"></i>Switch accounts</a>
+        </nav>
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont"><i class="fas fa-drone"></i> View drones</h1>
+        <form action="viewDrones-error.html" method="get">
+            <div class="wb-tabs">
+                <div class="tabpanels">
+                    <details id="panel-registered" open>
+                        <summary>Registered</summary>
+                        <p class="mrgn-tp-md">{<strong>3</strong>/no} drones are currently registered. Select a registration number to view the registration information. To deregister a drone, select the aircraft and press the <strong>Deregister</strong> button.</p>
+                        <section class="panel panel-default panel-datatable">
+                            <header class="panel-heading pddng-tp-0">
+                                <div class="row">
+                                    <div class="col-md-6"> </div>
+                                    <div class="col-md-6 text-right text-left-sm text-left-xs">
+                                        <div class="form-inline">
+                                            <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                                <div class="tableFilter"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="table-responsive">
+                                <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"info" : false, "filter" : true, "order" : [[5,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0]}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="width5"><span class="wb-inv">Select</span></th>
+                                            <th scope="col" class="width15 text-nowrap">Registration #</th>
+                                            <th scope="col">Make</th>
+                                            <th scope="col">Model</th>
+                                            <th scope="col" class="width20">Serial #</th>
+                                            <th scope="col" class="width10 text-center">Registration date <br>
+                                                <abbr class="nowrap" title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
+                                            <th scope="col">Registered by</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><input name="ua1" type="checkbox" value="" id="ua1"></td>
+                                            <td><label for="ua1"><a href="viewDrone-withSA.html">C-2839487287</a></label></td>
+                                            <td>DJI</td>
+                                            <td>Phantom 4 Pro</td>
+                                            <td>4097820988321</td>
+                                            <td class="text-center">2018-04-07</td>
+                                            <td>John Doe</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><input name="ua2" type="checkbox" value="" id="ua2"></td>
+                                            <td><label for="ua2"><a href="viewDrone-withSA.html">C-2839487287</a></label></td>
+                                            <td>DJI</td>
+                                            <td>Phantom 4 Advanced</td>
+                                            <td>4928388323229</td>
+                                            <td class="text-center">2019-04-01</td>
+                                            <td>John Doe</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <footer class="panel-footer">
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-6 pddng-tp-sm">
+                                        <!-- Only displayed if 1+ drones are registered -->
+                                        <!-- Denoted as a link for prototype purposes only 
+                                        <button class="btn btn-primary mrgn-tp-md" type="submit">Deregister</button>-->
+                                        <a href="deregister.html" class="btn btn-primary mrgn-tp-md" type="submit">Deregister</a>
+
+                                    </div>
+                                    <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
+                                    <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                                </div>
+                            </footer>
+                        </section>
+                    </details>
+                    <details id="panel-deregistered">
+                        <summary>Deregistered</summary>
+                        <p class="mrgn-tp-md">The following drones were deregistered and are no longer operational:</p>
+                        <section class="panel panel-default panel-datatable">
+                            <div class="table-responsive">
+                                <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"info" : false, "paging": false, "filter" : false, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[4] },{"searchable" : false, "targets": []}],
+
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No deregistered drones"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="width20">Make</th>
+                                            <th scope="col" class="width20">Model</th>
+                                            <th scope="col" class="width20 text-wordwrap">Serial #</th>
+                                            <th scope="col" class="width20 text-center">Deregistration date <br>
+                                                <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
+                                            <th scope="col">Deregistered by</th>
+                                            <th scope="col" class="width25 text-center">Notice of deregistration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>DJI</td>
+                                            <td>Phantom 4 Pro</td>
+                                            <td>4097820988321</td>
+
+                                            <td class="text-center">2019-09-07</td>
+                                            <td>John Doe</td>
+                                            <td class="text-center"><a href="#"><i class="fas fa-file-pdf mrgn-rght-sm"></i>Notice of deregistration</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DJI</td>
+                                            <td>Phantom 4 Pro</td>
+                                            <td>12345678901234567890123456789012345678901234567890</td>
+
+                                            <td class="text-center">2019-08-06</td>
+                                            <td>John Doe</td>
+                                            <td class="text-center"><a href="#"><i class="fas fa-file-pdf mrgn-rght-sm"></i>Notice of deregistration</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </details>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
+        <div class="row">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2019-10-17
+                            <!-- #EndDate -->
+                        </time>
+                        <span class="version">(V9.9.9)</span>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer role="contentinfo" id="wb-info">
+        <div id="transactFooter" class="landscape"></div>
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+                        <h2 class="wb-inv">About this Web application</h2>
+                        <ul>
+                            <li><a href="#">Contact information</a></li>
+                            <li><a href="../termsConditions.html">Terms and conditions</a></li>
+                            <li><a href="../privacy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+    <script type="text/javascript">
+        $(document).on("wb-ready.wb", function(event) {
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
+            });
+
+            $(document).on('keypress', $('input[type="search"]'), function() {
+                $(".wb-tabs").removeClass("wb-eqht wb-eqht-inited");
+                $(".tabpanels").css("min-height", 0);
+            });
+        });
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+
+</html>

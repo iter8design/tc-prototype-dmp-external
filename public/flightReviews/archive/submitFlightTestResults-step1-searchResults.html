@@ -1,0 +1,240 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<!-- InstanceBeginEditable name="PageTitle" -->
+<title>Submit flight review results - step 1 of 3 - Drone Management Portal</title>
+<!-- InstanceEndEditable -->
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+<link rel="stylesheet" href="../../../css/cdtsapps.css">
+<link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+<link rel="stylesheet" href="../../../css/uav-vasp.css">
+<link rel="stylesheet" href="../../../css/utils.css">
+<link rel="stylesheet" href="../../../css/plugins.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+<!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+<noscript>
+<link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+</noscript>
+<!-- InstanceBeginEditable name="CustomJSLibraries" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="CustomCSS" -->
+<link rel="stylesheet" type="text/css" href="../../js/tc/datePicker-master/css/datepicker.css">
+<!-- InstanceEndEditable -->
+</head><body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+  <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+  <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+</ul>
+<header role="banner">
+  <div id="wb-bnr" class="container">
+    <div class="row">
+      <div class="brand col-xs-9 col-sm-8 col-md-6">
+        <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
+        </object>
+        <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+      <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+        <h2 class="wb-inv">Language selection</h2>
+        <ul class="list-inline margin-bottom-none">
+          <li><a lang="fr" href="#">Français</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <div class="app-bar">
+    <div class="container">
+      <div class="row">
+        <section class="col-xs-12 col-sm-7">
+          <h2 class="wb-inv">Transport Canada Drone Management Portal</h2>
+          <a class="app-name" href="#">Transport Canada <br>
+          Drone Management Portal</a></section>
+        <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+          <h2 class="wb-inv">Account menu</h2>
+          <ul class="app-list-account list-unstyled">
+            <li><a href="../../accountSettings/accountSettings.html" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
+            <li><a href="../../signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2>You are here:</h2>
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="../../welcome.html">Home</a></li>
+          <!-- InstanceBeginEditable name="Breadcrumbs" --><li>Submit flight review results: step 1 of 3</li><!-- InstanceEndEditable -->
+        </ol>
+      </div>
+    </div>
+  </nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container"> <!-- InstanceBeginEditable name="Content" -->
+  <h1 property="name" id="wb-cont"><i class="fas fa-thumbs-up"></i> Submit flight review results: step 1 of 3</h1>
+   <p>Following a successful flight review and verification of skills, enter the exam certificate number and Transport Canada account number from the pilot candidate's exam certificate provided to you and press the <strong>Search</strong> button.  If you have not been given an exam certificate from the pilot candidate, you will need to contact them to proceed.</p>
+  <form method="get" action="submitFlightTestResults-step2.html">
+  <div class="row">
+    <div class="col-md-12">
+    <label for="krcNumber">Exam certificate number:</label>
+    <div class="input-group">
+      <span class="input-group-addon" id="KRCNumberSuffix">EC</span>
+      <input type="text" class="form-control" aria-describedby="KRCNumberSuffix" id="krcNumber" size="11" maxlength="11" style="width: auto;">
+	</div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    <label for="tcAccountNum">Transport Canada account number:</label>
+    <div class="input-group">
+      <span class="input-group-addon" id="TCNumberSuffix">TC</span>
+      <input type="text" class="form-control" aria-describedby="TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
+    </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    <button name"btnSearch" type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </div>
+
+    <h2 class="wb-inv"><a href="#results"></a>Search results</h2>
+    <section class="panel panel-default bg-grey mrgn-tp-lg">
+      <div class="panel-body">
+        <p>This Small Advanced Exam was completed on Thurs. July 18, 2017 by:</p>
+        <div class="row">
+          <div class="col-md-6">
+            <address>
+            <span class="xlarge">John Doe</span><br>
+            123 Elm St <br>
+            Ottawa, ON  K1K 1K1
+            </address>
+            <i class="fas fa-phone mrgn-rght-sm"></i>613-999-9999 <br>
+            <i class="fas fa-envelope mrgn-rght-sm"></i>user@example.com </div>
+          <div class="col-md-6">
+            <p><strong>Date of birth:</strong><br>
+              January 15, 2001</p>
+            <p> <strong>Citizenship:</strong><br>
+              Canadian citizen or permanent resident </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="label-question">Have you verified using government-issued photo identification that John Doe:</p>
+        <ul class="mrgn-tp-md">
+          <li>is a Canadian citizen or permanent resident</li>
+          <li>is at least 16 years of age</li>
+          <li>resides at the address indicated </li>
+          <li>has the correct spelling of their name</li>
+        </ul>
+        <span class="fld-example">Valid government-issued identification includes a Canadian driver's license, Canadian birth certificate, or passport</span>
+        <fieldset class="mrgn-tp-0 pddng-tp-0">
+          <legend class="wb-inv">Have you verified using government-issued identification that John Doe is Canadian citizen or permanent resident, at least 16 years of age, resides at the address indicated with the name correctly spelled </legend>
+          <div class="radio mrgn-tp-0">
+            <label for="verified-yes">
+              <input type="radio" name="verified" value="radio" id="verified-yes">
+              Yes</label>
+          </div>
+          <div class="radio">
+            <label for="verified-no">
+              <input type="radio" name="verified" value="radio" id="verified-no">
+              No</label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="label-question">When did the flight review occur?</p>
+        <div class="mrgn-lft-sm mrgn-tp-md">
+          <label for="flightTestDate">Flight review date (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</label>
+          <br/>
+          <input name="flightTestDate" type="text" id="flightTestDate" size="10" class="form-control display-inline">
+        </div>
+      </div>
+    </div>
+    <div class="nav-button">
+      <button class="btn btn-primary" type="submit">Continue</button>
+      <a href="../../flightTests/welcome-pilotExaminer.html" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+  </form>
+  <hr>
+  <a href="../../flightTests/welcome-pilotExaminer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
+  <div class="pagedetails">
+    <dl id="wb-dtmd">
+      <dt>Date modified:&#32;</dt>
+      <dd>
+        <time property="dateModified"> 
+          <!-- #BeginDate format:IS1 -->2018-08-14<!-- #EndDate --> 
+        </time>
+      </dd>
+    </dl>
+  </div>
+</main>
+<footer role="contentinfo" id="wb-info">
+  <div id="transactFooter" class="landscape"></div><div class="brand">
+    <div class="container">
+      <div class="row">
+        <nav class="col-md-10 ftr-urlt-lnk">
+          <h2 class="wb-inv">About this Web application</h2>
+          <ul>
+            <li><a href="#">Contact information</a></li>
+            <li><a href="../../termsConditions.html">Terms and conditions</a></li>
+            <li><a href="../../privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+        <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <div class="col-xs-6 col-md-2 text-right">
+          <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--[if gte IE 9 | !IE ]><!--> 
+<script src="../../../js/jquery/2.2.4/jquery.js"></script> 
+<script src="../../../wet-boew/js/wet-boew.min.js"></script> 
+<!--<![endif]--> 
+<!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]--> 
+<script src="../../../GCWeb/js/theme.min.js"></script> 
+<!-- InstanceBeginEditable name="CustomJS" --> 
+<script src="../../js/tc/datePicker-master/js/datepicker.js"></script> 
+<script>
+	$( document ).on( "wb-ready.wb", function( event ) {
+
+		// Attach a datepicker to the above input element
+		datePickerController.createDatePicker({
+			formElements:{
+				"flightTestDate":"%Y-%m-%d"
+			},
+			rangeHigh:new Date()
+		});
+	});
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

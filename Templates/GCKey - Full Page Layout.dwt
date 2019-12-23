@@ -1,0 +1,208 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<!-- TemplateBeginEditable name="PageTitle" -->
+<title></title>
+<!-- TemplateEndEditable -->
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../GCWeb/css/theme.min.css">
+<link rel="stylesheet" href="../css/fuelux.min.css">
+<link rel="stylesheet" href="../css/gckey.css">
+<!--<link rel="stylesheet" href="../css/cdtsapps.css">-->
+
+<!--<![endif]-->
+<!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+<!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+<noscript>
+<link rel="stylesheet" href="../wet-boew/css/noscript.min.css" />
+</noscript>
+<!-- TemplateBeginEditable name="CustomJSLibraries" -->
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="CustomCSS" -->
+<!-- TemplateEndEditable -->
+</head><body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+  <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+  <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+</ul>
+<header role="banner">
+  <div id="wb-bnr" class="container">
+    <div class="row">
+      <div class="brand col-xs-9 col-sm-8 col-md-6">
+        <object type="image/svg+xml" tabindex="-1" data="../assets/sig-blk-en.svg">
+        </object>
+        <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+      <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+        <h2 class="wb-inv">Language selection</h2>
+        <ul class="list-inline margin-bottom-none">
+          <li><a lang="fr" href="#">Français</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  
+  <nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg wb-init wb-menu-inited wb-navcurr-inited" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+ <h2 class="wb-inv">Site menu</h2>
+ <div class="container visible-md visible-lg nvbar">
+  <div class="row">
+   <ul class="list-inline menu" role="menubar">
+    <li><a href="DE-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank" title="Definitions (opens in a new window)" tabindex="0" aria-posinset="1" aria-setsize="3" role="menuitem">Definitions</a></li>
+    <li><a href="FQ-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank" title="Frequently Asked Questions (FAQs) (opens in a new window)" tabindex="-1" aria-posinset="2" aria-setsize="3" role="menuitem">Frequently Asked Questions (FAQ)</a></li>
+    <li class="last"><a href="HP-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014#logon" target="_blank" title="Help (opens in a new window)" tabindex="-1" aria-posinset="3" aria-setsize="3" role="menuitem">Help</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+
+  <nav role="navigation" id="wb-bc" property="breadcrumb">
+ <h2 class="wb-inv">You are here:</h2>
+ <div class="container">
+  <div class="row">
+   <ol class="breadcrumb">
+<li>Home</li>
+<!-- TemplateBeginEditable name="Breadcrumbs" -->
+<!-- TemplateEndEditable -->
+</ol>
+</div>
+</div>
+</nav>
+  
+  
+  
+</header>
+<main role="main" property="mainContentOfPage" class="container"> <!-- TemplateBeginEditable name="Content" -->
+  <h1 property="name" id="wb-cont">Welcome to GCKey</h1>
+  <!-- TemplateEndEditable -->
+  <div class="pagedetails">
+    <dl id="wb-dtmd">
+      <dt>Date modified:&#32;</dt>
+      <dd>
+        <time property="dateModified"> 
+          <!-- #BeginDate format:IS1 -->2017-12-12<!-- #EndDate --> 
+        </time>
+      </dd>
+    </dl>
+  </div>
+</main>
+<footer role="contentinfo" id="wb-info">
+  <nav role="navigation" class="container visible-lg visible-md wb-navcurr">
+    <h2 class="wb-inv">Site Information</h2>
+    <div class="row">
+      <section class="col-sm-3 col-lg-3">
+        <h3>About</h3>
+        <ul class="list-unstyled">
+          <li><a href="AB-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">About GCKey</a></li>
+          <li><a href="ES-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">Enabled Services</a></li>
+          <li><a href="SM-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">Site Map</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-3 col-lg-3">
+        <h3>Transparency</h3>
+        <ul class="list-unstyled">
+          <li><a href="http://www.tbs-sct.gc.ca/pd-dp/gr-rg/index-eng.asp" target="_blank">Proactive Disclosure</a></li>
+          <li><a href="IN-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" rel="license" target="_blank">Terms and Conditions</a></li>
+          <li><a href="PS-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">Personal Information Collection Statement</a></li>
+        </ul>
+      </section>
+      <div class="col-sm-3 col-lg-3">
+        <section>
+          <h3>News</h3>
+          <ul class="list-unstyled">
+            <li><a href="NT-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">Recent Project Activity</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="col-sm-3 col-lg-3">
+        <section>
+          <h3>Contact Us</h3>
+          <ul class="list-unstyled">
+            <li><a href="CU-01?ReqID=R743BEFA2B4E5E66419101E2DDD88D6A771EB8014" target="_blank">Phone Numbers</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </nav>
+  <div id="transactFooter" class="landscape"></div><div class="brand">
+    <div class="container">
+      <div class="row ">
+        <div class="col-xs-6 col-sm-6 visible-sm visible-xs tofpg">
+          <a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-12 text-right">
+          <object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="/j/wet/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+       </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul> </nav>
+<div id="transactFooter" class="landscape"></div><div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+--> 
+<!--[if gte IE 9 | !IE ]><!--> 
+<script src="../js/jquery/2.2.4/jquery.js"></script> 
+<script src="../wet-boew/js/wet-boew.min.js"></script> 
+<!--<![endif]--> 
+<!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]--> 
+<script src="../GCWeb/js/theme.min.js"></script> 
+<!-- TemplateBeginEditable name="CustomJS" -->
+
+
+ <!-- TemplateEndEditable -->
+</body>
+</html>

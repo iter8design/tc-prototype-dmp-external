@@ -1,0 +1,26 @@
+{
+	"data" : [
+		{
+			"FlightSchoolName" : "Test 1",
+			"AddressLine1" : "123 Elm St.",
+			"AddressLine2" : "Ottawa, ON  K1K 1K1",
+			"ContactInformation" : "",
+			"Email": "test@test.com",
+			"TelephoneNumber": "613-999-9999",
+			"URL": "http://www.test.com",
+			"AreasServed_EN" : "Canada-wide",
+			"AreasServed_FR" : "[FR] Canada-wide"
+		},		
+		{
+			"FlightSchoolName" : "Test 2",
+			"AddressLine1" : "123 Elm St.",
+			"AddressLine2" : "Ottawa, ON  K1K 1K1",
+			"ContactInformation" : "",
+			"TelephoneNumber": "613-999-9999",
+			"Email": "test@test2.com",
+			"URL": "http://www.test2.com",
+			"AreasServed_EN" : "Varies"
+			"AreasServed_FR" : "[FR] Varies"
+		}
+	]
+}

@@ -1,0 +1,263 @@
+/*------------------------------------*\
+    PLUGINS
+	
+	Used to override the CSS used in any plugin.  This will keep the main CSS file simpler, and ensure that any plugin CSS 
+	customizations are not lost when libraries are upgraded.
+	
+\*------------------------------------*/
+
+/*------------------------------------*\
+    DATATABLES
+\*------------------------------------*/
+
+table.dataTable thead th[colspan]:not([colspan="1"]) .sorting-icons {
+    /*suported only in FF, Chrome, IE9*/
+    display: none;
+}
+
+table.dataTable thead .sorting-icons {
+    margin-top: 0;
+}
+
+table.dataTable thead .sorting .sorting-icons:before,
+table.dataTable thead .sorting_asc .sorting-icons:before,
+table.dataTable thead .sorting_desc .sorting-icons:before {
+    border: none;
+    background: none;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    top: 0;
+}
+
+table.dataTable thead th.sorting_asc,
+table.dataTable thead th.sorting_desc {
+    background-color: #426D94;
+    /* #2572b4; */
+    color: #fff;
+}
+
+table.dataTable thead th.sorting_asc input,
+table.dataTable thead th.sorting_desc input,
+table.dataTable thead th.sorting_asc select,
+table.dataTable thead th.sorting_desc select {
+    color: #000;
+}
+
+table.dataTable thead th input,
+table.dataTable thead th select {
+    font-weight: normal;
+}
+
+table.dataTable thead .sorting .sorting-icons:before {
+    content: "\f0dc";
+    color: #000;
+}
+
+table.dataTable thead .sorting_asc .sorting-icons:before {
+    content: "\f0de";
+    color: #000;
+}
+
+table.dataTable thead .sorting_desc .sorting-icons:before {
+    content: "\f0dd";
+    color: #000;
+}
+
+table.dataTable thead th {
+    background-color: #eee;
+}
+
+table.dataTable thead .sorting .sorting-icons:after,
+table.dataTable thead .sorting_asc .sorting-icons:after,
+table.dataTable thead .sorting_desc .sorting-icons:after {
+    content: none;
+}
+
+.bottom .dataTables_paginate {
+    padding: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    text-align: inherit;
+}
+
+.dataTables_scrollHeadInner {
+    background-color: #CCCCCC;
+}
+
+
+.pages-left .dataTables_wrapper .dataTables_paginate,
+.panel table.dataTable tr td.dataTables_empty {
+    text-align: left;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #426D94;
+    border-color: #2572b4;
+    padding: 6px 12px;
+    margin-top: 6px;
+}
+
+/* .dataTables_wrapper a:hover {
+	color: #fff;	
+} */
+
+.panel table.dataTable,
+.panel table.dataTable td,
+.panel table.dataTable th {
+    border: 0px;
+}
+
+.panel table.dataTable td,
+.panel table.dataTable th {
+    border-right: solid #ddd 1px;
+    border-bottom: solid #ddd 1px;
+}
+
+.panel table.dataTable tr.even {
+    background-color: #f8f8f8;
+}
+
+.panel table.dataTable tr.separator td {
+    border-bottom: 2px solid #739ABD;
+}
+
+.panel table.dataTable td:last-child,
+.panel table.dataTable th:last-child {
+    border-right: 0px;
+}
+
+.panel table.dataTable tr:last-child td {
+    border-bottom: 0px;
+}
+
+.panel table.dataTable tfoot td {
+    border-top: 1px solid #ddd;
+}
+
+.panel-datatable footer.panel-footer {
+    font-style: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.panel-datatable footer.panel-footer .top label {
+    font-weight: normal;
+    margin: 0;
+}
+
+.panel-datatable footer.panel-footer .top select {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-color: #ccc;
+}
+
+.panel-datatable footer.panel-footer .dataTables_length label {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.panel-datatable footer.panel-footer .dataTables_length select {
+    height: 34px;
+    padding: 6px 5px;
+    font-size: 14px;
+    line-height: 1.4375;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.panel-datatable footer.panel-footer .bottom .paginate_button {
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 6px 12px;
+}
+
+.panel-datatable footer.panel-footer .bottom a.paginate_button.next:after {
+    content: "\f061";
+    font-family: 'Font Awesome 5 Pro';
+    top: 0;
+}
+
+.panel-datatable footer.panel-footer .bottom a.paginate_button.previous:before {
+    content: "\f060";
+    font-family: 'Font Awesome 5 Pro';
+    top: 0;
+}
+
+
+/*------------------------------------*\
+    SELECT 2	
+\*------------------------------------*/
+
+.panel-primary .panel-heading .select2-container .select2-choice > .select2-chosen {
+    text-shadow: none;
+}
+
+.select2-container--bootstrap .select2-dropdown {
+    text-wrap: none;
+    white-space: nowrap;
+    /* width: auto !important; */
+    overflow: visible !important;
+}
+
+.select2-container--bootstrap .select2-results > .select2-results__options {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 75px;
+}
+
+.select2-results__group {
+    color: #333 !important;
+    font-size: 14px !important;
+    background-color: #EFF3F7;
+
+}
+
+.select2-results__options--nested {
+    padding-left: 7px !important;
+    font-size: 13px !important;
+}
+
+select.fieldError + .select2-container--bootstrap .select2-selection.select2-selection--single,
+select.fieldError + .select2-container--bootstrap .select2-selection.select2-selection--single,
+select.input-validation-error + .select2-container--bootstrap .select2-selection.select2-selection--single,
+select.input-validation-error + .select2-container--bootstrap .select2-selection.select2-selection--single {
+    background-color: #faf3f3;
+    border-color: #a94442;
+}
+
+
+/*------------------------------------*\
+    X-EDITABLE
+\*------------------------------------*/
+
+.editable-click,
+a.editable-click,
+a.editable-click:hover {
+    /* border-bottom-style: solid !important;
+    padding-left: 2px;
+    padding-right: 2px; */
+    border: 0px;
+}
+
+.panel-title .editable-click,
+.panel-title a.editable-click,
+.panel-title a.editable-click:hover {
+    /* border-bottom: solid 1px #fff; */
+    text-decoration: none;
+}
+
+.editable-empty,
+.editable-empty:hover,
+.editable-empty:focus {
+    color: #000 !important;
+}

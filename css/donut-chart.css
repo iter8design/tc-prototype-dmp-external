@@ -1,0 +1,110 @@
+.card {
+  background: #fff;
+  padding: 40px;
+  padding-top: 20px;
+  margin: 0 40px 0 0;
+  border-radius: 2em;
+}
+
+.donut-chart {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.donut-chart .quad {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.donut-chart .chart-center {
+  position: absolute;
+  border-radius: 50%;
+}
+.donut-chart .chart-center span {
+  display: block;
+  text-align: center;
+}
+
+.donut-chart.chart {
+  width: 240px;
+  height: 240px;
+  background: #e1e1e1;
+}
+.donut-chart.chart .quad {
+  width: 120px;
+  height: 120px;
+  top: 0;
+  left: 0;
+  border-radius: 100% 0 0 0;
+  display: none;
+}
+.donut-chart.chart .quad.one {
+  transform: rotate(10deg);
+  transform-origin: bottom right;
+  -webkit-transform: rotate(10deg);
+  -webkit-transform-origin: bottom right;
+  background: #4E8F7F;
+}
+
+.donut-chart.chart .quad.two {
+	transform: rotate(90deg);
+  transform-origin: bottom right;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin: bottom right;
+  background: #4E8F7F;
+
+}
+
+.donut-chart.chart .quad.three {
+	transform: rotate(180deg);
+  transform-origin: bottom right;
+  -webkit-transform: rotate(180deg);
+  -webkit-transform-origin: bottom right;
+  background: #4E8F7F;
+ 
+}
+
+.donut-chart.chart .quad.four {
+	transform: rotate(270deg);
+  transform-origin: bottom right;
+  -webkit-transform: rotate(270deg);
+  -webkit-transform-origin: bottom right;
+  background: #4E8F7F;
+ 
+}
+
+.donut-chart.chart.exam-fail .quad {
+	background: #a94442;
+}
+
+
+.donut-chart.chart .quad.top {
+  background: #e1e1e1;
+} 
+
+.donut-chart.chart .chart-center {
+  top: 25px;
+  left: 25px;
+  width: 190px;
+  height: 190px;
+  background: #fff;
+  
+}
+
+.donut-chart.chart .chart-center span {
+  font-size: 40px;
+  line-height: 190px;
+  color: #333;
+}
+
+.donut-chart.chart .chart-center:after {
+  display: inline-block;
+  width: 100%;
+  font-size: 40px;
+  color: #f26a4a;
+  text-align: center;
+  line-height: 170px;
+ 
+} 

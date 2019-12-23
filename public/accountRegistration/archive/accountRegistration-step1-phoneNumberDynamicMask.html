@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Account - Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>Account registration - step 1 - Drone Management Portal</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../css/utils.css">
+    <link rel="stylesheet" href="../../css/plugins.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <div class="brand col-xs-9 col-sm-8 col-md-6">
+                    <object type="image/svg+xml" tabindex="-1" data="../../assets/sig-blk-en.svg">
+                    </object>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline margin-bottom-none">
+                        <li><a lang="fr" href="#">Français</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-7">
+                        <h2 class="wb-inv">Transport Canada Drone Management Portal</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            Drone Management Portal</a>
+                    </section>
+                    <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+                        <h2 class="wb-inv">Account menu</h2>
+                        <ul class="app-list-account list-unstyled">
+                            <li><a href="../signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont"><i class="fas fa-user"></i> Account registration: step 1 </h1>
+        <p>Welcome to Transport Canada's Drone Management Portal. Seeing as this is your first time here, we'll need some basic information from you before we get started. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory. The information you provide is collected and stored in accordance with our <a href="#" target="_blank" title="This links will open in a new window">privacy policy</a> and is administered under the authority of the <em>Privacy Act</em> and other applicable laws.</p>
+        <!--<p>If you've registered with us before, please <a href="#">read the following information</a> before continuing.</p>-->
+        <form action="accountRegistration-step2.html" method="get">
+            <!-- <fieldset class="mrgn-tp-sm">
+                <legend class="medium">I am:</legend>
+                <div class="radio">
+                    <label for="individual">
+                        <input type="radio" name="representation" value="radio" id="individual" checked>
+                        An individual who <strong>owns</strong> or <strong>flies</strong> drones </label>
+                </div>
+                <div class="radio">
+                    <label for="business">
+                        <input type="radio" name="representation" value="radio" id="business">
+                        Representing a business -->
+            <!--or government organization (municipal/provincial/federal)--> that <strong>owns</strong> or <strong>flies</strong> drones
+            <!--          <span class="fld-example">While we won't be asking you for more information about your business or government organization today, we'll email you in the coming months for further information.</span>-->
+            <!-- </label>
+
+
+                </div>
+            </fieldset>
+
+            <div class="mrgn-lft-lg" id="cn-business">
+
+                <div class="form-group">
+                    <label for="legalName"><span class="mandatory">*</span> Legal name <span class="wb-inv">(required)</span>: </label>
+                    <input name="legalName" id="legalName" type="text" size="50" class="form-control" autocomplete="organization" maxlength="150">
+                </div>
+
+                <div class="form-group">
+                    <label for="operatingName">Operating name (if different than your business legal name): </label>
+                    <input name="operatingName" id="operatingName" type="text" size="50" class="form-control" autocomplete="off" maxlength="150">
+                </div>
+
+                <div class="form-group">
+                    <label for="businessNumber">Business number (BN): </label>
+                    <span class="fld-example">This is a nine-digit account number issued by the Canadian government for <abbr title="Goods Sales Tax">GST</abbr>/<abbr title="Harmonized Sales Tax">HST</abbr>, payroll, import/export, and corporate income tax. (<a href="#" target="_blank" title="This link will open in a new window">More information</a>)</span>
+                    <div class="input-group"> <span class="input-group-addon" id="prefix">BN</span>
+                        <input name="businessNumber" id="businessNumber" aria-describedby="prefix" type="text" size="9" class="form-control input-numeric-9" autocomplete="off" maxlength="9" style="width: auto;">
+                    </div>
+
+
+                </div>
+            </div> -->
+
+
+            <div class="form-group mrgn-tp-md">
+                <label for="email"><span class="mandatory">*</span> Your email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send you notifications and messages about your account.</span> </label>
+                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150">
+            </div>
+            <div class="form-group">
+                <label for="phone"><span class="mandatory">*</span>Your telephone number <span class="wb-inv"> (required):</span> <span class="fld-example">We'll only contact you by telephone if there's a problem with any of the services you apply for or are using.</span> </label>
+                <div class="form-group form-inline">
+                    <input name="phone" id="phone" type="text" size="15" class="form-control input-phone" autocomplete="tel" maxlength="15">
+                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
+                </div>
+            </div>
+            <div class="form-group form-inline">
+                <div class="form-group">
+                    <label for="givenName" class="display-block"><span class="mandatory">*</span>First (given) name<span class="wb-inv"> (required)</span>:</label>
+                    <input name="givenName" id="givenName" type="text" size="35" class="form-control" autocomplete="given-name" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="middleInitials" class="display-block">Middle name/initials:</label>
+                    <input name="middleInitials" id="middleInitials" type="text" size="35" class="form-control" maxlength="50">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="familyName"><span class="mandatory">*</span>Last (family) name<span class="wb-inv"> (required)</span>:</label>
+                <input name="familyName" id="familyName" type="text" size="35" class="form-control" autocomplete="family-name" maxlength="50">
+            </div>
+
+            <div class="form-group" id="cn-business-title">
+                <label for="title"><span class="mandatory">*</span>Your position title at this business<span class="wb-inv"> (required)</span>:</label>
+                <input name="title" id="position" type="text" size="50" class="form-control" autocomplete="organization-title" maxlength="150">
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend class="medium mrgn-bttm-0"><span class="mandatory" title="This field is mandatory">*</span> Date of birth:<span class="fld-example">Some services require a minimum age of 14, 16, or 18 to apply.</span><span class="wb-inv">(required)</span></legend>
+                    <div class="display-inline-block">
+                        <label for="dobDay" class="small">Day <span class="wb-inv">Format: 2 digits</span></label>
+                        <input name="dobDay" id="dobDay" type="text" size="2" maxlength="2" class="form-control input-numeric-2">
+                    </div>
+                    <div class="display-inline-block">
+                        <label for="dobMonth" class="small">Month <span class="wb-inv">Format: 2 digits</span></label>
+                        <input name="dobMonth" id="dobMonth" type="text" size="2" maxlength="2" class="form-control input-numeric-2">
+                    </div>
+                    <div class="display-inline-block">
+                        <label for="dobYear" class="small">Year <span class="wb-inv">Format: 4 digits</span></label>
+                        <input name="dobYear" id="dobYear" type="text" size="4" maxlength="4" class="form-control input-numeric-4">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <fieldset class="mrgn-tp-sm">
+                    <legend class="medium mrgn-bttm-md"><span class="mandatory" title="This field is mandatory">*</span> Are you a Canadian citizen or permanent resident of Canada? <span class="fld-example">Foreign residents may not register a drone in Canada, but may operate a drone with a pilot certificate.</span></legend>
+                    <div class="radio">
+                        <label for="citizen">
+                            <input type="radio" name="citizenship" value="radio" id="citizen" checked>
+                            Yes </label>
+                    </div>
+                    <div class="radio">
+                        <label for="notCitizen">
+                            <input type="radio" name="citizenship" value="radio" id="notCitizen">
+                            No </label>
+
+
+                    </div>
+                </fieldset>
+
+            </div>
+            <div class="form-group showHide" id="cn-resideInCanada">
+                <fieldset class="mrgn-tp-sm">
+                    <legend class="medium mrgn-bttm-md"><span class="mandatory" title="This field is mandatory">*</span> Do you currently reside in Canada?
+                    </legend>
+
+                    <div class="radio">
+                        <label for="resideYes">
+                            <input type="radio" name="resideInCanada" value="radio" id="resideYes" checked>
+                            Yes </label>
+                    </div>
+                    <div class="radio">
+                        <label for="resideNo">
+                            <input type="radio" name="resideInCanada" value="radio" id="resideNo">
+                            No </label>
+                        <div class="info mrgn-lft-md" id="cn-resideInCanada-info">
+                            If you do not reside in Canada, you will need to <a href="#">apply for a Special Flight Operating Certificate</a> after obtaining your pilot certificate to perform any drone operations.
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+            </div>
+        </form>
+        <!-- InstanceEndEditable -->
+        <div class="pagedetails">
+            <dl id="wb-dtmd">
+                <dt>Date modified:&#32;</dt>
+                <dd>
+                    <time property="dateModified">
+                        <!-- #BeginDate format:IS1 -->2019-10-31
+                        <!-- #EndDate -->
+                    </time>
+                </dd>
+            </dl>
+
+        </div>
+    </main>
+    <footer role="contentinfo" id="wb-info">
+        <div id="transactFooter" class="landscape"></div>
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+                        <h2 class="wb-inv">About this Web application</h2>
+                        <ul>
+                            <li><a href="#">Contact information</a></li>
+                            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+                            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+
+            var cleave = new Cleave('.input-phone', {
+                blocks: [15],
+                numericOnly: true
+            });
+
+            $("#phone").on("keyup", function() {
+                if ($(this).val().length == 10) {
+                    cleave.destroy();
+                    cleave = new Cleave('.input-phone', {
+                        delimiter: '-',
+                        blocks: [3, 3, 4],
+                        numericOnly: true
+                    });
+                } else {
+                    cleave.destroy();
+                    cleave = new Cleave('.input-phone', {
+                        blocks: [15],
+                        numericOnly: true
+                    });
+                }
+            });
+
+
+
+
+
+
+            new Cleave('.input-phone-extension', {
+
+                blocks: [8],
+                numericOnly: true
+            });
+
+            new Cleave('.input-numeric-4', {
+                blocks: [4],
+                numericOnly: true
+            });
+
+            new Cleave('.input-numeric-9', {
+                blocks: [9],
+                numericOnly: true
+            });
+
+            $('.input-numeric-2').toArray().forEach(function(field) {
+                new Cleave(field, {
+                    blocks: [2],
+                    numericOnly: true
+                });
+            });
+
+            $("#cn-business, #cn-business-title, #cn-resideInCanada, #cn-resideInCanada-info").hide();
+            $("#business").on("click", function() {
+                $("#cn-business, #cn-business-title").fadeIn();
+            });
+
+            $("#individual").on("click", function() {
+                $("#cn-business, #cn-business-title").fadeOut();
+            });
+
+            $("#notCitizen").on("click", function() {
+                $("#cn-resideInCanada").fadeIn();
+            });
+
+            $("#resideNo").on("click", function() {
+                $("#cn-resideInCanada-info").fadeIn();
+            });
+
+
+        });
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+
+</html>
