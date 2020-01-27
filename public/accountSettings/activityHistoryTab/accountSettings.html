@@ -117,13 +117,14 @@
                     <h2 class="wb-inv">Activity history</h2>
 
                     <section class="panel panel-default mrgn-tp-md">
-                        <table class="table table-bordered table-hover table-condensed small">
+                        <table class="table table-bordered table-hover table-condensed small" id="tbl-activityHistory">
                             <thead>
                                 <tr class="row">
                                     <th class="col-md-3 text-right" scope="col">Date and time</th>
                                     <th class="col-md-9" scope="col">Event</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr class="row">
                                     <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
@@ -764,6 +765,12 @@
 
 
                             </tbody>
+                            <tfoot>
+                                <tr class="row bg-grey">
+                                    <td colspan="2" class="text-center"><a href="#tbl-activityHistory" id="lnk-ah-load-more"><i class="fas fa-chevron-square-down mrgn-rght-sm"></i>View older entries</a></td>
+                                </tr>
+                            </tfoot>
+
                         </table>
 
                         <section id="dlg_receipt" class="mfp-hide modal-dialog modal-content overlay-def">
@@ -977,43 +984,24 @@
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../../js/tc/cleave/cleave.min.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            /* Apply input masks */
-            new Cleave('.input-numeric-4', {
-                blocks: [4],
-                numericOnly: true
-            });
-
-            $('.input-numeric-2').toArray().forEach(function(field) {
-                new Cleave(field, {
-                    blocks: [2],
-                    numericOnly: true
+            $(document.body).on('click', '#lnk-ah-load-more', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: "../../includes/activityHistory/loadMore.html",
+                    data: "html",
+                    success: function(data) {
+                        if (data == "") {
+                            $(data).hide().appendTo("#tbl-activityHistory tbody").fadeIn(1000);
+                        } else {
+                            //No more entries - remove the view older entries link
+                            $("#lnk-ah-load-more").parent().parent().parent().remove();
+                        }
+                    }
                 });
             });
-
-            new Cleave('.input-postal', {
-                delimiter: ' ',
-                blocks: [3, 3],
-                uppercase: true
-            });
-
-            new Cleave('.input-phone', {
-                delimiter: '-',
-                blocks: [3, 3, 4],
-                numericOnly: true
-            });
-
-            $("#cn-notifications input[type=checkbox]").on("click", function(event) {
-                if ($(this).prop("checked")) {
-                    $(this).parent().parent().parent().addClass("highlight-yellow");
-                } else {
-                    $(this).parent().parent().parent().removeClass("highlight-yellow");
-                }
-            });
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
