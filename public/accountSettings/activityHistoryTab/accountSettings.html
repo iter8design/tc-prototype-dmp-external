@@ -992,7 +992,7 @@
                     url: "../../includes/activityHistory/loadMore.html",
                     data: "html",
                     success: function(data) {
-                        if (data == "") {
+                        if (data != "") {
                             $(data).hide().appendTo("#tbl-activityHistory tbody").fadeIn(1000);
                         } else {
                             //No more entries - remove the view older entries link

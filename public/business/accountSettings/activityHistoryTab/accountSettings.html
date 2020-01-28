@@ -126,7 +126,7 @@
                     <summary>Activity history</summary>
                     <h2 class="wb-inv">Activity history</h2>
                     <section class="panel panel-default mrgn-tp-md">
-                        <table class="table table-bordered table-hover table-condensed">
+                        <table class="table table-bordered table-hover table-condensed" id="tbl-activityHistory">
                             <thead>
                                 <tr class="row">
                                     <th class="col-md-3 text-right" scope="col">Date and time</th>
@@ -336,6 +336,11 @@
                                     </td>
                                 </tr>
                             </tbody>
+                            <tfoot>
+                                <tr class="row bg-grey">
+                                    <td colspan="2" class="text-center"><a href="#tbl-activityHistory" id="lnk-ah-load-more"><i class="fas fa-chevron-square-down mrgn-rght-sm"></i>View older entries</a></td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </section>
                 </details>
@@ -408,8 +413,23 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-        });
 
+            $(document.body).on('click', '#lnk-ah-load-more', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: "../../../includes/activityHistory/loadMore.html",
+                    data: "html",
+                    success: function(data) {
+                        if (data != "") {
+                            $(data).hide().appendTo("#tbl-activityHistory tbody").fadeIn(1000);
+                        } else {
+                            //No more entries - remove the view older entries link
+                            $("#lnk-ah-load-more").parent().parent().parent().remove();
+                        }
+                    }
+                });
+            });
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
