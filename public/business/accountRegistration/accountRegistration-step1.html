@@ -137,7 +137,7 @@
                 </div>
             </div>
 
-            <!--<div class="form-group">
+            <div class="form-group">
                 <fieldset class="mrgn-tp-sm">
                     <legend class="medium">Is this business incorporated under the territorial, provincial, or federal laws of Canada?</legend>
                     <div class="radio">
@@ -154,7 +154,7 @@
 
                     </div>
                 </fieldset>
-            </div> -->
+            </div>
 
 
 
@@ -223,7 +223,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -245,19 +245,29 @@
     <script src="../../../js/tc/intl-tel-input/js/utils.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $("#phone").intlTelInput({
-                initialCountry: "ca",
-                preferredCountries: ["ca", "us"],
-                formatOnInit: true,
-                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
-                        return "999-999-9999";
-                    } else {
-                        return selectedCountryPlaceholder;
-                    }
 
+            //The AJAX call here is only required for French locales
+            $.ajax({
+                dataType: "json",
+                url: "../../../js/tc/intl-tel-input/langs/fr.json",
+                success: function(data) {
+                    $("#phone").intlTelInput({
+                        //localizedCountries: data,
+                        initialCountry: "ca",
+                        preferredCountries: ["ca", "us"],
+                        formatOnInit: true,
+                        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                            if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
+                                return "999-999-9999";
+                            } else {
+                                return selectedCountryPlaceholder;
+                            }
+
+                        }
+                    });
                 }
             });
+
 
 
             new Cleave('.input-phone-extension', {
@@ -265,15 +275,15 @@
                 numericOnly: true
             });
 
-            new Cleave('.input-numeric-4', {
+            /* new Cleave('.input-numeric-4', {
                 blocks: [4],
                 numericOnly: true
-            });
+            }); */
 
-            /* new Cleave('.input-numeric-9', {
+            new Cleave('.input-numeric-9', {
                 blocks: [9],
                 numericOnly: true
-            }); */
+            });
 
             $('.input-numeric-2').toArray().forEach(function(field) {
                 new Cleave(field, {
@@ -283,22 +293,22 @@
             });
 
             /* 
-            $("#cn-business, #cn-business-title, #cn-resideInCanada, #cn-resideInCanada-info").hide();
-            $("#business").on("click", function() {
-                $("#cn-business, #cn-business-title").fadeIn();
-            });
+                $("#cn-business, #cn-business-title, #cn-resideInCanada, #cn-resideInCanada-info").hide();
+                $("#business").on("click", function() {
+                    $("#cn-business, #cn-business-title").fadeIn();
+                });
 
-            $("#individual").on("click", function() {
-                $("#cn-business, #cn-business-title").fadeOut();
-            });
+                $("#individual").on("click", function() {
+                    $("#cn-business, #cn-business-title").fadeOut();
+                });
 
-            $("#notCitizen").on("click", function() {
-                $("#cn-resideInCanada").fadeIn();
-            });
+                $("#notCitizen").on("click", function() {
+                    $("#cn-resideInCanada").fadeIn();
+                });
 
-           $("#resideNo").on("click", function() {
-                $("#cn-resideInCanada-info").fadeIn();
-            }); */
+               $("#resideNo").on("click", function() {
+                    $("#cn-resideInCanada-info").fadeIn();
+                }); */
 
 
         });
