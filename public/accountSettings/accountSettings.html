@@ -157,6 +157,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p>Canadian citizen or permanent resident</p>
+                                                <!-- Non-Canadian citizen or non-permanent resident -->
 
                                                 <div class="label-form">Date of birth:</div>
                                                 <div>January 15, 2001</div>
@@ -475,7 +476,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="#dlg_updateCADs" class="btn btn-primary" id="btnSave">Save changes</a>
+                                <a href="#dlg_updateCADs" class="btn btn-primary lbx-modal wb-lbx" id="btnSave">Save changes</a>
                             </div>
                         </div>
                     </details>
@@ -673,6 +674,9 @@
             <div class="modal-body">
                 <p>We're in the process of updating any certificates that may have been issued to you with your updated contact information. Please do not refresh or close your browser window.</p>
             </div>
+            <footer class="modal-footer" style="display:none">
+
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">I'll do this later</a> </footer>
 
         </section>
     </main>
