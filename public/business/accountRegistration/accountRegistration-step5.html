@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Sign up for a business account: step 4 - Drone Management Portal</title>
+    <title>Sign up for a business account: step 5 - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -92,7 +92,7 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Account settings: John Doe</a></li>
-                        <li>Sign up for a business account: step 4</li>
+                        <li>Sign up for a business account: step 5</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -101,57 +101,83 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 4</h1>
+        <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 5</h1>
 
-        <h2>Provide access to another person</h2>
-        <p>In the event that you cannot access your account, we recommend that there be an alternate person with access to this account. By providing the person's contact information below, an email invitation will be sent with instructions on how to access this account.</p>
+        <h2>Transfer drones</h2>
 
-        <p>If you choose not to do this now, you may invite a person to access your account at a later date from your account.</p>
-        <hr>
+        <p>If you've registered drones used for this business with your personal account, you can transfer them to your business account. The certificates of registration for all selected drones be updated for you with your business account information.</p>
+
+        <p>Select any drones you wish to transfer and press the <strong>Finish</strong> button.</p>
         <form action="#" method="get">
+
             <div class="form-group">
                 <fieldset class="mrgn-tp-0">
-                    <legend class="wb-inv mrgn-tp-0 mrgn-bttm-0">Provide access to an alternate individual</legend>
+                    <legend class="wb-inv mrgn-tp-0 mrgn-bttm-0">Transfer drones from your personal account to this business account</legend>
                     <div class="radio mrgn-tp-0">
-                        <label for="access-yes">
-                            <input type="radio" name="consent" value="radio" id="access-yes" checked>
-                            Yes, I'd like to give access to this account to an alternate person.</label>
+                        <label for="transfer-yes">
+                            <input type="radio" name="transfer" value="radio" id="transfer-yes" checked>
+                            Yes, I'd like to transfer one or more drones from my personal account.</label>
 
 
                     </div>
-                    <div id="cn-alternate-person" class="mrgn-lft-lg">
-                        <div class="form-group">
-                            <label for="firstName"><span class="mandatory" title="This field is mandatory">*</span>First (given) name:</label>
-                            <input name="firstName" type="text" id="firstName" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lastName"><span class="mandatory" title="This field is mandatory">*</span>Last (family) name:</label>
-                            <input name="lastName" type="text" id="lastName" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label for="title"><span class="mandatory" title="This field is mandatory">*</span>Position title:</label>
-                            <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><span class="mandatory" title="This field is mandatory">*</span>Email address (username@example.com):</label>
-                            <input name="mail" type="email" id="email" value="" size="50" maxlength="150" class="form-control" />
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="phone"><span class="mandatory" title="This field is mandatory">*</span>Telephone number:</label>
-                            <div class="form-group form-inline">
-                                <input name="phone" type="tel" id="phone" value="" size="12" maxlength="12" class="form-control input-phone" />
-                                <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
-                            </div>
-                        </div>
+                    <div id="cn-list-drones" class="mrgn-lft-lg">
+                        <section class="panel panel-default panel-datatable">
+                            <table id="list-drones" class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"info" : false, "paging" : false,  "filter" : false, "order" : [[5,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0]}], 
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="width5 text-center selectAll"><span class="wb-inv">Select</span></th>
+                                        <th scope="col" class="width15 text-nowrap">Registration #</th>
+                                        <th scope="col">Make</th>
+                                        <th scope="col">Model</th>
+                                        <th scope="col" class="width20">Serial #</th>
+                                        <th scope="col" class="width20 text-center">Registration date <br>
+                                            <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center"><input name="ua1" type="checkbox" value="" id="ua1"></td>
+                                        <td><label for="ua1">C-2839487287</label></td>
+                                        <td>DJI</td>
+                                        <td>Phantom 4 Pro</td>
+                                        <td>4097820988321</td>
+                                        <td class="text-center">2018-04-07</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><input name="ua2" type="checkbox" value="" id="ua2"></td>
+                                        <td><label for="ua2">C-2839487287</label></td>
+                                        <td>DJI</td>
+                                        <td>Phantom 4 Advanced</td>
+                                        <td>4928388323229</td>
+                                        <td class="text-center">2019-04-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><input name="ua3" type="checkbox" value="" id="ua3"></td>
+                                        <td><label for="ua3">C-8728372818</label></td>
+                                        <td>Draganfly</td>
+                                        <td>Phantom 4 Advanced</td>
+                                        <td>X4ES</td>
+                                        <td class="text-center">2018-02-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><input name="ua3" type="checkbox" value="" id="ua3"></td>
+                                        <td><label for="ua3">C-8728382983</label></td>
+                                        <td>Custom built</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center">2018-02-01</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
 
                     </div>
                     <div class="radio">
-                        <label for="access-no">
-                            <input type="radio" name="consent" value="radio" id="access-no">
-                            No, I do not wish to give access to another person at this time.
+                        <label for="transfer-no">
+                            <input type="radio" name="transfer" value="radio" id="transfer-no">
+                            No, I do not wish to transfer any drones at this time.
                         </label>
 
 
@@ -159,11 +185,10 @@
                 </fieldset>
             </div>
 
-
-
             <div class="nav-button">
-                <!--<button class="btn btn-primary" type="submit">Continue</button> -->
-                <a href="accountRegistration-step5.html" class="btn btn-primary">Continue</a>
+                <!--<button class="btn btn-primary" type="submit">Finish</button>-->
+                <a href="../welcome-signupComplete.html" class="btn btn-primary">Finish</a>
+
                 <a href="#" class="btn btn-link">Go back</a>
             </div>
         </form>
@@ -212,45 +237,58 @@
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js">
-        < /script <
-        script src = "../../../js/tc/cleave/cleave.min.js" >
-    </script>
-    <script src="../../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../../js/tc/intl-tel-input/js/utils.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $("#phone").intlTelInput({
-                initialCountry: "ca",
-                preferredCountries: ["ca", "us"],
-                formatOnInit: true,
-                formatOnDisplay: true,
-                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
-                        return "999-999-9999";
-                    } else {
-                        return selectedCountryPlaceholder;
-                    }
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-invisible'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
 
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
                 }
+
             });
 
-            $("#phone").on("countrychange", function() {
-                var countryCd = $("#phone").getCountry();
-                console.log('country changed to:' + countryCd);
+            //Bind the click event handler to the checkboxes 
+            $("#list-drones tbody").on('click', "td>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
             });
 
-            $("#access-no").on("click", function() {
-                $("#cn-alternate-person").fadeOut(300);
+            $("#transfer-no").on("click", function() {
+                $("#cn-list-drones").hide();
+                console.log('hide');
             });
 
-            $("#access-yes").on("click", function() {
-                $("#cn-alternate-person").fadeIn(300);
+            $("#transfer-yes").on("click", function() {
+                $("#cn-list-drones").fadeIn(300);
+                console.log('show');
             });
 
 
         });
+
+        /* Highlight the row that was checked */
+        function fnHighlightSelectedRow(checkbox) {
+            if (checkbox.prop("checked"))
+                checkbox.parent("td").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+            else
+                checkbox.parent("td").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>

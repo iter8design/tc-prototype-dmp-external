@@ -103,64 +103,34 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 3</h1>
 
-        <h2>Provide access to another person</h2>
-        <p>In the event that you cannot access your account, we recommend that there be an alternate person with access to this account. By providing the person's contact information below, an email invitation will be sent with instructions on how to access this account.</p>
-
-        <p>If you choose not to do this now, you may invite a person to access your account at a later date from your account.</p>
-        <hr>
+        <h2>Consent to disclose your business contact information</h2>
+        <p>To allow other individuals to request access to your account, do you agree to make the following information available?</p>
+        <div class="well">
+            <strong class="large">John Doe</strong> <br>
+            <span class="position-title">Operations Manager</span>
+        </div>
+        <p>This information will only be displayed for anyone signing up for a business account with <strong>{Acme Widget Company}</strong>, operating as <strong>{Acme Widgets and Things} (BN999999999)</strong> for the purpose of allowing account requests to be sent to you.</p>
+        <hr class="mrgn-tp-0 mrgn-bttm-0">
         <form action="#" method="get">
             <div class="form-group">
-                <fieldset class="mrgn-tp-0">
-                    <legend class="wb-inv mrgn-tp-0 mrgn-bttm-0">Provide access to an alternate individual</legend>
+
+                <fieldset class="mrgn-tp-0 mrgn-lft-md">
+                    <legend class="medium wb-hide"></legend>
                     <div class="radio mrgn-tp-0">
-                        <label for="access-yes">
-                            <input type="radio" name="consent" value="radio" id="access-yes" checked>
-                            Yes, I'd like to give access to this account to an alternate person.</label>
-
-
-                    </div>
-                    <div id="cn-alternate-person" class="mrgn-lft-lg">
-                        <div class="form-group">
-                            <label for="firstName"><span class="mandatory" title="This field is mandatory">*</span>First (given) name:</label>
-                            <input name="firstName" type="text" id="firstName" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lastName"><span class="mandatory" title="This field is mandatory">*</span>Last (family) name:</label>
-                            <input name="lastName" type="text" id="lastName" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label for="title"><span class="mandatory" title="This field is mandatory">*</span>Position title:</label>
-                            <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><span class="mandatory" title="This field is mandatory">*</span>Email address (username@example.com):</label>
-                            <input name="mail" type="email" id="email" value="" size="50" maxlength="150" class="form-control" />
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="phone"><span class="mandatory" title="This field is mandatory">*</span>Telephone number:</label>
-                            <div class="form-group form-inline">
-                                <input name="phone" type="tel" id="phone" value="" size="12" maxlength="12" class="form-control input-phone" />
-                                <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
-                            </div>
-                        </div>
-
+                        <label for="corp-yes">
+                            <input type="radio" name="consent" value="radio" id="corp-yes" checked>
+                            Yes, I agree with making my contact information available and to send me notifications to other individuals who request access.</label>
                     </div>
                     <div class="radio">
-                        <label for="access-no">
-                            <input type="radio" name="consent" value="radio" id="access-no">
-                            No, I do not wish to give access to another person at this time.
+                        <label for="corp-no">
+                            <input type="radio" name="consent" value="radio" id="corp-no">
+                            No, do not make my contact information available or allow others to request access to this account.
                         </label>
 
 
                     </div>
                 </fieldset>
             </div>
-
-
-
             <div class="nav-button">
                 <!--<button class="btn btn-primary" type="submit">Continue</button> -->
                 <a href="accountRegistration-step4.html" class="btn btn-primary">Continue</a>
@@ -212,47 +182,14 @@
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js">
-        < /script <
-        script src = "../../../js/tc/cleave/cleave.min.js" >
-
-    </script>
-    <script src="../../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../../js/tc/intl-tel-input/js/utils.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
-            $("#phone").intlTelInput({
-                initialCountry: "ca",
-                preferredCountries: ["ca", "us"],
-                formatOnInit: true,
-                formatOnDisplay: true,
-                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
-                        return "999-999-9999";
-                    } else {
-                        return selectedCountryPlaceholder;
-                    }
 
-                }
-            });
-
-            $("#phone").on("countrychange", function() {
-                var countryCd = $("#phone").getCountry();
-                console.log('country changed to:' + countryCd);
-            });
-
-            $("#access-no").on("click", function() {
-                $("#cn-alternate-person").fadeOut(300);
-            });
-
-            $("#access-yes").on("click", function() {
-                $("#cn-alternate-person").fadeIn(300);
-            });
 
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

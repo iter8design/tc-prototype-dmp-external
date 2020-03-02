@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Sign up for a business account: step 2 - Drone Management Portal</title>
+    <title>Error - Sign up for a business account: step 2 - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -103,6 +103,32 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 2</h1>
 
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+
+                <li><a href="#address"><i class="fa-li fa fa-angle-right"></i>Please enter the address.</a></li>
+                <li><a href="#city"><i class="fa-li fa fa-angle-right"></i>Please enter the city.</a></li>
+                <li><a href="#province"><i class="fa-li fa fa-angle-right"></i>Please select your province/territory.</a></li>
+                <li><a href="#state"><i class="fa-li fa fa-angle-right"></i>Please select the state.</a></li>
+                <li><a href="#state-prov-region"><i class="fa-li fa fa-angle-right"></i>Please select the state/province/region.</a></li>
+
+                <li><a href="#zip"><i class="fa-li fa fa-angle-right"></i>Please enter the ZIP code.</a></li>
+                <li><a href="#postal"><i class="fa-li fa fa-angle-right"></i>Please enter the postal code.</a></li>
+                <li><a href="#postal-zip"><i class="fa-li fa fa-angle-right"></i>Please enter the postal/ZIP code.</a></li>
+
+                <li><a href="#address"><i class="fa-li fa fa-angle-right"></i>The address entered may not be greater than 250 characters.</a></li>
+                <li><a href="#addressLine2"><i class="fa-li fa fa-angle-right"></i>The <abbr title="Post office">P.O.</abbr> Box, apartment, suite, unit, building, floor or other address information entered may not be greater than 250 characters.</a></li>
+                <li><a href="#city"><i class="fa-li fa fa-angle-right"></i>The city entered may not be greater than 75 characters.</a></li>
+                <li><a href="#postal"><i class="fa-li fa fa-angle-right"></i>The postal code entered must be in the X9X 9X9 format.</a></li>
+                <li><a href="#zip"><i class="fa-li fa fa-angle-right"></i>The ZIP code entered may not be greater than 9 digits.</a></li>
+                <li><a href="#postal-zip"><i class="fa-li fa fa-angle-right"></i>The postal/ZIP code entered may not be greater than 10 characters.</a></li>
+
+
+
+            </ol>
+        </div>
+
         <p>Although we won't be mailing anything to you, we do require your mailing address to put on any certificates that we may issue to you and to verify this business. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
         <form action="welcome.html" method="get">
             <div class="row">
@@ -116,7 +142,7 @@
                                 <label class="control-label" for="address"><span class="mandatory" title="This field is mandatory.">*</span>Address: <span class="wb-inv">(required)</span></label>
 
                                 <div class="form-group">
-                                    <input type="text" id="address" size="100" maxlength="250" class="form-control width50" autocomplete="address-line1" placeholder="Street and number">
+                                    <input type="text" id="address" size="100" maxlength="250" class="form-control width50 fieldError" autocomplete="address-line1" placeholder="Street and number">
                                 </div>
 
 
@@ -125,11 +151,11 @@
                             <div class="form-group">
                                 <label class="control-label" for="addressLine2"><abbr title="Post office">P.O.</abbr> Box, apartment, suite, unit, building, floor, etc. (optional)
                                 </label>
-                                <input type="text" id="addressLine2" size="100" maxlength="250" class="form-control width50" autocomplete="address-line2">
+                                <input type="text" id="addressLine2" size="100" maxlength="250" class="form-control width50 fieldError" autocomplete="address-line2">
                             </div>
                             <div class="form-group">
                                 <label for="country"><span class="mandatory" title="This field is mandatory.">*</span>Country: <span class="wb-inv">(required)</span></label>
-                                <select class="form-control" name="country" id="country" autocomplete="country">
+                                <select class="form-control fieldError" name="country" id="country" autocomplete="country">
                                     <option data-code="AF" value="Afghanistan">Afghanistan</option>
                                     <option data-code="AX" value="Aland Islands">Åland Islands</option>
                                     <option data-code="AL" value="Albania">Albania</option>
@@ -377,7 +403,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="city"><span class="mandatory" title="This field is mandatory.">*</span>City: <span class="wb-inv">(required)</span></label>
-                                <input name="city" type="text" size="25" maxlength="75" id="city" value="" class="form-control address-options" autocomplete="address-level2" />
+                                <input name="city" type="text" size="25" maxlength="75" id="city" value="" class="form-control fieldError" autocomplete="address-level2" />
                             </div>
                             <div id="cn-country-selection">
 
@@ -385,7 +411,7 @@
 
                                 <div class="form-group">
                                     <label for="province"><span class="mandatory" title="This field is mandatory.">*</span>Province/territory: <span class="wb-inv">(required)</span></label>
-                                    <select name="province" id="province" class="form-control" autocomplete="address-level2">
+                                    <select name="province" id="province" class="form-control fieldError" autocomplete="address-level2">
                                         <option selected value="">&lsaquo;&lsaquo;&lsaquo; Select &rsaquo;&rsaquo;&rsaquo;</option>
                                         <option>Alberta</option>
                                         <option>British Columbia</option>
@@ -404,7 +430,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="postal"><span class="mandatory" title="This field is mandatory.">*</span>Postal code (X9X 9X9): <span class="wb-invisible">Format: letter digit letter digit letter digit</span> <span class="wb-inv">(required)</span></label>
-                                    <input name="postal" type="text" id="postal" title="Format: X9X 9X9" value="" size="7" maxlength="7" class="form-control input-postal" autocomplete="postal-code" />
+                                    <input name="postal" type="text" id="postal" title="Format: X9X 9X9" value="" size="7" maxlength="7" class="form-control input-postal fieldError" autocomplete="postal-code" />
                                 </div>
                             </div>
                         </section>
@@ -414,7 +440,7 @@
 
             <div class="nav-button">
                 <!--<button class="btn btn-primary" type="submit">Continue</button> -->
-                <a href="accountRegistration-step2-error.html" class="btn btn-primary">Continue</a>
+                <a href="accountRegistration-step3.html" class="btn btn-primary">Continue</a>
                 <a href="#" class="btn btn-link">Go back</a>
             </div>
         </form>
@@ -557,7 +583,6 @@
             });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

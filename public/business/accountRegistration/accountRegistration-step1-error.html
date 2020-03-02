@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Sign up for a business account: step 1 - Drone Management Portal</title>
+    <title>Error - Sign up for a business account: step 1 - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -102,6 +102,43 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 1</h1>
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+
+                <li><a href="#legal"><i class="fa-li fa fa-angle-right"></i>Please enter the legal name of the business.</a></li>
+
+
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Please enter your business email address.</a></li>
+                <li><a href="#phone"><i class="fa-li fa fa-angle-right"></i>Please enter your business telephone number.</a></li>
+                <li><a href="#title"><i class="fa-li fa fa-angle-right"></i>Please enter your position title.</a></li>
+
+                <li><a href="#legal"><i class="fa-li fa fa-angle-right"></i>The legal name of the business entered may not be greater than 150 characters.</a></li>
+                <li><a href="#operatingName"><i class="fa-li fa fa-angle-right"></i>The operating name of the business entered may not be greater than 150 characters.</a></li>
+
+                <li><a href="#businessNumber"><i class="fa-li fa fa-angle-right"></i>The business number (BN) entered must be 9 digits long (the first 9 digits before the letters RT, RP, or RC). </a></li>
+
+
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The business email address entered is not valid.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The business email address entered may not be greater than 150 characters.</a></li>
+
+                <!--  This will be removed with support for international phone number formats
+                <li><a href="#phone"><i class="fa-li fa fa-angle-right"></i>The business telephone number entered must be in the 999-999-9999 format.</a></li> -->
+
+                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered may not be more than 5 digits long.</a></li>
+                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered must be numeric.</a></li>
+                <li><a href="#title"><i class="fa-li fa fa-angle-right"></i>The position title entered may not be greater than 50 characters.</a></li>
+
+
+
+
+
+
+
+
+
+            </ol>
+        </div>
         <p>A business account is needed in order to register drones for a business. A business account will allow you to:</p>
         <ul>
             <li>manage and view all the drones for your business in one place
@@ -120,24 +157,25 @@
             <h2>About this business</h2>
 
             <div class="form-group">
-                <label for="legalName"><span class="mandatory">*</span> Legal name<span class="wb-inv">(required)</span>: </label>
-                <input name="legalName" id="legalName" type="text" size="50" class="form-control" autocomplete="organization" maxlength="150">
+                <label for="legal"><span class="mandatory">*</span> Legal name<span class="wb-inv">(required)</span>: </label>
+                <input name="legal" id="legal" type="text" size="50" class="form-control fieldError" autocomplete="organization" maxlength="150">
             </div>
 
             <div class="form-group">
                 <label for="operatingName">Operating name (if different than your business legal name): </label>
-                <input name="operatingName" id="operatingName" type="text" size="50" class="form-control" autocomplete="off" maxlength="150">
+                <input name="operatingName" id="operatingName" type="text" size="50" class="form-control fieldError" autocomplete="off" maxlength="150">
             </div>
 
             <div class="form-group">
                 <label for="businessNumber">Business number (BN): </label>
                 <span class="fld-example">This is a nine-digit account number issued by the Canadian government for <abbr title="Goods Sales Tax">GST</abbr>/<abbr title="Harmonized Sales Tax">HST</abbr>, payroll, import/export, and corporate income tax. (<a href="https://www.canada.ca/en/services/taxes/business-number.html" target="_blank" title="This link will open in a new window">More information</a>)</span>
                 <div class="input-group"> <span class="input-group-addon" id="prefix">BN</span>
-                    <input name="businessNumber" id="businessNumber" aria-describedby="prefix" type="text" size="9" class="form-control input-numeric-9" autocomplete="off" maxlength="9" style="width: auto;">
+                    <input name="businessNumber" id="businessNumber" aria-describedby="prefix" type="text" size="9" class="form-control input-numeric-9 fieldError" autocomplete="off" maxlength="9" style="width: auto;">
                 </div>
             </div>
 
-            <!--<div class="form-group">
+            <!--  Still under discussion...
+               <div class="form-group">
                 <fieldset class="mrgn-tp-sm">
                     <legend class="medium">Is this business incorporated under the territorial, provincial, or federal laws of Canada?</legend>
                     <div class="radio">
@@ -162,18 +200,18 @@
 
             <div class="form-group mrgn-tp-md">
                 <label for="email"><span class="mandatory">*</span> Your business email address (username@example.com)<span class="wb-inv">(required)</span>: <span class="fld-example">We'll use this email address to send you notifications and messages about this business account.</span> </label>
-                <input name="email" id="email" type="text" size="50" class="form-control" autocomplete="email" maxlength="150" value="">
+                <input name="email" id="email" type="text" size="50" class="form-control fieldError" autocomplete="email" maxlength="150" value="">
             </div>
             <div class="form-group">
                 <label for="phone"><span class="mandatory">*</span>Your business telephone number <span class="wb-inv"> (required):</span> <span class="fld-example">We'll only contact you by telephone if there's a problem with any of the services you apply for or are using.</span> </label>
                 <div class="form-group form-inline">
-                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel" maxlength="17">
-                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
+                    <input name="phone" id="phone" type="text" size="17" class="form-control input-phone fieldError" autocomplete="tel" maxlength="17">
+                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension fieldError" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
                 </div>
             </div>
             <div class="form-group">
                 <label for="title"><span class="mandatory" title="This field is mandatory">*</span>Your position title:</label>
-                <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control" />
+                <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control fieldError" />
             </div>
 
             <section class="cn-certification">
@@ -189,7 +227,7 @@
 
             <div class="nav-button">
                 <!--<button class="btn btn-primary" type="submit">Continue</button> -->
-                <a href="accountRegistration-step1-error.html" class="btn btn-primary">Continue</a>
+                <a href="accountRegistration-step2.html" class="btn btn-primary">Continue</a>
                 <a href="accountRegistration-alreadyExists.html" class="btn btn-link">Cancel</a>
             </div>
         </form>
@@ -200,7 +238,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2019-10-31
+                        <!-- #BeginDate format:IS1 -->2020-03-02
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -275,10 +313,6 @@
                 numericOnly: true
             });
 
-            /* new Cleave('.input-numeric-4', {
-                blocks: [4],
-                numericOnly: true
-            }); */
 
             new Cleave('.input-numeric-9', {
                 blocks: [9],
@@ -292,23 +326,7 @@
                 });
             });
 
-            /* 
-                $("#cn-business, #cn-business-title, #cn-resideInCanada, #cn-resideInCanada-info").hide();
-                $("#business").on("click", function() {
-                    $("#cn-business, #cn-business-title").fadeIn();
-                });
 
-                $("#individual").on("click", function() {
-                    $("#cn-business, #cn-business-title").fadeOut();
-                });
-
-                $("#notCitizen").on("click", function() {
-                    $("#cn-resideInCanada").fadeIn();
-                });
-
-               $("#resideNo").on("click", function() {
-                    $("#cn-resideInCanada-info").fadeIn();
-                }); */
 
 
         });
