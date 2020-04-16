@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #PRINT ONLY
+\*------------------------------------*/
+
+@media print {
+
+    body {
+        font-size: 95%;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+
+    h1[class^="hd"] {
+        padding-left: 0;
+    }
+
+
+    #wb-bc,
+    #wb-acct,
+    #wb-dtmd,
+    .no-print {
+        display: none;
+    }
+
+    #wb-sttl {
+        font-size: 28px;
+    }
+
+    .table-responsive {
+        overflow: visible;
+    }
+}
