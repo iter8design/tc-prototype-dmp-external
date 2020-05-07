@@ -1,5 +1,8 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -220,7 +223,7 @@
                     <p class="mrgn-tp-md">
                         <label for="comments">If you have any other comments about this flight review, you may provide them below for the candidate.</label>
                     </p>
-                    <textarea name="comments" id="comments" cols="40" rows="3" class="form-control full-width"></textarea>
+                    <textarea name="comments" id="comments" cols="40" rows="5" class="form-control full-width" aria-describedby="charCount"></textarea>
                 </div>
             </div>
             <div class="nav-button">
@@ -248,7 +251,8 @@
         </div>
     </main>
     <footer role="contentinfo" id="wb-info">
-        <div id="transactFooter" class="landscape"></div><div class="brand">
+        <div id="transactFooter" class="landscape"></div>
+        <div class="brand">
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
@@ -288,8 +292,31 @@
                     "flightTestDate": "%Y-%m-%d"
                 }
             });
+            var msgCharacterCountExceeded = "You'll need to shorten your comments as you've reached the character limit";
+            var msgCharactersLeft = " characters left";
+            $("textarea").after("<span id='charCount' class='small' aria-live='polite'>&nbsp;</span>")
+
+            $("textarea").on("keyup focus", function() {
+                var max = 500;
+                var len = $(this).val().length;
+                if (len > max) {
+                    $(this).addClass("fieldError");
+                    $("#charCount").html("<i class='fas fa-exclamation-circle text-red mrgn-rght-sm'></i>" + msgCharacterCountExceeded);
+                } else {
+                    var char = max - len;
+                    $(this).removeClass("fieldError");
+                    $("#charCount").html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + char + " " + msgCharactersLeft);
+                }
+
+            }).on("focusout", function() {
+                var len = $(this).val().length;
+                if (len == 0)
+                    $("#charCount").html("&nbsp;");
+            });
         });
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
