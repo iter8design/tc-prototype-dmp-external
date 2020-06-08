@@ -60,12 +60,12 @@
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
-                        <li><a lang="fr" href="../#>Français</a></li>
+                        <li><a lang="fr" href="#">Français</a></li>
                     </ul>
                 </section>
             </div>
         </div>
-        <div class="app-bar">
+        <div class=" app-bar">
             <div class="container">
                 <div class="row">
                     <section class="col-xs-12 col-sm-7">
@@ -209,120 +209,41 @@
                     <summary>Activity history</summary>
                     <h2 class="wb-inv">Activity history</h2>
 
+
+                </details>
+                <details id="panel-notifications">
+                    <summary>Notifications</summary>
+
                     <section class="panel panel-default mrgn-tp-md">
-                        <table class="table table-bordered table-hover table-condensed small">
-                            <thead>
-                                <tr class="row">
-                                    <th class="col-md-3 text-right text-nowrap" scope="col">Date and time</th>
-                                    <th class="col-md-9" scope="col">Event</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="row">
-                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:44 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                    <td class="col-md-9 col-sm-12 col-xs-8">
-                                        <p>Account information updated</p>
-                                        <details class="pddng-bttm-0">
-                                            <summary class="small">View details</summary>
-                                            <ul class="list-group mrgn-0">
-                                                <li class="list-group-item list-group-item-info">
-                                                    <div class="display-table">
-                                                        <div class="display-table-row">
-                                                            <div class="display-table-cell">
-                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
-                                                            </div>
-                                                            <div class="display-table-row">
-                                                                <ul class="pddng-lft-0">
-                                                                    <li>Date of birth changed from <strong>1990-01-05</strong> to <strong>1990-02-05</strong>
-                                                                    <li>Street name changed from <strong>Oak</strong> to <strong>Elm</strong></li>
-                                                                    <li>Street type changed from <strong>St.</strong> to <strong>Rd.</strong></li>
-                                                </li>
-                                            </ul>
-            </div>
-        </div>
-        </div>
-        </li>
-        </ul>
-        </details>
-        </td>
-        </tr>
+                        <header class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6 text-right">
+                                    <form class="form-inline" role="form" method="get">
+                                        <label for="filter" class="display-inline hidden-xs">Display:</label>
+                                        <div class="input-group">
 
-        <tr class="row">
-            <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:41 <abbr title="Eastern Standard Time">EST</abbr></td>
-            <td class="col-md-9 col-sm-12 col-xs-8">
-                <p>You have been affiliated with {drone flight school operating name}.</p>
-            </td>
-        </tr>
-
-
-        <tr class="row">
-            <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:41 <abbr title="Eastern Standard Time">EST</abbr></td>
-            <td class="col-md-9 col-sm-12 col-xs-8">
-                <p>Account registration completed</p>
-            </td>
-        </tr>
-
-
-
-
-        <tr class="row">
-            <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:40 <abbr title="Eastern Standard Time">EST</abbr></td>
-            <td class="col-md-9 col-sm-12 col-xs-8">
-                <p>Account activated</p>
-            </td>
-        </tr>
-
-        <tr class="row">
-            <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:39 <abbr title="Eastern Standard Time">EST</abbr></td>
-            <td class="col-md-9 col-sm-12 col-xs-8">
-                <p>Account confirmation code sent</p>
-            </td>
-        </tr>
-
-        <tr class="row">
-            <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
-            <td class="col-md-9 col-sm-12 col-xs-8">
-                <p>Account registration started</p>
-            </td>
-        </tr>
-
-        </tbody>
-        </table>
-        </section>
-        </details>
-        <details id="panel-notifications">
-            <summary>Notifications</summary>
-
-            <section class="panel panel-default mrgn-tp-md">
-                <header class="panel-heading">
-                    <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6 text-right">
-                            <form class="form-inline" role="form" method="get">
-                                <label for="filter" class="display-inline hidden-xs">Display:</label>
-                                <div class="input-group">
-
-                                    <select class="form-control" id="filter">
-                                        <option selected="">current notifications</option>
-                                        <option>archived notifications</option>
-                                    </select>
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">Go</button>
-                                    </span> </div>
-                            </form>
+                                            <select class="form-control" id="filter">
+                                                <option selected="">current notifications</option>
+                                                <option>archived notifications</option>
+                                            </select>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go</button>
+                                            </span> </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <p class="mrgn-bttm-0">There are no new notifications at this time.</p>
                         </div>
-                    </div>
-                </header>
-                <div class="panel-body">
-                    <p class="mrgn-bttm-0">There are no new notifications at this time.</p>
-                </div>
-                <footer class="panel-footer text-right">
+                        <footer class="panel-footer text-right">
 
-                </footer>
-            </section>
+                        </footer>
+                    </section>
 
-        </details>
-        </div>
+                </details>
+            </div>
         </div>
         </div>
         <hr>
@@ -348,7 +269,8 @@
             </div>
     </main>
     <footer role="contentinfo" id="wb-info">
-        <div id="transactFooter" class="landscape"></div><div class="brand">
+        <div id="transactFooter" class="landscape"></div>
+        <div class="brand">
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
