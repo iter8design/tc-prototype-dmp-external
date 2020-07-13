@@ -400,7 +400,10 @@ textarea.fieldError,
     border-left: solid 10px #31708f;
     color: #000;
     background-color: #EBF2FA;
+}
 
+main .alert-floating.alert-info .container {
+    width: auto;
 }
 
 .alert-info,
