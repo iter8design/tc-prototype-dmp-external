@@ -114,10 +114,13 @@
                         <h3 class="media-heading mrgn-tp-md mrgn-lft-md large">DJI Phantom 4 Pro</h3>
                         <div class="row">
                             <div class="col-md-4">
+                                <div class="small mrgn-lft-md mrgn-bttm-md"><span id="editable-desc" class="text-wordwrap" data-title="Nickname or brief description:">Flying burry</span><br>
+                                    <a href="#" id="lnk-update-description"><i class="fa fa-pencil mrgn-rght-sm"></i>Update description</a>
+                                </div>
                                 <div class="small mrgn-lft-md mrgn-bttm-md">Rotary wing, 250 grams up to and including 25 kilograms
                                 </div>
 
-                                <div class="small mrgn-lft-md mrgn-bttm-md">Serial #: <br> <span class="editable text-wordwrap" data-title="Serial number:">12345678901234567890123456789012345678901234567890</span><br>
+                                <div class="small mrgn-lft-md mrgn-bttm-md">Serial #: <br> <span id="editable-serial" class=" text-wordwrap" data-title="Serial number:">12345678901234567890123456789012345678901234567890</span><br>
                                     <a href="#" id="lnk-update-serial-num"><i class="fa fa-pencil mrgn-rght-sm"></i>Update serial number</a>
                                 </div>
                                 <div class="mrgn-lft-md">
@@ -227,7 +230,7 @@
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
 
-            $('.editable').editable({
+            $('#editable-serial').editable({
                 showbuttons: true,
                 placement: 'bottom',
                 toggle: 'manual',
@@ -236,12 +239,29 @@
 
             $('#lnk-update-serial-num').on("click", function(e) {
                 e.stopPropagation();
-                $('.editable').editable('toggle');
+                $('#editable-serial').editable('toggle');
                 setTimeout(function() {
                     $("#edit-serial-num").focus();
                 }, 200);
 
             });
+
+            $('#editable-desc').editable({
+                showbuttons: true,
+                placement: 'bottom',
+                toggle: 'manual',
+                tpl: '<input type="text" size="45" id="edit-description">'
+            });
+
+            $('#lnk-update-description').on("click", function(e) {
+                e.stopPropagation();
+                $('#editable-desc').editable('toggle');
+                setTimeout(function() {
+                    $("#edit-description").focus();
+                }, 200);
+
+            });
+
 
             $("#view-pdf").on("click", function(event) {
                 event.preventDefault();

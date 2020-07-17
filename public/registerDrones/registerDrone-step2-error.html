@@ -116,6 +116,7 @@
                 <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>Please select the maximum takeoff weight of the drone.</a></li>
 
                 <li><a href="#serialNumber"><i class="fa-li fa fa-angle-right"></i>The serial number entered may not be greater than 50 characters.</a></li>
+                <li><a href="#nickname"><i class="fa-li fa fa-angle-right"></i>The nickname or description entered may not be greater than 50 characters.</a></li>
                 <li><i class="fa-li fa fa-angle-right"></i>This drone has already been registered with registration number C-9999999999. Please contact us for further information.</li>
                 <li><i class="fa-li fa fa-angle-right"></i>Drones under 250 g do not need to be registered.</li>
 
@@ -204,26 +205,15 @@
                         <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control fieldError input-alpha-50" maxlength="50">
                     </div>
                 </div>
-                <!--<div class="row">
-      <div class="col-md-12">
-        <fieldset>
-          <legend class="label-question">Have you made any modifications to this drone, such that it may no longer conform to the manufacturer's <strong>Safety Assured Flight Envelope (SAFE)</strong> <strong class="required wb-inv">(required)</strong>
-          <span class="fld-example">A <strong>Safety Assured Flight Envelope</strong> is a declaration from the manufacturer about the maximum speeds of the drone, weather conditions in which it can operate, and what operations may be done over people.</span>
-          
-          </legend>
-          <div class="radio">
-            <label for="uaModifications-yes">
-              <input type="radio" name="uaModifications" value="radio" id="uaModifications-yes">
-              Yes</label>
-          </div>
-          <div class="radio">
-            <label for="uaModifications-no">
-              <input type="radio" name="uaModifications" value="radio" id="uaModifications-no">
-              No</label>
-          </div>
-        </fieldset>
-      </div>
-    </div>-->
+                <div class="row">
+                    <div class="col-md-12 mrgn-tp-md">
+                        <p class="label-question">
+                            <label for="nickname">Do you have a nickname or other brief description of this drone?
+                                <span class="fld-example">If you own multiple drones, providing a nickname or description (such as where the drone is kept) may help you identify each one more easily.</span> </label>
+                        </p>
+                        <input name="nickname" id="nickname" type="text" size="50" class="form-control fieldError" maxlength="50">
+                    </div>
+                </div>
             </div>
             <div class="nav-button">
                 <button class="btn btn-primary" type="submit">Continue</button>
@@ -348,7 +338,6 @@
             $("#cn-ua-details-pane").show();
             $('#makeModelList').select2('close');
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
