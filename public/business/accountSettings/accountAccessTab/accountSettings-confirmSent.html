@@ -144,34 +144,58 @@
 
                         <div class="table-responsive">
                             <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[5] },{"searchable" : false, "targets": []}],
+        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[3] },{"searchable" : false, "targets": []}],
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthChange": false}'>
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="width20">Name</th>
-                                        <th scope="col" class="width15 text-nowrap">Position title</th>
-                                        <th scope="col">Access type</th>
-                                        <th scope="col">Date joined <br><abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
-                                        <th scope="col" class="width20">Last login <br> (YYYY-MM-DD HH:MM)</th>
-                                        <th scope="col" class="width10 text-center">Action</th>
+                                        <th scope="col" class="width30">Contact information</th>
+
+                                        <th scope="col" class="width20">Access type</th>
+
+                                        <th scope="col" class="width15">Last login <br> (YYYY-MM-DD HH:MM)</th>
+                                        <th scope="col" class="width20 text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tr>
-                                    <td>Davies, Paul</td>
-                                    <td>Operations Manager</td>
+                                    <td>Davies, Paul<br>
+                                        <span class="position-title">Operations Manager</span> <br>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-747-2447 ext. 5992 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>pdavid@domain.com</a>
+                                    </td>
+
                                     <td>Full</td>
-                                    <td>2018-04-01</td>
-                                    <td>2018-05-04 10:23 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                    <td class="text-center"></td>
+
+                                    <td class="nowrap">2018-05-04 10:23 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="nowrap text-center"><a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
+
+                                        <span data-toggle="popover" title="Unable to remove this person" data-content="This person may not be removed as there must be at least one person will full access at any given time.  Please add another person with full access first."><a href="#" class="btn btn-default btn-sm disabled"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
+                                        </span>
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <td>Hall, Linda</td>
-                                    <td>Office Manager</td>
+                                    <td>Hall, Linda<br>
+                                        <span class="position-title">Office Manager</span> <br>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-989-9028 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>linda@domain.com</a>
+                                    </td>
+
                                     <td>Drone registrations only</td>
-                                    <td>2018-05-08</td>
-                                    <td>Never</td>
-                                    <td class="text-center"><a href="#">Remove</a></td>
+
+                                    <td class="nowrap">Never</td>
+                                    <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Norman, Peter<br>
+                                        <span class="position-title">Engineer</span> <br>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-758-2313 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>peter@domain.com</a>
+                                    </td>
+
+                                    <td>Drone registrations only</td>
+
+                                    <td class="nowrap">Never</td>
+                                    <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
                                 <tbody>
 
