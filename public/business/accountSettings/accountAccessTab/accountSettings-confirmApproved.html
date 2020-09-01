@@ -140,11 +140,22 @@
                     <h2 class="wb-inv">Account access</h2>
                     <p class="mrgn-tp-md">The following people have access to this account:</p>
                     <section class="panel panel-default panel-datatable">
+                        <header class="panel-heading pddng-tp-0">
+                            <div class="row">
 
+                                <div class="col-md-12 text-right text-left-sm text-left-xs">
+                                    <div class="form-inline">
+                                        <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                            <div class="tableFilter"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
                         <div class="table-responsive">
-                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[3] },{"searchable" : false, "targets": []}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthChange": false}'>
+                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='{"info" : false, "filter" : true, "paging": true, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : true, "targets":[0,1,2] },{"searchable" : true, "targets": [0]}],
+
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Find a person...</span>", "searchPlaceholder" : "Find a person...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching people found"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
                                     <tr>
                                         <th scope="col" class="width30">Contact information</th>
@@ -165,7 +176,9 @@
                                     <td>Full</td>
 
                                     <td class="nowrap">2018-05-04 10:23 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                    <td class="nowrap text-center"><a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
+                                    <td class="nowrap text-center"><span data-toggle="popover" title="Unable to edit this person" data-content="The account access for this person may not be changed as there must be at least one person with full access at any given time.">
+                                            <a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm disabled"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
+                                        </span>
 
                                         <span data-toggle="popover" title="Unable to remove this person" data-content="This person may not be removed as there must be at least one person will full access at any given time.  Please add another person with full access first."><a href="#" class="btn btn-default btn-sm disabled"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
                                         </span>
@@ -184,18 +197,32 @@
                                     <td class="nowrap">Never</td>
                                     <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
-                                <tr>
-                                    <td>Norman, Peter<br>
+                                <!--<tr>
+                                    <td>Jenkins, Martin<br>
                                         <span class="position-title">Engineer</span> <br>
-                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-758-2313 <br>
-                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>peter@domain.com</a>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-939-3928 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>martin@domain.com</a>
                                     </td>
 
                                     <td>Drone registrations only</td>
 
                                     <td class="nowrap">Never</td>
                                     <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
+                                </tr> -->
+
+                                <tr>
+                                    <td>Norman, Peter<br>
+                                        <span class="position-title">Engineer</span> <br>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-758-2313 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>peter@domain.com</a>
+                                    </td>
+                                    <td>Drone registrations only</td>
+
+                                    <td class="nowrap">Never</td>
+                                    <td class="text-center nowrap"><a href="#" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
+
+
                                 <tbody>
 
                                 </tbody>
@@ -216,88 +243,7 @@
                 </details>
             </div>
         </div>
-        <section id="dlg_edit" class="mfp-hide modal-dialog modal-content overlay-def">
-            <header class="modal-header">
-                <h2 class="modal-title">Edit account access</h2>
-            </header>
-            <form method="get" action="#" id="frmEditAccountAccess">
-                <div class="modal-body">
 
-                    <section>
-                        <div class="container-fluid">
-                            <p class="separator-bttm pddng-bttm-md">All fields are mandatory.</p>
-
-                            <h3>Paul Davies</h3>
-                            <!--<div class="form-group">
-                                <label for="firstName">First (given) name:</label>
-                                <input name="firstName" type="text" id="firstName" value="Paul" size="35" maxlength="50" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="lastName">Last (family) name:</label>
-                                <input name="lastName" type="text" id="lastName" value="Davies" size="35" maxlength="50" class="form-control" />
-                            </div> -->
-                            <div class="form-group">
-                                <label for="title">Position title:</label>
-                                <input name="title" type="text" id="title" value="Operations Manager" size="35" maxlength="50" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email address (username@example.com):</label>
-                                <input name="mail" type="email" id="email" value="pdavid@domain.com" size="50" maxlength="150" class="form-control" />
-                            </div>
-
-
-                            <div class="form-group ">
-                                <label for="phone">Telephone number:</label>
-                                <div class="form-group form-inline">
-                                    <input name="phone" type="tel" id="phone" value="613-747-2447" size="14" maxlength="17" class="form-control input-phone" />
-                                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext." value="5992">
-                                </div>
-                            </div>
-
-
-                            <!-- Options are disabled if the individual is the last one with full access on the account -->
-                            <div class="form-group">
-                                <fieldset class="mrgn-tp-sm">
-                                    <legend class="medium">Type of access:</legend>
-                                    <div class="radio mrgn-lft-md">
-                                        <label for="individual">
-                                            <input type="radio" name="accessType" value="radio" checked disabled>
-                                            Full
-                                            <span class="fld-example">Full access to the account, including account information and invitations</span>
-                                        </label>
-                                    </div>
-                                    <div class="radio mrgn-lft-md">
-                                        <label for="built">
-                                            <input type="radio" name="accessType" value="radio" disabled>
-                                            Drone registrations only
-                                            <span class="fld-example">May register drones, make changes to drones registrations and deregister drones only.</span>
-                                        </label>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                        </div>
-                    </section>
-                </div>
-                <footer class="modal-footer">
-                    <a href="#" id="btnSave" class="btn btn-primary popup-modal-dismiss pull-left">Save changes</a> <a href="#" id="btnCancel" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
-                </footer>
-            </form>
-        </section>
-
-        <section id="dlg_remove" class="mfp-hide modal-dialog modal-content overlay-def">
-            <header class="modal-header">
-                <h2 class="modal-title">Remove this person?</h2>
-            </header>
-            <div class="modal-body">
-                <p>By removing this person, they will no longer have access to this account.</p>
-            </div>
-            <footer class="modal-footer">
-
-                <a href="#" class="btn btn-primary popup-modal-dismiss pull-left">Confirm removal</a> <a href="#" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
-            </footer>
-        </section>
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
         <div class="row">
@@ -353,9 +299,8 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../js/tc/intl-tel-input/js/utils.js"></script>
-
+    <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
+    <script src="../../../../js/tc/bootstrap/popover.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
             /* Datatable */
@@ -371,7 +316,21 @@
             $(".dataTables_filter label").css({
                 "margin-bottom": "0px"
             });
+
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                trigger: 'click hover',
+                container: 'main',
+                placement: 'bottom'
+            })
+
+
+            $(document).on('keypress', $('input[type="search"]'), function() {
+                $(".wb-tabs").removeClass("wb-eqht wb-eqht-inited");
+                $(".tabpanels").css("min-height", 0);
+            });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

@@ -110,7 +110,7 @@
         <div class="alert alert-success">
             <h2> Invitation sent </h2>
             <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i>An email invitation has been sent to <strong>{First name} {Last name}</strong>.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>An email invitation has been sent to <strong>Martin Jenkins</strong>.</li>
             </ol>
         </div>
         <h2>{Operating name} - {Legal name} (BN999999999)</h2>
@@ -141,11 +141,22 @@
                     <h2 class="wb-inv">Account access</h2>
                     <p class="mrgn-tp-md">The following people have access to this account:</p>
                     <section class="panel panel-default panel-datatable">
+                        <header class="panel-heading pddng-tp-0">
+                            <div class="row">
 
+                                <div class="col-md-12 text-right text-left-sm text-left-xs">
+                                    <div class="form-inline">
+                                        <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                            <div class="tableFilter"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
                         <div class="table-responsive">
-                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[3] },{"searchable" : false, "targets": []}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthChange": false}'>
+                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='{"info" : false, "filter" : true, "paging": true, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : true, "targets":[0,1,2] },{"searchable" : true, "targets": [0]}],
+
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Find a person...</span>", "searchPlaceholder" : "Find a person...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching people found"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
                                     <tr>
                                         <th scope="col" class="width30">Contact information</th>
@@ -166,8 +177,9 @@
                                     <td>Full</td>
 
                                     <td class="nowrap">2018-05-04 10:23 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                    <td class="nowrap text-center"><a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
-
+                                    <td class="nowrap text-center"><span data-toggle="popover" title="Unable to edit this person" data-content="The account access for this person may not be changed as there must be at least one person with full access at any given time.">
+                                            <a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm disabled"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
+                                        </span>
                                         <span data-toggle="popover" title="Unable to remove this person" data-content="This person may not be removed as there must be at least one person will full access at any given time.  Please add another person with full access first."><a href="#" class="btn btn-default btn-sm disabled"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
                                         </span>
                                     </td>
@@ -186,17 +198,32 @@
                                     <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Norman, Peter<br>
+                                    <td>Jenkins, Martin<br>
                                         <span class="position-title">Engineer</span> <br>
-                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-758-2313 <br>
-                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>peter@domain.com</a>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-939-3928 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>martin@domain.com</a>
                                     </td>
 
                                     <td>Drone registrations only</td>
 
                                     <td class="nowrap">Never</td>
-                                    <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
+                                    <td class="text-center nowrap"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#" class="btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
+
+                                <tr>
+                                    <td>Norman, Peter<br>
+                                        <span class="position-title">Engineer</span> <br>
+                                        <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-758-2313 <br>
+                                        <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>peter@domain.com</a>
+                                    </td>
+                                    <td>Drone registrations only</td>
+
+                                    <td class="nowrap"><i class="fas fa-exclamation-circle text-yellow"></i> Pending approval</td>
+                                    <td class="text-center nowrap">
+                                        <a href="accountSettings-confirmApproved.html" class="wb-lbx btn btn-success btn-sm"><i class="fas fa-user-check mrgn-rght-sm"></i>Approve</a> <a href="accountSettings-confirmDenied.html" class="wb-lbx btn btn-danger btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Deny</a></td>
+                                </tr>
+
+
                                 <tbody>
 
                                 </tbody>
@@ -244,14 +271,7 @@
         <div class="brand">
             <div class="container">
                 <div class="row">
-                    <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
-                    </nav>
+
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
                         <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
@@ -272,8 +292,8 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../js/tc/intl-tel-input/js/utils.js"></script>
+    <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
+    <script src="../../../../js/tc/bootstrap/popover.js"></script>
 
     <script>
         $(document).on("wb-ready.wb", function(event) {
@@ -290,7 +310,21 @@
             $(".dataTables_filter label").css({
                 "margin-bottom": "0px"
             });
+
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                trigger: 'click hover',
+                container: 'main',
+                placement: 'bottom'
+            })
+
+
+            $(document).on('keypress', $('input[type="search"]'), function() {
+                $(".wb-tabs").removeClass("wb-eqht wb-eqht-inited");
+                $(".tabpanels").css("min-height", 0);
+            });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

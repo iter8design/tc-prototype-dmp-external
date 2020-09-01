@@ -106,6 +106,13 @@
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa fa-user"></i> Account settings</h1>
+
+        <div class="alert alert-success">
+            <h2> Success </h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i>Account access for <strong>Linda Hall</strong> has been successfully saved.</li>
+            </ol>
+        </div>
         <h2>{Operating name} - {Legal name} (BN999999999)</h2>
         <div class="wb-tabs">
             <div class="tabpanels">
@@ -133,7 +140,6 @@
                     <summary>Account access </summary>
                     <h2 class="wb-inv">Account access</h2>
                     <p class="mrgn-tp-md">The following people have access to this account:</p>
-
                     <section class="panel panel-default panel-datatable">
                         <header class="panel-heading pddng-tp-0">
                             <div class="row">
@@ -171,9 +177,8 @@
                                     <td>Full</td>
 
                                     <td class="nowrap">2018-05-04 10:23 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                    <td class="nowrap text-center">
-                                        <span data-toggle="popover" title="Unable to edit this person" data-content="The account access for this person may not be changed as there must be at least one person with full access at any given time.">
-                                        <a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm disabled"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
+                                    <td class="nowrap text-center"><span data-toggle="popover" title="Unable to edit this person" data-content="The account access for this person may not be changed as there must be at least one person with full access at any given time.">
+                                            <a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm disabled"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a>
                                         </span>
 
                                         <span data-toggle="popover" title="Unable to remove this person" data-content="This person may not be removed as there must be at least one person will full access at any given time.  Please add another person with full access first."><a href="#" class="btn btn-default btn-sm disabled"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
@@ -188,12 +193,12 @@
                                         <a href="mailto:"><i class="fas fa-envelope mrgn-rght-sm"></i>linda@domain.com</a>
                                     </td>
 
-                                    <td>Drone registrations only</td>
+                                    <td>Full</td>
 
                                     <td class="nowrap">Never</td>
-                                    <td class="text-center nowrap"><a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
+                                    <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
-                                <!--<tr>
+                                <tr>
                                     <td>Jenkins, Martin<br>
                                         <span class="position-title">Engineer</span> <br>
                                         <i class="fas fa-phone-alt mrgn-rght-sm"></i>613-939-3928 <br>
@@ -204,7 +209,7 @@
 
                                     <td class="nowrap">Never</td>
                                     <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
-                                </tr> -->
+                                </tr>
 
                                 <tr>
                                     <td>Norman, Peter<br>
@@ -216,7 +221,7 @@
 
                                     <td class="nowrap"><i class="fas fa-exclamation-circle text-yellow"></i> Pending approval</td>
                                     <td class="text-center nowrap">
-                                        <a href="accountSettings-confirmApproved.html#panel-accountAccess" class="btn btn-success btn-sm"><i class="fas fa-user-check mrgn-rght-sm"></i>Approve</a> <a href="accountSettings-confirmDenied.html#panel-accountAccess" class="btn btn-danger btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Deny</a></td>
+                                        <a href="accountSettings-confirmApproved.html" class="wb-lbx btn btn-success btn-sm"><i class="fas fa-user-check mrgn-rght-sm"></i>Approve</a> <a href="accountSettings-confirmDenied.html" class="wb-lbx btn btn-danger btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Deny</a></td>
                                 </tr>
 
 
@@ -236,48 +241,10 @@
                             </div>
                         </footer>
                     </section>
+
                 </details>
             </div>
         </div>
-        <section id="dlg_edit" class="mfp-hide modal-dialog modal-content overlay-def">
-            <header class="modal-header">
-                <h2 class="modal-title">Edit account access for Linda Hall</h2>
-            </header>
-            <form method="get" action="accountSettings-confirmSaved.html" id="frmEditAccountAccess">
-                <div class="modal-body">
-
-                    <section>
-                        <div class="container-fluid">
-
-                            <div class="form-group">
-                                <fieldset class="mrgn-tp-sm">
-                                    <legend class="medium">Type of access:</legend>
-                                    <div class="radio mrgn-lft-md">
-                                        <label for="individual">
-                                            <input type="radio" name="accessType" value="radio" checked>
-                                            Full
-                                            <span class="fld-example">Full access to the account, including account information and invitations</span>
-                                        </label>
-                                    </div>
-                                    <div class="radio mrgn-lft-md">
-                                        <label for="built">
-                                            <input type="radio" name="accessType" value="radio">
-                                            Drone registrations only
-                                            <span class="fld-example">May register drones, make changes to drones registrations and deregister drones only.</span>
-                                        </label>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                        </div>
-                    </section>
-                </div>
-                <footer class="modal-footer">
-                    <a href="accountSettings-confirmSaved.html#panel-accountAccess" id="btnSave" class="btn btn-primary pull-left">Save changes</a> <a href="#" id="btnCancel" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
-                </footer>
-            </form>
-        </section>
-
         <section id="dlg_remove" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">Remove Linda Hall?</h2>
@@ -317,14 +284,7 @@
         <div class="brand">
             <div class="container">
                 <div class="row">
-                    <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
-                    </nav>
+
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
                         <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
@@ -345,8 +305,9 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-     <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
+    <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
     <script src="../../../../js/tc/bootstrap/popover.js"></script>
+
     <script>
         $(document).on("wb-ready.wb", function(event) {
             /* Datatable */

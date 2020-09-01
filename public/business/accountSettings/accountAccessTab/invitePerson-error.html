@@ -10,20 +10,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Invite a person - Drone Management Portal</title>
+    <title>Error: Invite a person - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../css/utils.css">
-    <link rel="stylesheet" href="../../../css/plugins.css">
+    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -105,39 +105,52 @@
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-envelope"></i> Invite a person</h1>
-        <form name="" method="get" action="invitePerson-error.html">
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#firstName"><i class="fa-li fa fa-angle-right"></i>Please enter the first (given) name.</a></li>
+                <li><a href="#lastName"><i class="fa-li fa fa-angle-right"></i>Please enter the last (family) name.</a></li>
+                <li><a href="#firstName"><i class="fa-li fa fa-angle-right"></i>The first (given) name entered may not be greater than 50 characters.</a></li>
+                <li><a href="#lastName"><i class="fa-li fa fa-angle-right"></i>The last (family) name entered may not be greater than 50 characters.</a></li>
+                <li><a href="#title"><i class="fa-li fa fa-angle-right"></i>Please enter the position title.</a></li>
+                <li><a href="#title"><i class="fa-li fa fa-angle-right"></i>The position title entered may not be greater than 50 characters.</a></li>
+                <li><a href="#phone"><i class="fa-li fa fa-angle-right"></i>Please enter the telephone number.</a></li>
+                <li><a href="#phone"><i class="fa-li fa fa-angle-right"></i>The telephone number entered must be in the 999-999-9999 format.</a></li>
+                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered must be numeric.</a></li>
+                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered may not be more than 8 digits long.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>Please enter the email address.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered is not valid.</a></li>
+                <li><a href="#email"><i class="fa-li fa fa-angle-right"></i>The email address entered may not be greater than 150 characters.</a></li>
+            </ol>
+        </div>
+        <form name="" method="get" action="accountSettings-confirmSent.html#panel-accountAccess">
             <p>We will send an e-mail to the following person to provide them access to your account:</p>
             <div class="form-group">
-                <label for="firstName"><span class="mandatory">*</span>First (given) name: <span class="wb-inv"> (required)</span></label>
-                <input name="firstName" type="text" id="firstName" value="" size="35" maxlength="50" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label for="lastName"><span class="mandatory">*</span>Last (family) name: <span class="wb-inv"> (required)</span></label>
-                <input name="lastName" type="text" id="lastName" value="" size="35" maxlength="50" class="form-control" />
+                <label for="firstName"><span class="mandatory">*</span>First (given) name:</label>
+                <input name="firstName" type="text" id="firstName" value="" size="35" maxlength="50" class="form-control fieldError" />
             </div>
             <div class="form-group">
-                <label for="title"><span class="mandatory">*</span>Position title: <span class="wb-inv"> (required)</span></label>
-                <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control" />
+                <label for="lastName"><span class="mandatory">*</span>Last (family) name:</label>
+                <input name="lastName" type="text" id="lastName" value="" size="35" maxlength="50" class="form-control fieldError" />
+            </div>
+            <div class="form-group">
+                <label for="title"><span class="mandatory">*</span>Position title:</label>
+                <input name="title" type="text" id="title" value="" size="35" maxlength="50" class="form-control fieldError" />
             </div>
             <div class="form-group ">
                 <label for="phone"><span class="mandatory">*</span>Telephone number (999-999-9999)<span class="wb-inv"> (required)</span> :</label>
                 <div class="form-group form-inline">
-                    <input name="phone" type="tel" id="phone" value="" size="17" maxlength="17" class="form-control input-phone" autocomplete="tel" />
-                    <input name="phone_extension" id="phone_ext" type="text" size="5" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="5" title="Telephone number extension" placeholder="Ext.">
+                    <input name="phone" type="tel" id="phone" value="" size="17" maxlength="17" class="form-control input-phone fieldError" autocomplete="tel" />
+                    <input name="phone_extension" id="phone_ext" type="text" size="5" class="form-control input-phone-extension fieldError" autocomplete="tel-extension" maxlength="5" title="Telephone number extension" placeholder="Ext.">
                 </div>
             </div>
             <div class="form-group">
-                <label for="email"><span class="mandatory">*</span>Email address (username@example.com): <span class="wb-inv"> (required)</span></label>
-                <input name="mail" type="email" id="email" value="" size="50" maxlength="150" class="form-control" />
+                <label for="email"><span class="mandatory">*</span>Email address (username@example.com):</label>
+                <input name="mail" type="email" id="email" value="" size="50" maxlength="150" class="form-control fieldError" />
             </div>
-
-
-
-
             <div class="form-group">
                 <fieldset class="mrgn-tp-sm">
-                    <legend class="medium"><span class="mandatory" title="This field is mandatory">*</span> Type of access:</legend>
+                    <legend class="medium"><span class="mandatory">*</span> Type of access:</legend>
                     <div class="radio mrgn-lft-md">
                         <label for="individual">
                             <input type="radio" name="accessType" value="radio" checked>
@@ -195,7 +208,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -203,16 +216,16 @@
         </div>
     </footer>
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../../../js/tc/cleave/cleave.min.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
@@ -233,6 +246,7 @@
             }
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
