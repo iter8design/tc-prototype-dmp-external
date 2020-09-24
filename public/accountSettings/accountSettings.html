@@ -557,85 +557,7 @@
                         <summary>Activity history</summary>
                         <h2 class="wb-inv">Activity history</h2>
 
-                        <section class="panel panel-default mrgn-tp-md">
-                            <table class="table table-bordered table-hover table-condensed small">
-                                <thead>
-                                    <tr class="row">
-                                        <th class="col-md-3 text-right text-nowrap" scope="col">Date and time</th>
-                                        <th class="col-md-9" scope="col">Event</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:44 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>Account information updated</p>
-                                            <details class="pddng-bttm-0">
-                                                <summary class="small">View details</summary>
-                                                <ul class="list-group mrgn-0">
-                                                    <li class="list-group-item list-group-item-info">
-                                                        <div class="display-table">
-                                                            <div class="display-table-row">
-                                                                <div class="display-table-cell">
-                                                                    <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
-                                                                </div>
-                                                                <div class="display-table-row">
-                                                                    <ul class="pddng-lft-0">
-                                                                        <li>Date of birth changed from <strong>1990-01-05</strong> to <strong>1990-02-05</strong>
-                                                                        <li>Address changed from <strong>123 Oak St.</strong> to <strong>666 Elm Avenue</strong></li>
 
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </details>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:41 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>You have been affiliated with {drone flight school operating name}.</p>
-                                        </td>
-                                    </tr>
-
-
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:41 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>Account registration completed</p>
-                                        </td>
-                                    </tr>
-
-
-
-
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:40 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>Account activated</p>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:39 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>Account confirmation code sent</p>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="row">
-                                        <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="col-md-9 col-sm-12 col-xs-8">
-                                            <p>Account registration started</p>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </section>
                     </details>
                     <details id="panel-notifications">
                         <summary>Notifications</summary>
@@ -672,11 +594,11 @@
                 <h2 class="modal-title">Please wait a few moments...</h2>
             </header>
             <div class="modal-body">
-                <p>We're in the process of updating any certificates that may have been issued to you with your updated contact information. Please do not refresh or close your browser window.</p>
+                <p>We're in the process of updating any certificates that may have been issued to you with your updated contact information. Please be patient and do not refresh your browser window.</p>
             </div>
             <footer class="modal-footer" style="display:none">
 
-                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">I'll do this later</a> </footer>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">Dismiss</a> </footer>
 
         </section>
     </main>
@@ -718,9 +640,19 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+            $("#btnSave").on("click", function() {
+
+                $(document).trigger("open.wb-lbx", [{
+                    src: "#dlg_updateCADs",
+                    type: "inline"
+                }]);
+
+            });
+
             $("#frmAccountDetails").on("submit", function(event) {
                 event.preventDefault();
                 $("#btnSave").prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>Please wait a moment...</span>").attr('disabled', true);
+
             });
 
             $("#country").on("change", function() {
@@ -804,7 +736,6 @@
             });
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
