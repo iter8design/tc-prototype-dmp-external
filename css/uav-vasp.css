@@ -275,6 +275,10 @@ textarea.fieldError,
     vertical-align: top;
 }
 
+#cn-notifications {
+    margin-bottom: 0px;
+}
+
 #examTimer {
     color: #000;
     background-color: #d9edf7;
