@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Sign up for a business account: step 3 - Drone Management Portal</title>
+    <title>Error: Sign up for a business account: step 2 - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -42,7 +42,6 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" href="../../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -92,7 +91,7 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Account settings: John Doe</a></li>
-                        <li>Sign up for a business account: step 3</li>
+                        <li>Sign up for a business account: step 2</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -101,27 +100,52 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 3</h1>
+        <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 2</h1>
 
-        <div class="alert alert-success">
-            <h2>Access request sent </h2>
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
             <ol class="fa-ul">
-                <li>A request to access the business account for <strong>{Legal name}, operating as {Operating name} (BN999999999)</strong> has been sent to:
-                    <ul>
-                        <li>{First name} {Last name} ({Position title})</li>
-                        <li>{First name} {Last name} ({Position title})</li>
-                        <li>{First name} {Last name} ({Position title})</li>
-                    </ul>
-                </li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>Please select either an individual to request access from or to continue with a new account.</li>
             </ol>
         </div>
 
-        <p>If accepted, you will be receive an email notification with instructions on how to access the business account.</p>
+        <h2>Account may already exist</h2>
+        <p>This business may already have an account with us based on the information provided.</p>
+
+        <form action="../welcome-business.html" method="get">
+            <fieldset class="mrgn-tp-sm mrgn-bttm-lg">
+                <legend class="medium">Do you know any of the following people?
+                    <span class="fld-example">The selected individuals will be notified to request access to the business's existing account.</span>
+                </legend>
+                <div class="radio">
+                    <label for="p1">
+                        <input type="checkbox" name="accountHolders" value="" id="p1">
+                        Doe, Jane (<em>Director</em>)</label></div>
+                <div class="radio">
+                    <label for="p2">
+                        <input type="checkbox" name="accountHolders" value="" id="p2">
+                        Doe, John (<em>Director</em>)</label></div>
+                <div class="radio">
+                    <label for="p3">
+                        <input type="checkbox" name="accountHolders" value="" id="p3">
+                        Smith, Roger (<em>Chief Drone Officer</em>)</label></div>
+
+                <div class="radio mrgn-lft-md"><strong>OR</strong></div>
+                <div class="radio">
+                    <label for="none">
+                        <input type="checkbox" name="accountHolders" value="" id="none">
+                        I don't know any of these people or wish to sign up for a separate account at this time.</label></div>
+
+            </fieldset>
 
 
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a>
-
-
+            <div class="nav-button">
+                <!--<button class="btn btn-primary" type="submit">Continue</button>-->
+                <a href="accountRegistration-invitationSent.html" class="btn btn-primary">Continue</a>
+                <a href="#" class="btn btn-link">Go back</a>
+            </div>
+        </form>
 
         <!-- InstanceEndEditable -->
         <div class="pagedetails">
@@ -172,7 +196,12 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-
+            $("#none").on("click", function() {
+                $("[id^=p").prop("checked", false);
+            })
+            $("[id^=p").on("click", function() {
+                $("#none").prop("checked", false);
+            });
 
         });
     </script>

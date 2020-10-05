@@ -26,11 +26,11 @@
     <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
-		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
-		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
-		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.min.css" />
+		<script src="../../../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
 		
@@ -42,7 +42,6 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" href="../../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -112,7 +111,7 @@
                     <span class="fld-example">The selected individuals will be notified to request access to the business's existing account.</span>
                 </legend>
                 <div class="radio">
-                    <label for="interested">
+                    <label for="p1">
                         <input type="checkbox" name="accountHolders" value="" id="p1">
                         Doe, Jane (<em>Director</em>)</label></div>
                 <div class="radio">
@@ -163,13 +162,13 @@
                         <h2 class="wb-inv">About this Web application</h2>
                         <ul>
                             <li><a href="#">Contact information</a></li>
-                            <li><a href="https://www.canada.../../../transparency/terms.html">Terms and conditions</a></li>
+                            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
                             <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
                         </ul>
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -177,21 +176,30 @@
         </div>
     </footer>
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-
+            $("#none").on("click", function() {
+                $("[id^=p").prop("checked", false);
+            })
+            $("[id^=p").on("click", function() {
+                $("#none").prop("checked", false);
+            });
 
         });
+    </script>
+
+
+    });
     </script>
     <!-- InstanceEndEditable -->
 </body>
