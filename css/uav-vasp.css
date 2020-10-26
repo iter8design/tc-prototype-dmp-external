@@ -13,7 +13,6 @@ a:visited {
     color: #284162;
 }
 
-
 details summary {
     border: none;
     padding-left: 0px;
@@ -24,8 +23,16 @@ details[open] > summary {
     border: none;
 }
 
+
 fieldset {
     border-top: none;
+}
+
+/*  fix for the issue that textboxes in fieldset are not responsive on Firefox */
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
 }
 
 header .btn-primary {
@@ -64,6 +71,20 @@ label {
 .alert-info .fa-ul {
     margin-left: 1.6em;
     margin-bottom: 0;
+}
+
+.alert-info,
+.label-info,
+.label-info[href]:active,
+.label-info[href]:focus,
+.label-info[href]:hover,
+details.alert.alert-info,
+details.alert[open].alert-info {
+    background-color: #dbedfe;
+}
+
+.datemod {
+    padding-left: 0px;
 }
 
 .equal {
@@ -126,7 +147,6 @@ textarea.fieldError,
 }
 
 /* Mandatory asterisks */
-
 .mandatory,
 .mandatory-instructions {
     position: relative;
@@ -208,10 +228,7 @@ textarea.fieldError,
     position: relative;
 }
 
-
-
 /* UAVIMS specific */
-
 #acct-switch {
     position: absolute;
     top: -54px;
@@ -253,7 +270,6 @@ textarea.fieldError,
 #cn-accnt .account-number {
     font-size: 14px;
     font-weight: 700;
-
 }
 
 #cn-loggedIn {
@@ -270,7 +286,6 @@ textarea.fieldError,
     word-wrap: break-word;
     word-break: break-all;
     white-space: normal;
-    display: inline-block;
     width: 100%;
     vertical-align: top;
 }
@@ -290,7 +305,6 @@ textarea.fieldError,
     -webkit-box-shadow: 3px 3px 5px #888;
     -moz-box-shadow: 3px 3px 5px #888;
     box-shadow: 3px 3px 5px #888;
-
 }
 
 #examTimer i {
@@ -318,9 +332,6 @@ textarea.fieldError,
     animation: showhidespin 4s linear infinite;
 }
 
-#feedbackForm {
-    display: none;
-}
 
 #overlay {
     background: rgba(0, 0, 0, 0.3);
@@ -357,7 +368,8 @@ textarea.fieldError,
     margin-bottom: 0;
 }
 
-.alert-danger .fa {
+.alert-danger .fa,
+.field-validation-error {
     color: #d3080c;
 }
 
@@ -451,7 +463,6 @@ details.alert[open].alert-info {
 .cn-certification {
     background-color: #ffffcc;
     padding: 10px;
-
     margin-bottom: 1em;
     box-shadow: 3px 3px 5px #888;
     border: 1px solid #ffcc33;
@@ -478,7 +489,6 @@ details.alert[open].alert-info {
     margin-bottom: 1em;
     padding: 10px;
     width: 100%;
-
 }
 
 .toc_title {
@@ -571,6 +581,11 @@ h3.hd-section {
     background-color: #EBF2FA;
     padding: 10px 15px;
     margin: 20px 0;
+}
+
+.input-validation-error {
+    border: 1px solid #a94442;
+    background-color: #f3e9e8;
 }
 
 .info h3 {
@@ -676,7 +691,6 @@ h3.hd-section {
     opacity: 0.7;
 }
 
-
 .panel-disabled h4,
 .panel-disabled .panel-body {
     color: #666;
@@ -705,7 +719,6 @@ h3.hd-section {
     opacity: 0.85;
     color: #000;
     border-radius: 5px;
-
 }
 
 .panel-disabled .panel-body .panel-body-warning p,
@@ -753,7 +766,7 @@ h3.hd-section {
 .pill-green,
 .pill-red,
 .pill-yellow,
-.pill-white {
+pill-white {
     padding: 9px;
     border-radius: 9px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .05);
@@ -790,7 +803,6 @@ h3.hd-section {
     text-transform: uppercase;
     font-size: 80%;
     color: #666;
-
 }
 
 .radio .info {
@@ -804,7 +816,6 @@ h3.hd-section {
 
 .shadow-pulse {
     animation: shadow-pulse 1s infinite;
-
 }
 
 .thumbnail {
@@ -819,19 +830,15 @@ h3.hd-section {
 /*------------------------------------*\
     #MOBILE - Small view and under (<991px)
 \*------------------------------------*/
-
 @media screen and (max-width: 991px) {
     h1 > i {
         display: none !important;
     }
-
-
 }
 
 /*------------------------------------*\
     #MOBILE - Extra small view only (<768px)
 \*------------------------------------*/
-
 @media (max-width: 768px) and (min-width: 0px) {
     h1 > i {
         display: none !important;
@@ -841,8 +848,6 @@ h3.hd-section {
 /*------------------------------------*\
     Animations
 \*------------------------------------*/
-
-
 @keyframes shadow-pulse {
     0% {
         box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
@@ -881,5 +886,13 @@ h3.hd-section {
     100% {
         opacity: 0;
         transform: rotate(180deg);
+    }
+}
+
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    * {
+        word-wrap: break-word;
     }
 }
