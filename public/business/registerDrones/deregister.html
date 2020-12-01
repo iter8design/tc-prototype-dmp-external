@@ -104,7 +104,13 @@
             <a href="#dlg-switchAccount" class="lbx-modal wb-lbx"><i class="fa fa-user-circle mrgn-rght-sm"></i>Switch accounts</a>
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-unlink"></i> Deregister</h1>
+        <h1 property="name" id="wb-cont">
+
+            <span class="hd-pre">{Operating name} - {Legal name} (BN999999999)</span>
+            <span class="hd-icon"><i class="fas fa-unlink"></i></span>
+            <span class="hd-title">Deregister</span>
+        </h1>
+
         <form action="deregister-error.html" method="get">
             <p>The following <strong>2</strong> drones will be deregistered:</p>
             <ul>
@@ -204,7 +210,6 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

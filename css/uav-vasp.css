@@ -562,13 +562,22 @@ legend.label-question {
 .hd-pre {
     font-size: 14px;
     text-transform: uppercase;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
     color: #666;
-}
-
-.hd-pre:after {
     display: block;
 }
+
+.hd-icon {
+    display: inline-block;
+}
+
+.hd-title {
+    display: inline-block;
+}
+
+/*.hd-pre:after {
+    display: block;
+} */
 
 h3.hd-section {
     font-size: 20px;

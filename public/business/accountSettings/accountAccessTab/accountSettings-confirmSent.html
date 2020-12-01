@@ -105,7 +105,10 @@
             <a href="#dlg-switchAccount" class="lbx-modal wb-lbx"><i class="fa fa-user-circle mrgn-rght-sm"></i>Switch accounts</a>
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fa fa-user"></i> Account settings</h1>
+        <h1 property="name" id="wb-cont">
+            <span class="hd-pre">{Operating name} - {Legal name} (BN999999999)</span>
+            <span class="hd-icon"><i class="fa fa-cog"></i></span>
+            <span class="hd-title">Account settings</span></h1>
 
         <div class="alert alert-success">
             <h2> Invitation sent </h2>
@@ -113,7 +116,7 @@
                 <li><i class="fa-li fa fa-angle-right"></i>An email invitation has been sent to <strong>Martin Jenkins</strong>.</li>
             </ol>
         </div>
-        <h2>{Operating name} - {Legal name} (BN999999999)</h2>
+
         <div class="wb-tabs">
             <div class="tabpanels">
                 <details id="panel-accountDetails" open>
@@ -328,6 +331,7 @@
                 $(".tabpanels").css("min-height", 0);
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

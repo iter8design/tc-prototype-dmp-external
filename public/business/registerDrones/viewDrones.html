@@ -107,7 +107,15 @@
             <a href="#dlg-switchAccount" class="lbx-modal wb-lbx"><i class="fa fa-user-circle mrgn-rght-sm"></i>Switch accounts</a>
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-drone"></i> View drones</h1>
+
+        <h1 property="name" id="wb-cont">
+
+            <span class="hd-pre">{Operating name} - {Legal name} (BN999999999)</span>
+            <span class="hd-icon"><i class="fas fa-drone"></i></span>
+            <span class="hd-title">View drones</span>
+        </h1>
+
+
         <form action="viewDrones-error.html" method="get">
             <div class="wb-tabs">
                 <div class="tabpanels">
@@ -172,7 +180,7 @@
                                         <!-- Only displayed if 1+ drones are registered -->
                                         <!-- Denoted as a link for prototype purposes only 
                                         <button class="btn btn-primary mrgn-tp-md" type="submit">Deregister</button>-->
-                                        <a href="deregister.html" class="btn btn-primary mrgn-tp-md" type="submit">Deregister</a>
+                                        <a href="deregister.html" class="btn btn-primary mrgn-tp-md">Deregister</a>
 
                                     </div>
                                     <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
