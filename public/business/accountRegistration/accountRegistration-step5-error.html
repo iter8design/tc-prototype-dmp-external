@@ -103,6 +103,15 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 5</h1>
 
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+
+                <li><i class="fa-li fa fa-angle-right"></i>Please select at least one drone to transfer or indicate that you do not wish to transfer any drones at this time.</li>
+            </ol>
+        </div>
+
+
         <h2>Transfer drones</h2>
 
         <p>Drones registered to your personal account may be transferred to your business account at no cost. The certificates of registration for the selected drones will be updated for you with your business account information.</p>
@@ -274,12 +283,13 @@
                     $(this).prop("checked", false);
                     fnHighlightSelectedRow($(this));
                 });
-            });
 
+
+            });
 
             $("#transfer-yes").on("click", function() {
                 $("#cn-list-drones").fadeIn(300);
-                console.log('show');
+
             });
 
 
