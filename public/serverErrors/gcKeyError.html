@@ -16,8 +16,8 @@
     <!-- Meta data-->
     <!-- Load closure template scripts -->
 
-    <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/soyutils.js"></script>
-    <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/wet-en.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/soyutils.js"></script>
+    <script src="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_32/cdts/compiled/wet-en.js"></script>
     <noscript>
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverRefTop.html -->
@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_32/css/noscript.min.css" />
     </noscript>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         document.write(wet.builder.serverRefTop({
             cdnEnv: "prod"
         }));
@@ -44,11 +44,11 @@
     <div id="def-top">
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverTop.html -->
-        <header role="banner">
+        <header>
             <div id="wb-bnr" class="container">
                 <div class="row">
                     <div class="brand col-xs-8 col-sm-9 col-md-6"> <a href="https://canada.ca">
-                            <object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg">
+                            <object type="image/svg+xml" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg">
                             </object>
                             <span class="wb-inv"> Government of Canada / Gouvernement du Canada</span></a> </div>
                 </div>
@@ -56,13 +56,13 @@
         </header>
     </div>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         var defTop = document.getElementById("def-top");
         defTop.outerHTML = wet.builder.serverTop({
             cdnEnv: "prod"
         });
     </script>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Body" -->
         <h1 class="wb-inv" id="wb-cont">GCKey services unavailable / <span lang="fr">Erreur des services d'authentification</span></h1>
         <div class="row mrgn-tp-lg mrgn-bttm-lg">
@@ -102,7 +102,7 @@
     <div id="def-footer">
         <!-- Write closure fall-back static file -->
         <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_32/cdts/static/serverBottom.html -->
-        <footer role="contentinfo" id="wb-info">
+        <footer id="wb-info">
             <div id="transactFooter" class="landscape"></div>
             <div class="brand">
                 <div class="container">
@@ -118,17 +118,19 @@
         </footer>
     </div>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         var defFooter = document.getElementById("def-footer");
         defFooter.outerHTML = wet.builder.serverBottom({
             cdnEnv: "prod"
         });
+
     </script>
     <!-- Write closure template -->
-    <script type="text/javascript">
+    <script>
         document.write(wet.builder.refFooter({
             cdnEnv: "prod"
         }));
+
     </script>
 </body>
 
