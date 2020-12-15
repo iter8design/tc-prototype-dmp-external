@@ -51,19 +51,7 @@
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
     <header role="banner">
-        <div class="alert-floating alert alert-info alert-dismissible fade in" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="container">
 
-                <h2>Using drones for a business?</h2>
-
-                <p>Sign up for a business account to register and manage your drones in one place from your <a href="accountSettings/accountSettings-noticeBusinessAccount.html">account settings</a>.</p>
-                <a href="#" class="btn btn-primary btn btn-default pull-left mrgn-rght-md" id="btnClose" data-dismiss="alert">Got it - thanks!</a>
-                <a href="business/accountRegistration/accountRegistration-step1.html" class="btn btn-default btn btn-default pull-left">Sign up for a business account </a>
-
-
-            </div>
-        </div>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -97,10 +85,12 @@
             </div>
         </div>
 
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">
+        <!--
+            <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">-->
 
-            <!-- Application templates - Sample menu -->
-            <!-- DataAjaxFragmentStart -->
+        <!-- Application templates - Sample menu -->
+        <!-- DataAjaxFragmentStart -->
+        <!--
             <div class="pnl-strt container nvbar">
                 <h2 class="wb-inv">Main navigation menu</h2>
                 <div class="row">
@@ -120,7 +110,7 @@
 
                             </ul>
                         </li>
-                        <li class=""><a href="#s3" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Pilot certificates<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                        <li class=""><a href="#s3" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Pilot licensing<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
                             <ul class="sm list-unstyled" id="s3" role="menu" aria-expanded="false" aria-hidden="true">
                                 <li><a href="#" tabindex="-1" role="menuitem">Apple for a Pilot Certificate - Advanced Operations</a></li>
                                 <li><a href="#" tabindex="-1" role="menuitem">Find a drone flight school near you</a></li>
@@ -137,9 +127,11 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <!-- DataAjaxFragmentEnd -->
-        </nav>
+            </div>     
+        </nav> -->
+
+        <!--<nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="includes/menus/default.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav> -->
+
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -162,6 +154,20 @@
             <span class="hd-pre">John Doe</span>
             <span class="hd-title">Welcome</span>
         </h1>
+        <div class="alert-floating alert alert-info alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="container">
+
+                <h2>Using drones for a business?</h2>
+
+                <p>Sign up for a business account to register and manage your drones in one place from your <a href="accountSettings/accountSettings-noticeBusinessAccount.html" class="link">account settings</a>.</p>
+                <a href="#" class="btn btn-primary btn btn-default pull-left mrgn-rght-md" id="btnClose" data-dismiss="alert">Got it - thanks!</a>
+                <a href="business/accountRegistration/accountRegistration-step1.html" class="btn btn-default btn btn-default pull-left">Sign up for a business account </a>
+
+
+            </div>
+        </div>
+
         <p>Select one of the following services:</p>
         <div class="row">
             <div class="col-md-4 col-sm-12">
@@ -172,11 +178,11 @@
                     </header>
                     <div class="panel-body">
                         <p>For any drone weighing between 250 <abbr title="grams">g</abbr> and 25 <abbr title="kilograms">kg</abbr>.</p>
-                        <img src="../img/drone.png" width="259" height="194" class="img-responsive full-width" alt="">
+                        <img src="../img/drone.svg" class="img-responsive full-width" alt="">
                     </div>
                     <footer class="panel-footer panel-min-height">
-                        <ul class="list-unstyled">
-                            <li> <a href="#">View drones</a></li>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span><a href="#">View drones</a></li>
                         </ul>
                     </footer>
                 </div>
@@ -189,11 +195,11 @@
                     </header>
                     <div class="panel-body">
                         <p>Take an online exam to ensure you can operate a drone safely.</p>
-                        <img src="../img/exam.png" width="259" height="194" class="img-responsive full-width" alt="">
+                        <img src="../img/exam.svg" class="img-responsive full-width" alt="">
                     </div>
                     <footer class="panel-footer panel-min-height">
-                        <ul class="list-unstyled">
-                            <li> <a href="#">View exam results</a></li>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span><a href="#">View exam results</a></li>
                         </ul>
                     </footer>
                 </div>
@@ -205,11 +211,11 @@
                     </header>
                     <div class="panel-body">
                         <p>Includes flying in controlled airspace, near or over people.</p>
-                        <img src="../img/certificate.png" width="259" height="144" class="img-responsive full-width" alt="">
+                        <img src="../img/certificate.svg" class="img-responsive full-width" alt="">
                     </div>
                     <footer class="panel-footer panel-min-height">
-                        <ul class="list-unstyled">
-                            <li> <a href="#">Find a drone flight school near you</a></li>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span><a href="#">Find a drone flight school near you</a></li>
                         </ul>
                     </footer>
                 </div>

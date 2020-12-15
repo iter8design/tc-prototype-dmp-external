@@ -656,6 +656,17 @@ h3.hd-section {
     background-color: #eee;
 }
 
+.panel-footer .fa-ul {
+    margin-left: 1.5em;
+
+}
+
+.panel-footer i {
+    color: #38414d;
+}
+
+
+
 .panel-feedback {
     background: #d6f0fd;
     /* Old browsers */
@@ -668,6 +679,10 @@ h3.hd-section {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6f0fd', endColorstr='#f2f9fe', GradientType=1);
     /* IE6-9 */
     border: 2px double #d6f0fd;
+}
+
+h2.panel-title {
+    font-size: 20px;
 }
 
 .panel-question .radio-label:hover {
