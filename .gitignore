@@ -3,3 +3,11 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+public/.DS_Store
+js/.DS_Store
+img/.DS_Store
+GCWeb/.DS_Store
+css/.DS_Store
+.DS_Store
+public/.DS_Store
+js/.DS_Store
