@@ -657,7 +657,7 @@ h3.hd-section {
 
 }
 
-.panel-footer i {
+.panel-footer > i {
     color: #38414d;
 }
 
