@@ -99,15 +99,17 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-<h1 property="name" id="wb-cont">
-    <span class="hd-pre">{First name} {Last name}</span>
-    <span class="hd-icon"><i class="fas fa-drone"></i></span>
-    <span class="hd-title">Registration confirmed</span>
-</h1>
-        
+        <h1 property="name" id="wb-cont">
+            <span class="hd-pre">{First name} {Last name}</span>
+            <span class="hd-icon"><i class="fas fa-drone"></i></span>
+            <span class="hd-title">Registration confirmed</span>
+        </h1>
+
         <p>Your payment has been processed and the following drone was successfully registered. We have sent you an email confirmation with your registration information. </p>
+        <p>Your payment has been processed and the following drone was successfully registered. We have sent you an email confirmation with your registration information as well as an email with your <a href="#dlg_receipt" class="lbx-modal wb-lbx">receipt</a>. </p>
         <p>You will will now need to mark the outside of your drone with the registration number assigned by either applying a label with the information, or writing the information with a permanent marker.</p>
         <p>Before you operate your drone anywhere, make sure you have your pilot certificate.</p>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default box-shadow">
@@ -161,7 +163,148 @@
         </div>
 
         <hr>
-        <a href="../welcome-withRegisteredDrone.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
+        <a href="../welcome-withRegisteredDrone.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a>
+        <section id="dlg_receipt" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Your receipt - Drone registration</h2>
+            </header>
+            <div class="modal-body">
+                <section>
+                    <div class="container-fluid showHide" id="cn-receipt">
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Customer name: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                John Doe
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Transaction total: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                $10.00
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Transaction type: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                PURCHASE </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Date/time: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                8/24/2018 1:08:41 PM
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Transaction amount: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                $10.00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Order ID: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                95310
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Card number: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                **** **** **** 3503
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Card type: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                M
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Response / ISO code: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                27/1
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Reference number: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                660129400016061950
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Authorization code: </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                138982
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 text-right">
+                                <strong>Receipt number </strong>
+                            </div>
+                            <div class="col-xs-6 text-left">
+                                401-180824-C-138982-01
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <a href="#" class="btn btn-default hidden-print" onClick="window.print()">Print receipt</a>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <footer class="modal-footer">
+
+                <a href="#" class="btn btn-primary popup-modal-dismiss btn btn-default pull-left hidden-print">Close</a> </footer>
+        </section>
+        <!-- InstanceEndEditable -->
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
                 <dl id="wb-dtmd">
