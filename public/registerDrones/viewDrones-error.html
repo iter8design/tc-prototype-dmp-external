@@ -135,12 +135,12 @@
                                 </div>
                             </header>
                             <div class="table-responsive">
-                                <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+                                <table id="tbl-registered" class="wb-tables table table-hover table-bordered" data-wb-tables='
         {"info" : false, "filter" : true, "order" : [[5,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0]}],
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="width5"><span class="wb-inv">Select</span></th>
+                                            <th scope="col" class="width5 selectAll text-center"></th>
                                             <th scope="col" class="width15 text-nowrap">Registration #</th>
                                             <th scope="col">Make</th>
                                             <th scope="col">Model</th>
@@ -298,6 +298,66 @@
             $(".dataTables_filter label").css({
                 "margin-bottom": "0px"
             });
+
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+            //Bind the click event handler to the checkboxes 
+            $("#tbl-registered tbody").on('click', "td>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
+            });
+
+            var oTable = $("#tbl-registered").dataTable({
+                "retrieve": true
+
+            }).api();
+
+            /* Any checkboxes hidden by filtering are re-added as hidden inputs */
+            $('form').on('submit', function(e) {
+                var rows = oTable.fnGetNodes(),
+                    inputs = [];
+                // Add the inputs which are not currently visible to the form
+                for (var i = 0, len = rows.length; i < len; i++) {
+                    var $fields = $(rows[i]).find('input[name]:hidden:checked');
+                    $fields.each(function(idx, el) {
+                        inputs.push('<input type="hidden" name="' + $(el).attr('name') + '" value="' + $(el).val() + '">');
+                    });
+                }
+                $(this).append(inputs.join(''));
+            });
+
+            /* Highlight the row that was checked */
+            function fnHighlightSelectedRow(checkbox) {
+                if (checkbox.prop("checked"))
+                    checkbox.parent("td").addClass("highlight-yellow").nextAll("td").addClass("highlight-yellow");
+                else
+                    checkbox.parent("td").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
+            }
+        });
+
+        $(document).on("page.dt", ".wb-tables", function(event) {
+            //Deselect the select all checkbox on paginate
+            $("#selectAll").prop("checked", false);
         });
     </script>
     <!-- InstanceEndEditable -->
