@@ -644,12 +644,8 @@
         $(document).on("wb-ready.wb", function(event) {
 
             $("#btnSave").on("click", function() {
-
-                $(document).trigger("open.wb-lbx", [{
-                    src: "#dlg_updateCADs",
-                    type: "inline"
-                }]);
-
+                event.preventDefault();
+                triggerLbxModal("#dlg_updateCADs");
             });
 
             $("#frmAccountDetails").on("submit", function(event) {
@@ -740,6 +736,18 @@
 
         });
 
+        function triggerLbxModal(selector) {
+            (function($, wb) {
+                "use strict";
+                var $document = wb.doc;
+                $document.trigger("open.wb-lbx", [
+                    [{
+                        src: selector,
+                        type: "inline"
+                    }], true
+                ]);
+            })(jQuery, wb);
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>

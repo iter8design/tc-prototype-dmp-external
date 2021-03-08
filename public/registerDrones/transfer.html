@@ -123,9 +123,22 @@
 
 
             <div class="nav-button">
-                <a href="viewDrones-confirmTransferred.html" class="btn btn-primary">Transfer ownership</a>
+                <a href="viewDrones-confirmTransferred.html" class="btn btn-primary" id="btnTransfer">Transfer ownership</a>
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
         </form>
+
+        <section id="dlg-please-wait" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal">
+            <header class="modal-header">
+                <h2 class="modal-title"><i class="fas fa-circle-notch fa-spin mrgn-rght-sm"></i> Please wait a few moments...</h2>
+            </header>
+            <div class=" modal-body">
+                <p>This may take a minute or two as we update your drone registrations. Please be patient and do not refresh your browser window.</p>
+            </div>
+
+            <footer class="modal-footer" style="display:none">
+
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">Close</a> </footer>
+        </section>
         <!-- InstanceEndEditable -->
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
@@ -180,6 +193,24 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            $("#btnTransfer").on("click", function(event) {
+                event.preventDefault();
+                triggerLbxModal("#dlg-please-wait");
+            });
+
+            function triggerLbxModal(selector) {
+                (function($, wb) {
+                    "use strict";
+                    var $document = wb.doc;
+                    $document.trigger("open.wb-lbx", [
+                        [{
+                            src: selector,
+                            type: "inline"
+                        }], true
+                    ]);
+                })(jQuery, wb);
+            }
+
 
         });
 
