@@ -164,12 +164,12 @@
                 <h2 class="modal-title"><i class="fas fa-circle-notch fa-spin mrgn-rght-sm"></i> Please wait a few moments...</h2>
             </header>
             <div class=" modal-body">
-                <p>We are preparing the document for you. This may take a minute or two. Please be patient and do not refresh your browser window.</p>
+                <p>Your certificate of registration is being prepared and may take a few minutes. Please be patient and do not refresh your browser window.</p>
             </div>
 
             <footer class="modal-footer" style="display:none">
 
-                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">I'll do this later</a> </footer>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">Close</a></footer>
         </section>
 
         <!-- InstanceEndEditable -->
@@ -271,12 +271,8 @@
                 event.preventDefault();
                 var pdfUpdate = $(this).data("update-pdf");
                 if (pdfUpdate = 1) {
-                    $(document).trigger("open.wb-lbx",
-                        [{
-                            src: "#dlg-please-wait",
-                            type: "inline"
-                        }]
-                    );
+                    event.preventDefault();
+                    triggerLbxModal("#dlg-please-wait");
 
                     /* AJAX call here to generate the document 
                     
@@ -298,6 +294,19 @@
                 }
             });
         });
+
+        function triggerLbxModal(selector) {
+            (function($, wb) {
+                "use strict";
+                var $document = wb.doc;
+                $document.trigger("open.wb-lbx", [
+                    [{
+                        src: selector,
+                        type: "inline"
+                    }], true
+                ]);
+            })(jQuery, wb);
+        }
     </script>
     <!-- InstanceEndEditable -->
 </body>
