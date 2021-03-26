@@ -190,86 +190,17 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/bootstrap/tooltip.js"></script>
-    <script src="../../js/tc/bootstrap/popover.js"></script>
-    <script src="../../js/tc/bootstrap/dropdown.js"></script>
-    <script src="../../js/tc/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
 
-            $('#editable-serial').editable({
-                showbuttons: true,
-                placement: 'bottom',
-                toggle: 'manual',
-                tpl: '<input type="text" size="45" id="edit-serial-num" maxlength-="50">'
-            });
-
-            $('#lnk-update-serial-num').on("click", function(e) {
-                e.stopPropagation();
-                $('#editable-serial').editable('toggle');
-                setTimeout(function() {
-                    $("#edit-serial-num").focus();
-                }, 200);
-
-            });
-
-            $('#editable-desc').editable({
-                showbuttons: true,
-                placement: 'right',
-                toggle: 'manual',
-                tpl: '<input type="text" size="45" id="edit-description" maxlength="50">'
-            });
-
-            $('#lnk-update-description').on("click", function(e) {
-                e.stopPropagation();
-                $('#editable-desc').editable('toggle');
-                setTimeout(function() {
-                    $("#edit-description").focus();
-                }, 200);
-
-            });
-
-
-            $("#view-pdf").on("click", function(event) {
-                event.preventDefault();
-                var pdfUpdate = $(this).data("update-pdf");
-                if (pdfUpdate = 1) {
-                    event.preventDefault();
-                    triggerLbxModal("#dlg-please-wait");
-
-                    /* AJAX call here to generate the document 
-                    
-                    $.ajax({
-                        url: '',
-                        type: 'post',
-                        success: function(response) {
-                            window.location= response;
-                            
-                        }
-                    });
-                    
-                    When ready, download the document
-                    
-                    Close the dialog
-                    
-                    */
-
-                }
+            new Cleave('.input-alpha-50', {
+                blocks: [50],
+                numericOnly: false,
+                uppercase: true
             });
         });
 
-        function triggerLbxModal(selector) {
-            (function($, wb) {
-                "use strict";
-                var $document = wb.doc;
-                $document.trigger("open.wb-lbx", [
-                    [{
-                        src: selector,
-                        type: "inline"
-                    }], true
-                ]);
-            })(jQuery, wb);
-        }
     </script>
     <!-- InstanceEndEditable -->
 </body>
