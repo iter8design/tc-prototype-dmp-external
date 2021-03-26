@@ -144,7 +144,7 @@
                                             <td><label for="ua1"><a href="#">C-2839487287</a></label></td>
                                             <td>DJI</td>
                                             <td>Phantom 4 Pro</td>
-                                            <td>4097820988321 <br><span class="small">Flying Burry</span></td>
+                                            <td>4097820988321 <div class="drone-description">Flying Burry</div></td>
                                             <td class="text-center">2018-04-07</td>
                                         </tr>
                                         <tr>
@@ -168,7 +168,7 @@
                                             <td><label for="ua3"><a href="#">C-8728382983</a></label></td>
                                             <td>Custom built</td>
                                             <td></td>
-                                            <td></td>
+                                            <td><span class="drone-description">East office</span></td>
                                             <td class="text-center">2018-02-01</td>
                                         </tr>
                                     </tbody>
@@ -324,17 +324,17 @@
                 }
 
             });
-            
+
             //Bind the click event handler to the checkboxes 
-            $("#tbl-registered tbody").on('click', "td>:checkbox" ,function() {
+            $("#tbl-registered tbody").on('click', "td>:checkbox", function() {
                 fnHighlightSelectedRow($(this));
             });
-            
-            var oTable = $("#tbl-registered").dataTable({ 
-			     "retrieve": true
-								
-			}).api();
-                   
+
+            var oTable = $("#tbl-registered").dataTable({
+                "retrieve": true
+
+            }).api();
+
             /* Any checkboxes hidden by filtering are re-added as hidden inputs */
             $('form').on('submit', function(e) {
                 var rows = oTable.fnGetNodes(),
@@ -357,12 +357,11 @@
                     checkbox.parent("td").removeClass("highlight-yellow").nextAll("td").removeClass("highlight-yellow");
             }
         });
-        
-        $( document ).on( "page.dt", ".wb-tables", function( event ) {
+
+        $(document).on("page.dt", ".wb-tables", function(event) {
             //Deselect the select all checkbox on paginate
             $("#selectAll").prop("checked", false);
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

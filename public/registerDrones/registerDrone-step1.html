@@ -103,7 +103,7 @@
             <span class="hd-title">Register a drone</span>
         </h1>
         <form name="registerUA-step1" method="get" action="registerDrone-step2.html">
-            <p>Please provide the following information about your drone. All fields are mandatory.</p>
+            <p>Please provide the following information about your drone. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
             <fieldset class="mrgn-tp-sm">
                 <legend class="wb-inv">Was the drone purchased or built?</legend>
                 <div class="radio">
@@ -112,7 +112,7 @@
                         The drone was <strong>purchased</strong> new or used.</label>
                 </div>
                 <div class="form-group mrgn-lft-lg" id="purchaseInformation">
-                    <label for="purchaseDate">Date of purchase (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <span class="fld-example">If you're not sure of the exact date, provide your best guess.</span></label>
+                    <label for="purchaseDate"><span class="mandatory" title="This field is mandatory.">*</span>Date of purchase (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <span class="fld-example">If you're not sure of the exact date, provide your best guess.</span><span class="wb-inv">(required)</span></label>
                     <br>
                     <input name="purchaseDate" type="text" id="purchaseDate" size="10" class="form-control display-inline input-date" maxlength="10">
                     <div class="form-group mrgn-tp-md">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="form-group mrgn-lft-lg showHide" id="builtInformation">
                     <div class="form-group">
-                        <label for="type">Type:</label>
+                        <label for="type"><span class="mandatory" title="This field is mandatory.">*</span>Type: <span class="wb-inv">(required)</span></label>
                         <br>
                         <select name="type" id="type" class="form-control">
                             <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
@@ -141,15 +141,24 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="mtow">Maximum takeoff weight: <span class="fld-example">This is the total weight of the drone <strong>including any accessories</strong> that may be attached.</span>
-                            <select name="mtow" id="mtow" class="form-control">
-                                <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                                <option value="1">Less than 250 grams</option>
-                                <option value="2">250 grams up to and including 25 kilograms</option>
-                                <option value="4">Greater than 25 kilograms</option>
-                            </select>
-                        </label>
+                        <label for="mtow"><span class="mandatory" title="This field is mandatory.">*</span>Maximum takeoff weight: <span class="fld-example">This is the total weight of the drone <strong>including any accessories</strong> that may be attached.</span><span class="wb-inv">(required)</span></label>
+                        <select name="mtow" id="mtow" class="form-control">
+                            <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                            <option value="1">Less than 250 grams</option>
+                            <option value="2">250 grams up to and including 25 kilograms</option>
+                            <option value="4">Greater than 25 kilograms</option>
+                        </select>
+
                     </div>
+
+                    <div class="form-group">
+
+                        <label for="nickname">Nickname or brief description of this drone:
+                            <span class="fld-example">A nickname or description (such as where the drone is kept) may help you identify this drone more easily in your account.</span> </label>
+
+                        <input name="nickname" id="nickname" type="text" size="50" class="form-control" maxlength="50">
+                    </div>
+
                 </div>
             </fieldset>
             <div class="nav-button">

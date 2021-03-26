@@ -109,7 +109,7 @@
         <form action="deregister-error.html" method="get">
             <p>The following <strong>2</strong> drones will be deregistered:</p>
             <ul>
-                <li>DJI Phantom 4 Advanced
+                <li>DJI Phantom 4 Advanced <div class="drone-description">Zippity</div>
                     <div class="display-block small">Serial #: DJK293882711233331 <br /> Registration #C-2839482198</div>
                 </li>
                 <li>DJI Phantom 4 Pro
@@ -130,15 +130,6 @@
                         <option value="7">Sold or given away </option>
                         <option value="8">Withdrawn from service</option>
 
-                        <!--New values from revised regulations -->
-                        <!--<option value="">the aircraft is destroyed</option>
-                        <option value="">the aircraft is permanently withdrawn from use</option>
-                        <option value="">the aircraft is missing and the search for the aircraft is terminated</option>
-                        <option value="">the aircraft has been missing for 60 days or more</option>
-                        <option value=""> the registered owner has transferred legal custody and control of the aircraft (sold/given away/exported)</option>
-                        <!-- Admin only values -->
-                        <!--<option value="">an individual who is a registered owner of the aircraft dies</option>
-<option value="">an entity that is a registered owner of the aircraft is wound up, dissolved or amalgamated with another entity; <option value="">a registered owner ceases to be qualified to be a registered owner under section 901.04</option> -->
                     </select>
                 </div>
             </div>
@@ -222,18 +213,18 @@
                 triggerLbxModal("#dlg-please-wait");
             });
 
-function triggerLbxModal(selector) {
-(function($, wb) {
-"use strict";
-var $document = wb.doc;
-$document.trigger("open.wb-lbx", [
-[{
-src: selector,
-type: "inline"
-}], true
-]);
-})(jQuery, wb);
-}
+            function triggerLbxModal(selector) {
+                (function($, wb) {
+                    "use strict";
+                    var $document = wb.doc;
+                    $document.trigger("open.wb-lbx", [
+                        [{
+                            src: selector,
+                            type: "inline"
+                        }], true
+                    ]);
+                })(jQuery, wb);
+            }
         });
     </script>
     <!-- InstanceEndEditable -->

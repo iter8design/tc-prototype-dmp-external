@@ -105,14 +105,14 @@
             <a href="#dlg-switchAccount" class="lbx-modal wb-lbx"><i class="fa fa-user-circle mrgn-rght-sm"></i>Switch accounts</a>
         </nav>
         <!-- InstanceBeginEditable name="Content" -->
-<h1 property="name" id="wb-cont">
+        <h1 property="name" id="wb-cont">
 
-    <span class="hd-pre">{Operating name} - {Legal name} (BN999999999)</span>
-    <span class="hd-icon"><i class="fas fa-drone"></i></span>
-    <span class="hd-title">Register a drone <span class="wb-inv">:step 2</span></span>
-</h1>
-        
-        
+            <span class="hd-pre">{Operating name} - {Legal name} (BN999999999)</span>
+            <span class="hd-icon"><i class="fas fa-drone"></i></span>
+            <span class="hd-title">Register a drone <span class="wb-inv">:step 2</span></span>
+        </h1>
+
+
         <form name="registerUA-step2" method="get" action="registerDrone-summary.html" novalidate>
             <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
             <div class="row">
@@ -199,6 +199,16 @@
                             <label for="serialNumber">What is the serial number?</label>
                         </p>
                         <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control input-alpha-50" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mrgn-tp-md">
+                        <p class="label-question">
+                            <label for="nickname">Do you have a nickname or other brief description of this drone?
+                                <span class="fld-example">A nickname or description (such as where the drone is kept) may help you identify this drone more easily in your account.</span> </label>
+                        </p>
+                        <input name="nickname" id="nickname" type="text" size="50" class="form-control" maxlength="50">
                     </div>
                 </div>
 

@@ -487,6 +487,12 @@ details.alert[open].alert-info {
     width: 100%;
 }
 
+.drone-description {
+    padding-top: 2px;
+    font-size: 80%;
+    color: #666;
+}
+
 .toc_title {
     font-weight: 700;
 }
