@@ -284,7 +284,7 @@
 		  placeholder: 'Search for a make/model...',
 		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
                 theme: "bootstrap",
-                minimumInputLength: 1,
+                minimumInputLength: 3,
                 "language": {
                     "noResults": function() {
                         return "No results found - <a href='#make' id='lnk-addMakeModel'>tell us about your make and model.</a>";
@@ -329,6 +329,7 @@
             $("#cn-ua-details-pane").show();
             $('#makeModelList').select2('close');
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
