@@ -83,10 +83,6 @@ details.alert[open].alert-info {
     background-color: #dbedfe;
 }
 
-.datemod {
-    padding-left: 0px;
-}
-
 .equal {
     display: -webkit-flex;
     display: flex;
