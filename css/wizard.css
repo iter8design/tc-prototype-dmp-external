@@ -1,0 +1,184 @@
+.wizard {
+    margin: 0 auto;
+}
+
+.wizard .nav-tabs {
+    position: relative;
+    border-bottom-color: #e0e0e0;
+}
+
+.wizard > div.wizard-inner {
+    position: relative;
+}
+
+.connecting-line {
+    background: black;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    border-bottom: 1px dashed #FFF;
+}
+
+.completion-line {
+    background: #ffcc00;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 48%;
+    z-index: 2;
+    border-bottom: 5px solid #ffcc00;
+}
+
+span.round-tab {
+    width: 45px;
+    height: 45px;
+    line-height: 35px;
+    display: inline-block;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    background-color: white;
+    border: 4px solid;
+    border-color: #e1e4e7;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-family: FontAwesome 5 Free;
+}
+
+span.round-tab.pointer {
+    cursor: pointer;
+}
+
+span.round-tab i {
+    color: #335075;
+}
+
+.wizard li.active span.round-tab {
+    background-color: #335075;
+    border: 5px solid;
+    border-color: #e1e4e7;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-family: FontAwesome 5 Free;
+}
+
+.wizard li.completed span.round-tab {
+    background-color: black;
+    border: 5px solid;
+    border-color: #ffcc00;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-family: FontAwesome 5 Free;
+}
+
+.wizard li.active span.round-tab i,
+.wizard li.completed span.round-tab i {
+    color: #ffcc00;
+}
+
+i.bg-white {
+    color: #FFF !important;
+    /* need to override otherwise it will be yellow. */
+}
+
+.wizard .nav-tabs > li {
+    width: 25%;
+}
+
+.wizard .nav-tabs > li a {
+    width: 45px;
+    height: 45px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+    z-index: 3
+}
+
+.wizard .nav-tabs > li a:hover {
+    background: transparent;
+}
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+.wizard .nav.nav-tabs {
+    min-width: 280px;
+}
+
+@media screen and (min-width : 586px) {
+    .step-label-top {
+        width: 100%;
+        top: -2px;
+        text-align: center;
+        position: absolute;
+    }
+
+    .step-label-bottom {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 85%;
+        padding: 0 30%;
+    }
+}
+
+@media screen and (max-width : 585px) {
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 13px;
+        width: 33px;
+        height: 33px;
+        line-height: 22px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+
+    .step-label-top {
+        display: none;
+    }
+
+    .step-label-bottom {
+        display: none;
+    }
+
+    i.fa-lg {
+        font-size: 1.1111111em !important;
+    }
+}
+
+.wizard .nav-tabs {
+    border-bottom: none;
+    padding: 40px 0;
+}
