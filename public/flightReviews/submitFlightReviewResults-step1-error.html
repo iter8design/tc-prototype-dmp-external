@@ -1,5 +1,8 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -7,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Submit flight review results: step 1 of 3 - Drone Management Portal</title>
+    <title>Error: Submit flight review results: Verify the pilot’s eligibility - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -21,6 +24,7 @@
     <link rel="stylesheet" href="../../css/uav-vasp.css">
     <link rel="stylesheet" href="../../css/utils.css">
     <link rel="stylesheet" href="../../css/plugins.css">
+    <link rel="stylesheet" href="../../css/wizard.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -88,7 +92,7 @@
                         <li><a href="../welcome.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Submit flight review results</a></li>
-                        <li>Step 1 of 3</li>
+                        <li>Verify the pilot’s eligibility</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -100,44 +104,109 @@
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">{First name} {Last name}</span>
             <span class="hd-icon"><i class="fas fa-paper-plane"></i></span>
-            <span class="hd-title">Submit flight review results: step 1 of 3</span>
+            <span class="hd-title">Submit flight review results</span>
         </h1>
+
         <div class="alert alert-danger mrgn-bttm-md">
             <h2>Attention</h2>
             <ol class="fa-ul">
-                <li><a href="#examCertificate"><i class="fa-li fa fa-angle-right"></i>Please enter the candidate's pilot certificate number.</a></li>
+                <li><a href="#pilotCertificate"><i class="fa-li fa fa-angle-right"></i>Please enter the candidate's pilot certificate number.</a></li>
                 <li><a href="#tcAccountNum"><i class="fa-li fa fa-angle-right"></i>Please enter the candidate's Transport Canada account number.</a></li>
-
-                <li><a href="#examCertificate"><i class="fa-li fa fa-angle-right"></i>The pilot certificate number entered must be 10 digits long.</a></li>
+                <li><a href="#pilotCertificate"><i class="fa-li fa fa-angle-right"></i>The pilot certificate number entered must be 10 digits long.</a></li>
                 <li><a href="#tcAccountNum"><i class="fa-li fa fa-angle-right"></i>The Transport Canada account number entered must be 10 digits long.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>The pilot certificate number and/or Transport Canada account number entered are not valid. Please verify the information is correct and try again.</li>
+
+
 
             </ol>
         </div>
 
-        <p>Once the flight review has been completed, enter the candidate's pilot certificate number and Transport Canada account number (written on the pilot certificate) and press the <strong>Search</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed. </p>
-        <form method="get" action="submitFlightReviewResults-step1-error-noCandidate.html">
+
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="completion-line"></div>
+
+                            <ul class="nav nav-tabs">
+
+                                <li role="presentation" class="active">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">1</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">VERIFY PILOT ELIGIBILITY</div>
+                                    </div>
+                                </li>
+
+                                <li role="presentation" class="">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">2</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">VALIDATE THE DRONE USED</div>
+                                    </div>
+                                </li>
+
+                                <li role="presentation" class="">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">3</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">ENTER FLIGHT REVIEW RESULTS</div>
+                                    </div>
+                                </li>
+
+
+                                <li role="presentation" class="">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">4</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">FLIGHT REVIEW SUMMARY</div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <h2>Verify the pilot’s eligibility</h2>
+        <p>Enter the candidate's pilot certificate number and Transport Canada account number from their pilot certificate and press the <strong>Verify pilot</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed.</p>
+
+        <form method="get" action="submitFlightReviewResults-step1-eligible.html#result">
             <div class="row">
                 <div class="col-md-12">
-                    <label for="examCertificate">Pilot certificate number:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="examSuffix">PC</span>
-                        <input type="text" class="form-control fieldError input-numeric-10" aria-describedby="examCertificate examSuffix" id="examCertificate" size="11" maxlength="11" style="width: auto;">
+                    <label for="pilotCertificate">Pilot certificate number:</label>
+                    <div class="input-group"> <span class="input-group-addon" id="suffix">PC</span>
+                        <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <label for="tcAccountNum">Transport Canada account number:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="TCNumberSuffix">TC</span>
-                        <input type="text" class="form-control fieldError input-numeric-10-tc" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
+                    <div class="input-group"> <span class="input-group-addon" id="TCNumberSuffix">TC</span>
+                        <input type="text" class="form-control input-numeric-10-tc fieldError" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button name"btnSearch" type="submit" class="btn btn-primary">Search</button>
+                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify pilot</button>
                 </div>
             </div>
         </form>
@@ -149,9 +218,10 @@
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2019-10-17 <span class="version">(V9.9.9)</span>
+                            <!-- #BeginDate format:IS1 -->2021-05-06
                             <!-- #EndDate -->
                         </time>
+                        <span class="version">(V9.9.9)</span>
                     </dd>
                 </dl>
 
@@ -213,4 +283,6 @@
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

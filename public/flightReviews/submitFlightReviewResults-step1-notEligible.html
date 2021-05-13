@@ -173,7 +173,7 @@
         <h2>Verify the pilot’s eligibility</h2>
         <p>Enter the candidate's pilot certificate number and Transport Canada account number from their pilot certificate and press the <strong>Verify pilot</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed.</p>
 
-        <form method="get" action="submitFlightReviewResults-step1-eligible.html#result">
+        <form method="get" action="submitFlightReviewResults-step2.html">
             <div class="row">
                 <div class="col-md-12">
                     <label for="pilotCertificate">Pilot certificate number:</label>
@@ -195,6 +195,42 @@
                     <button name="btnSearch" type="submit" class="btn btn-primary">Verify pilot</button>
                 </div>
             </div>
+
+
+
+            <section class="well mrgn-tp-lg" id="result">
+                <h3 class="wb-inv">Candidate verification</h3>
+                <div class="row">
+
+                    <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-times-circle text-red fa-3x opct-80"></i></div>
+                    <div class="col-md-11">
+                        <p>The following person is not eligible for a flight review.</p>
+
+
+                        <div class="large mrgn-bttm-md">
+
+                            <p>Matt Pullman <br>
+                                123 Elm St <br>
+                                Ottawa, ON K1K 1K1</p>
+
+                            <div class="label-form">Date of birth:</div>
+                            <div>January 15, 2001</div>
+                        </div>
+
+                        <p>A flight review may not be conducted until this person has passed a <strong>Small Advanced Exam</strong>.</p>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </section>
+
+
         </form>
         <hr>
         <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->

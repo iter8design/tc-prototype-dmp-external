@@ -1,3 +1,4 @@
+mit
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -10,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Submit flight review results: Verify the pilot’s eligibility - Drone Management Portal</title>
+    <title>Submit flight review results: Validate the drone used - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -92,7 +93,7 @@
                         <li><a href="../welcome.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Submit flight review results</a></li>
-                        <li>Verify the pilot’s eligibility</li>
+                        <li>Step 2 of 4</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -116,7 +117,7 @@
 
                             <ul class="nav nav-tabs">
 
-                                <li role="presentation" class="active">
+                                <li role="presentation">
                                     <a href="#">
                                         <span class="round-tab">
                                             <span class="wb-inv">Step</span><span class="step-label">1</span>
@@ -127,7 +128,7 @@
                                     </div>
                                 </li>
 
-                                <li role="presentation" class="">
+                                <li role="presentation" class="active">
                                     <a href="#">
                                         <span class="round-tab">
                                             <span class="wb-inv">Step</span><span class="step-label">2</span>
@@ -170,30 +171,43 @@
         </div>
 
 
-        <h2>Verify the pilot’s eligibility</h2>
-        <p>Enter the candidate's pilot certificate number and Transport Canada account number from their pilot certificate and press the <strong>Verify pilot</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed.</p>
+        <h2>Validate the drone used</h2>
+        <p>Enter the registration number from the drone’s certificate of registration and press the <strong>Verify drone</strong> button. </p>
 
-        <form method="get" action="submitFlightReviewResults-step1-eligible.html#result">
+        <form method="get" action="submitFlightReviewResults-step3.html">
             <div class="row">
                 <div class="col-md-12">
-                    <label for="pilotCertificate">Pilot certificate number:</label>
-                    <div class="input-group"> <span class="input-group-addon" id="suffix">PC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
+                    <label for="registrationNumber">Registration #:</label>
+                    <div class="input-group"> <span class="input-group-addon" id="suffix">C-</span>
+                        <input type="text" class="form-control input-numeric-10" aria-describedby="registrationNumber suffix" id="registrationNumber" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
-                    <label for="tcAccountNum">Transport Canada account number:</label>
-                    <div class="input-group"> <span class="input-group-addon" id="TCNumberSuffix">TC</span>
-                        <input type="text" class="form-control input-numeric-10-tc" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
-                    </div>
+                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify drone</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify pilot</button>
+
+
+            <section class="well mrgn-tp-lg" id="result">
+                <h3 class="wb-inv">Drone validation</h3>
+                <div class="row">
+
+                    <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-check-circle text-green fa-3x opct-80"></i></div>
+                    <div class="col-md-11">
+                        <p>The following drone has been registered and may be used for this flight review.
+                        </p>
+                        <p class="large">
+                            JoyDrone FlyHigh X100 <br>
+                            Serial #: 498293939298838928</p>
+                    </div>
                 </div>
+            </section>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+                <a href="submitFlightReviewResults-step1.html" class="btn btn-link">Go back</a>
             </div>
         </form>
         <hr>
@@ -258,11 +272,6 @@
         });
 
         new Cleave('.input-numeric-10', {
-            blocks: [10],
-            numericOnly: true
-        });
-
-        new Cleave('.input-numeric-10-tc', {
             blocks: [10],
             numericOnly: true
         });

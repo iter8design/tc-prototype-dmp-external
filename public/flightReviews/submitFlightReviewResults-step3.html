@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Error: Submit flight review results: Enter flight review results - Drone Management Portal</title>
+    <title>Submit flight review results: Enter flight review results - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -108,22 +108,6 @@
             <span class="hd-title">Submit flight review results</span>
         </h1>
 
-        <div class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
-            <ol class="fa-ul">
-                <li><a href="#flightReviewDate"><i class="fa-li fa fa-angle-right"></i>Please enter the flight review date.</a></li>
-                <li><a href="#flightReviewDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered may not occur in the future.</a></li>
-                <li><a href="#flightReviewDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered may only occur after January 9, 2019.</a></li>
-                <li><a href="#flightReviewDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered must be in the YYYY-MM-DD format.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>The supporting information entered may not be greater than 500 characters for the following skill(s):
-                    <ul>
-                        <li><a href="#skill-1">{Skill description}</a></li>
-                    </ul>
-                </li>
-                <li><a href="#comments"><i class="fa-li fa fa-angle-right"></i>The flight review comments entered may not be greater than 500 characters.</a></li>
-            </ol>
-        </div>
-
         <div class="row">
             <div class="col-md-12">
                 <section>
@@ -196,7 +180,7 @@
                     <div class="mrgn-lft-sm mrgn-tp-md">
                         <label for="flightReviewDate">Flight review date (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</label>
                         <br />
-                        <input name="flightReviewDate" type="text" id="flightReviewDate" size="10" class="form-control display-inline input-date fieldError">
+                        <input name="flightReviewDate" type="text" id="flightReviewDate" size="10" class="form-control display-inline input-date">
                     </div>
                 </div>
             </div>
@@ -223,7 +207,7 @@
                         <legend class="wb-inv">What type of flight review are you performing?</legend>
                         <div class="radio">
                             <label for="type-advanced">
-                                <input type="radio" name="type" value="radio" id="type-advanced" data-label="Advanced" checked>
+                                <input type="radio" name="type" value="radio" id="type-advanced" checked data-label="Advanced">
                                 Advanced</label>
                         </div>
                         <div class="radio">
@@ -236,7 +220,7 @@
             </div>
 
             <h2>
-                <span class="hd-pre" id="type">ADVANCED</span>
+                <span class="hd-pre" id="type">Advanced</span>
                 Skills checklist</h2>
             <p>For each of the following skills, indicate whether the pilot candidate has met or not met the requirement.</p>
             <section class="panel panel-checklist">
@@ -363,7 +347,7 @@
                         <div class="showHide">
                             <div class="col-md-12 mrgn-tp-md ">
                                 <label for="skill-4-comments"><i class="fa fa-arrow-alt-circle-right text-blue mrgn-rght-sm"></i>Please provide any other supporting information if required.</label>
-                                <textarea name="skill-4-comments" id="skill-4-comments" cols="40" rows="3" class="form-control full-width" aria-describedby="skill-4"></textarea>
+                                <textarea name="skill-2-comments" id="skill-4-comments" cols="40" rows="3" class="form-control full-width" aria-describedby="skill-4"></textarea>
                             </div>
                         </div>
 
@@ -386,7 +370,7 @@
                         <div class="showHide">
                             <div class="col-md-12 mrgn-tp-md ">
                                 <label for="skill-5-comments"><i class="fa fa-arrow-alt-circle-right text-blue mrgn-rght-sm"></i>Please provide any other supporting information if required.</label>
-                                <textarea name="skill-5-comments" id="skill-5-comments" cols="40" rows="3" class="form-control full-width" aria-describedby="skill-5 charCount"></textarea>
+                                <textarea name="skill-5-comments" id="skill-5-comments" cols="40" rows="3" class="form-control full-width" aria-describedby="skill-5"></textarea>
                             </div>
                         </div>
 
@@ -473,7 +457,7 @@
                     <p class="mrgn-tp-md">
                         <label for="comments">If you have any other comments about this flight review, you may provide them below for the candidate.</label>
                     </p>
-                    <textarea name="comments" id="comments" cols="40" rows="3" class="form-control full-width fieldError" aria-describedby="charCount"></textarea>
+                    <textarea name="comments" id="comments" cols="40" rows="3" class="form-control full-width" aria-describedby="charCount"></textarea>
                     <span id='charCount' class='small' aria-live='polite'>&nbsp;</span>
                 </div>
             </div>
@@ -544,23 +528,16 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            //Set the name of the checklist based on the type of flight review selected
-            $("input:radio[name=type]").on("click", function() {
-                $("#type").text($(this).data("label"));
-            });
+//Set the name of the checklist based on the type of flight review selected
+$("input:radio[name=type]").on("click", function() {
+$("#type").text($(this).data("label"));
+});
 
-            // Hide the row comments initially and set the event handler to display when a radio button selection is made
-            $(".showHide").hide();
-            $(".panel-checklist input:radio").on("change", function() {
-                $(this).parent().parent().find(".showHide").fadeIn(300);
-            });
-
-
-            $(".showHide").hide();
-            $(".panel-checklist input:radio").on("change", function() {
-                console.log('show it');
-                $(this).parent().parent().find(".showHide").fadeIn(300);
-            });
+// Hide the row comments initially and set the event handler to display when a radio button selection is made
+$(".showHide").hide();
+$(".panel-checklist input:radio").on("change", function() {
+$(this).parent().parent().find(".showHide").fadeIn(300);
+});
 
 
             // Attach a datepicker to the above input element

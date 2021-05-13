@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr">
-<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -42,7 +39,6 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" type="text/css" href="../../js/tc/datePicker-master/css/datepicker.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -107,12 +103,12 @@
             <span class="hd-title">Submit flight review results: step 1 of 3</span>
         </h1>
         <p>Once the flight review has been completed, enter the candidate's pilot certificate number and Transport Canada account number (written on the pilot certificate) and press the <strong>Search</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed. </p>
-        <form method="get" action="submitFlightReviewResults-step2.html">
+        <form method="get" action="submitFlightReviewResults-step1-error.html">
             <div class="row">
                 <div class="col-md-12">
                     <label for="examCertificate">Pilot certificate number:</label>
                     <div class="input-group"> <span class="input-group-addon" id="examSuffix">PC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="examCertificate examSuffix" id="examSuffix" size="11" maxlength="11" style="width: auto;">
+                        <input type="text" class="form-control input-numeric-10" aria-describedby="examCertificate examSuffix" id="examCertificate" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
@@ -126,118 +122,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button name="btnSearch" type="submit" class="btn btn-primary">Search</button>
+                    <button name"btnSearch" type="submit" class="btn btn-primary">Search</button>
                 </div>
             </div>
-        </form>
-        <form method="get" action="submitFlightReviewResults-step1-searchResults-error.html">
-            <h2 class="wb-inv"><a id="results"></a>Search results</h2>
-            <section class="panel panel-default bg-grey mrgn-tp-lg">
-                <div class="panel-body">
-                    <p>This Small Advanced Exam was successfully completed on Thursday July 18, 2018 by:</p>
-                    <address>
-                        <span class="xlarge">John Doe</span><br>
-                        123 Elm St <br>
-                        Ottawa, ON K1K 1K1
-                    </address>
-                    <p><i class="fas fa-phone mrgn-rght-sm"></i>613-999-9999 <br>
-                        <i class="fas fa-envelope mrgn-rght-sm"></i>user@example.com
-                    </p>
-                    <p><strong>Date of birth:</strong><br>
-                        January 15, 2001</p>
-
-                </div>
-            </section>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="label-question">Have you verified using <a href="#dlg-id" class="wb-lbx">government-issued identification</a> that John Doe:</p>
-                    <ul class="mrgn-tp-md">
-                        <li>is at least 16 years of age</li>
-                        <li>has the correct spelling of their name on their pilot certificate</li>
-                    </ul>
-                    <section id="dlg-id" class="mfp-hide modal-dialog modal-content overlay-def">
-                        <header class="modal-header">
-                            <h2 class="modal-title">What is government-issued identification?</h2>
-                        </header>
-                        <div class="modal-body">
-                            <p>Identification must be a valid (not expired) piece of government-issued (federal/provincial/territorial/state government authority or the equivalent body abroad) identification that provides their name and date of birth. This includes:</p>
-                            <ul>
-                                <li> a driver's license that is issued by a province or territory or the equivalent abroad; </li>
-                                <li>a passport;</li>
-                                <li> a birth certificate or baptismal certificate, certified by the issuing authority, or a duly notarized copy. If the date of birth is not shown on a baptismal certificate, it must be supported by a statutory declaration in which the candidate declares the date of birth; </li>
-                                <li>a Certificate of Registration of Birth Abroad issued by the Department of Citizenship and Immigration; </li>
-                                <li>a citizenship certificate; </li>
-                                <li> a permanent resident card; </li>
-                                <li>an aviation personnel permit or license, showing the date of birth, issued by the state of which the candidate is a citizen;</li>
-                                <li>a military identification; </li>
-                                <li>a Certificate of Indian Status; or an identification card issued by the federal, provincial or territorial government.</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <footer class="modal-footer"> <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a> </footer>
-                    </section>
-                    <span class="fld-example"></span>
-                    <fieldset class="mrgn-tp-0 pddng-tp-0">
-                        <legend class="wb-inv">Have you verified using government-issued identification that John Doe is Canadian citizen or permanent resident, at least 16 years of age, resides at the address indicated with the name correctly spelled </legend>
-                        <div class="radio">
-                            <label for="verified-yes">
-                                <input type="radio" name="verified" value="radio" id="verified-yes">
-                                Yes</label>
-                        </div>
-                        <div class="radio">
-                            <label for="verified-no">
-                                <input type="radio" name="verified" value="radio" id="verified-no">
-                                No</label>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="label-question">Does the drone being used for the flight review have a valid registration number on it and a valid Certificate of Registration?</p>
-                    <fieldset class="mrgn-tp-0 pddng-tp-0">
-                        <legend class="wb-inv"></legend>
-                        <div class="radio">
-                            <label for="registered-yes">
-                                <input type="radio" name="verified" value="radio" id="registered-yes">
-                                Yes</label>
-                        </div>
-                        <div class="radio">
-                            <label for="registered-no">
-                                <input type="radio" name="verified" value="radio" id="registered-no">
-                                No</label>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="label-question">When did the flight review occur?</p>
-                    <div class="mrgn-lft-sm mrgn-tp-md">
-                        <label for="flightTestDate">Flight review date (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</label>
-                        <br />
-                        <input name="flightTestDate" type="text" id="flightTestDate" size="10" class="form-control display-inline input-date">
-                    </div>
-                </div>
-            </div>
-            <!-- This row is only displayed if the flight reviewer has been affiliated to multiple flight schools -->
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="label-question">Which flight school is this flight review for?</p>
-                    <div class="mrgn-lft-sm mrgn-tp-md">
-                        <label for="flightSchool" class="wb-inv">Flight school:</label>
-
-                        <select name="type" id="flightSchool" class="form-control">
-                            <option value="1" selected="selected">{Flight school name 1}</option>
-                            <option value="2">{Flight school name 2}</option>
-
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-button">
-                <button class="btn btn-primary" type="submit">Continue</button>
-                <a href="../welcome-flightReviewer.html" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
         </form>
         <hr>
         <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
@@ -293,17 +180,10 @@
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/cleave/cleave.min.js"></script>
-    <script src="../../js/tc/datePicker-master/js/datepicker.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            // Attach a datepicker to the above input element
-            datePickerController.createDatePicker({
-                formElements: {
-                    "flightTestDate": "%Y-%m-%d"
-                },
-                rangeHigh: new Date()
-            });
+
         });
 
         new Cleave('.input-numeric-10', {
@@ -315,15 +195,7 @@
             blocks: [10],
             numericOnly: true
         });
-
-        new Cleave('.input-date', {
-            date: true,
-            delimiter: '-',
-            datePattern: ['Y', 'm', 'd']
-        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

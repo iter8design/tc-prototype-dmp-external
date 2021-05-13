@@ -1,3 +1,4 @@
+mit
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -10,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Submit flight review results: step 2 of 3 - Drone Management Portal</title>
+    <title>Error: Submit flight review results: Validate the drone used - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="../../css/uav-vasp.css">
     <link rel="stylesheet" href="../../css/utils.css">
     <link rel="stylesheet" href="../../css/plugins.css">
+    <link rel="stylesheet" href="../../css/wizard.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -91,7 +93,7 @@
                         <li><a href="../welcome.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Submit flight review results</a></li>
-                        <li>Step 2 of 3</li>
+                        <li>Step 2 of 4</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -103,158 +105,113 @@
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">{First name} {Last name}</span>
             <span class="hd-icon"><i class="fas fa-paper-plane"></i></span>
-            <span class="hd-title">Submit flight review results: step 2 of 3</span>
+            <span class="hd-title">Submit flight review results</span>
         </h1>
+
         <div class="alert alert-danger mrgn-bttm-md">
             <h2>Attention</h2>
             <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i> For each skill, please indicate whether the requirement was met or not met.</li>
-                <li><a href="#comments"><i class="fa-li fa fa-angle-right"></i> The comments entered may not be greater than 500 characters.</a></li>
-
+                <li><a href="#registrationNumber"><i class="fa-li fa fa-angle-right"></i>No drone was found with the registration number entered. Please verify that the number entered is correct and try again.</a></li>
             </ol>
         </div>
 
-        <h2>{Flight school name}</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="completion-line"></div>
 
-        <p>For each of the following skills, indicate whether the pilot candidate has met or not met the requirement.</p>
-        <form action="submitFlightReviewResults-step3-unsuccessful.html" method="get">
-            <div class="row row-header mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <h2 class="medium">Skills checklist</h2>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 hidden-sm hidden-xs">
-                    <div class="text-center fnt-wght-bld pddng-tp-md">Met</div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 hidden-sm hidden-xs">
-                    <div class="text-center fnt-wght-bld pddng-tp-md">Not met</div>
-                </div>
-            </div>
-            <div class="row mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-1">Describe the site survey process</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-1" id="skill-1-met" type="radio" value="" class="" aria-describedby="skill-1" />
-                        <label for="skill-1-met" class="visible-sm visible-xs">Met</label>
+                            <ul class="nav nav-tabs">
+
+                                <li role="presentation">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">1</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">VERIFY PILOT ELIGIBILITY</div>
+                                    </div>
+                                </li>
+
+                                <li role="presentation" class="active">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">2</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">VALIDATE THE DRONE USED</div>
+                                    </div>
+                                </li>
+
+                                <li role="presentation" class="">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">3</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">ENTER FLIGHT REVIEW RESULTS</div>
+                                    </div>
+                                </li>
+
+
+                                <li role="presentation" class="">
+                                    <a href="#">
+                                        <span class="round-tab">
+                                            <span class="wb-inv">Step</span><span class="step-label">4</span>
+                                        </span>
+                                    </a>
+                                    <div style="width:100%">
+                                        <div class="step-label-bottom">FLIGHT REVIEW SUMMARY</div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-1" id="skill-1-notMet" type="radio" value="" class="" />
-                    <label for="skill-1-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
+                </section>
             </div>
-            <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-7">Describe emergency procedures that apply to flying a <abbr title="Remotely Piloted Aircraft System">RPAS</abbr>, including lost-link procedures and procedures to follow in the event of a fly-away, including who to contact</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-7" id="skill-7-met" type="radio" value="" class="" aria-describedby="skill-7" />
-                        <label for="skill-7-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-7" id="skill-7-notMet" type="radio" value="" class="" />
-                    <label for="skill-7-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row  mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-10">Describe the method by which to inform Transport Canada of an incident or accident</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-10" id="skill-10-met" type="radio" value="" class="" aria-describedby="skill-10" />
-                        <label for="skill-10-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-10" id="skill-10-notMet" type="radio" value="" class="" />
-                    <label for="skill-10-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-2">Successfully perform pre-flight checks of their <abbr title="Remotely Piloted Aircraft System">RPAS</abbr></div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-2" id="skill-2-met" type="radio" value="" class="" aria-describedby="skill-2" />
-                        <label for="skill-2-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-2" id="skill-2-notMet" type="radio" value="" class="" />
-                    <label for="skill-1-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-3">Perform a take-off</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-3" id="skill-3-met" type="radio" value="" class="" aria-describedby="skill-3" />
-                        <label for="skill-3-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-3" id="skill-3-notMet" type="radio" value="" class="" />
-                    <label for="skill-3-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-4">Demonstrate the ability to navigate around obstacles</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-4" id="skill-4-met" type="radio" value="" class="" aria-describedby="skill-4" />
-                        <label for="skill-4-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-4" id="skill-4-notMet" type="radio" value="" class="" />
-                    <label for="skill-4-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-5">Demonstrate the ability to recognize distances</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-5" id="skill-5-met" type="radio" value="" class="" aria-describedby="skill-5" />
-                        <label for="skill-5-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-5" id="skill-5-notMet" type="radio" value="" class="" />
-                    <label for="skill-5-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
-            <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
-                <div class="col-md-8 col-sm-12 col-xs-12" id="skill-6">Perform a landing</div>
-                <div class="col-md-2 col-sm-6 col-xs-6">
-                    <div class="text-center">
-                        <input name="skill-6" id="skill-6-met" type="radio" value="" class="" aria-describedby="skill-6" />
-                        <label for="skill-6-met" class="visible-sm visible-xs">Met</label>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-6 text-center">
-                    <input name="skill-6" id="skill-6-notMet" type="radio" value="" class="" />
-                    <label for="skill-6-notMet" class="visible-sm visible-xs">Not met</label>
-                </div>
-            </div>
+        </div>
+
+
+        <h2>Validate the drone used</h2>
+        <p>Enter the registration number from the drone’s certificate of registration and press the <strong>Verify drone</strong> button. </p>
+
+        <form method="get" action="submitFlightReviewResults-step3.html">
             <div class="row">
-                <div class="col-md-12 ">
-                    <p class="mrgn-tp-md">
-                        <label for="comments">If you have any other comments about this flight review, you may provide them below for the candidate.</label>
-                    </p>
-                    <textarea name="comments" id="comments" cols="40" rows="3" class="form-control full-width fieldError"></textarea>
+                <div class="col-md-12">
+                    <label for="registrationNumber">Registration #:</label>
+                    <div class="input-group"> <span class="input-group-addon " id="suffix">C-</span>
+                        <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="registrationNumber suffix" id="registrationNumber" size="11" maxlength="11" style="width: auto;">
+                    </div>
                 </div>
             </div>
-            <div class="nav-button">
-                <button class="btn btn-primary" type="submit">Continue</button>
-                <a href="#" class="btn btn-link mrgn-lft-md">Go back</a> </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify drone</button>
+                </div>
+            </div>
+
+
+
         </form>
-        <!-- InstanceEndEditable -->
+        <hr>
+        <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
                 <dl id="wb-dtmd">
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2019-10-17 <span class="version">(V9.9.9)</span>
+                            <!-- #BeginDate format:IS1 -->2021-05-06
                             <!-- #EndDate -->
                         </time>
+                        <span class="version">(V9.9.9)</span>
                     </dd>
                 </dl>
 
@@ -297,39 +254,18 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/datePicker-master/js/datepicker.js"></script>
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-            // Attach a datepicker to the above input element
-            datePickerController.createDatePicker({
-                formElements: {
-                    "flightTestDate": "%Y-%m-%d"
-                }
-            });
 
-            var msgCharacterCountExceeded = "You'll need to shorten your comments as you've reached the character limit";
-            var msgCharactersLeft = " characters left";
-            $("textarea").after("<span id='charCount' class='small'>&nbsp;</span>")
-
-            $("textarea").on("keyup focus", function() {
-                var max = 500;
-                var len = $(this).val().length;
-                if (len > max) {
-                    $(this).addClass("fieldError");
-                    $("#charCount").html("<i class='fas fa-exclamation-circle text-red mrgn-rght-sm'></i>" + msgCharacterCountExceeded);
-                } else {
-                    var char = max - len;
-                    $(this).removeClass("fieldError");
-                    $("#charCount").html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + char + " " + msgCharactersLeft);
-                }
-
-            }).on("focusout", function() {
-                var len = $(this).val().length;
-                if (len == 0)
-                    $("#charCount").html("&nbsp;");
-            });
         });
+
+        new Cleave('.input-numeric-10', {
+            blocks: [10],
+            numericOnly: true
+        });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

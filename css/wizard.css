@@ -30,9 +30,9 @@
     margin: 0;
     left: 0;
     right: 0;
-    top: 48%;
+    top: 35%;
     z-index: 2;
-    border-bottom: 5px solid #ffcc00;
+    border-bottom: 5px solid #EEEEEE;
 }
 
 span.round-tab {
@@ -52,7 +52,6 @@ span.round-tab {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    font-family: FontAwesome 5 Free;
 }
 
 span.round-tab.pointer {
@@ -63,6 +62,11 @@ span.round-tab i {
     color: #335075;
 }
 
+.step-label-bottom {
+    font-size: 13px;
+    color: #666666;
+}
+
 .wizard li.active span.round-tab {
     background-color: #335075;
     border: 5px solid;
@@ -70,7 +74,6 @@ span.round-tab i {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    font-family: FontAwesome 5 Free;
 }
 
 .wizard li.completed span.round-tab {
@@ -80,7 +83,6 @@ span.round-tab i {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    font-family: FontAwesome 5 Free;
 }
 
 .wizard li.active span.round-tab i,
@@ -88,9 +90,8 @@ span.round-tab i {
     color: #ffcc00;
 }
 
-i.bg-white {
-    color: #FFF !important;
-    /* need to override otherwise it will be yellow. */
+.wizard li.active span.step-label {
+    color: #ffffff;
 }
 
 .wizard .nav-tabs > li {
@@ -123,6 +124,10 @@ i.bg-white {
     min-width: 280px;
 }
 
+.wizard {
+    font-size: 14px;
+}
+
 @media screen and (min-width : 586px) {
     .step-label-top {
         width: 100%;
@@ -139,6 +144,28 @@ i.bg-white {
         padding: 0 30%;
     }
 }
+
+
+
+/*Small view (screen-only)*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .step-label-bottom {
+        padding: 0 10%;
+
+    }
+
+}
+
+/*Extra-small view (screen only)*/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .step-label-bottom {
+        padding: 0 5%;
+
+    }
+
+}
+
+
 
 @media screen and (max-width : 585px) {
     .wizard {
@@ -181,4 +208,5 @@ i.bg-white {
 .wizard .nav-tabs {
     border-bottom: none;
     padding: 40px 0;
+    padding-top: 0px;
 }

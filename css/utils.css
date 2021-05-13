@@ -633,6 +633,10 @@ tr.separator-bttm th {
     Background color
 \*------------------------------------*/
 
+.bg-blue {
+    background-color: #5B6677;
+}
+
 .bg-default {
     background-color: #f5f5f5;
 }
