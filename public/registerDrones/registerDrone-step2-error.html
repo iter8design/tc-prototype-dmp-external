@@ -137,7 +137,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="label-question">What is the make and model?</p>
-                    <label for="makeModelList" class="display-block">Make and model:</label>
+                    <label for="makeModelList" class="display-block">Make and model: <strong class="required wb-inv">(required)</strong></label>
                     <select class="form-control display-block fieldError" id="makeModelList" name="makeModelList" style="width: 50%">
                         <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                         <option value="1">Aeryon Labs - Skyranger</option>
@@ -195,7 +195,8 @@
                                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                                             <option value="1">Less than 250 grams</option>
                                             <option value="2">250 grams up to and including 25 kilograms</option>
-                                            <option value="4">Greater than 25 kilograms</option>
+                                            <option value="4">Over 25 kilograms up to and including 150 kilograms</option>
+                                            <option value="4">Over 150 kilograms</option>
                                         </select>
                                     </div>
                                 </div>
@@ -208,7 +209,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="label-question">
-                            <label for="serialNumber">What is the serial number?</label>
+                            <label for="serialNumber"><span class="mandatory" title="This field is mandatory.">*</span> What is the serial number? <strong class="required wb-inv">(required)</strong></label>
                         </p>
                         <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control fieldError input-alpha-50" maxlength="50">
                     </div>
@@ -346,7 +347,6 @@
             $("#cn-ua-details-pane").show();
             $('#makeModelList').select2('close');
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

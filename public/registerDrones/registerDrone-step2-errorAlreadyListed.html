@@ -118,7 +118,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="label-question">What is the make and model?</p>
-                    <label for="makeModelList" class="display-block">Make and model:</label>
+                    <label for="makeModelList" class="display-block">Make and model: <strong class="required wb-inv">(required)</strong></label>
                     <select class="form-control display-block" id="makeModelList" name="makeModelList" style="width: 50%">
                         <option value="0">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                         <option value="1">Aeryon Labs - Skyranger</option>
@@ -176,7 +176,8 @@
                                             <option value="" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                                             <option value="1">Less than 250 grams</option>
                                             <option value="2">250 grams up to and including 25 kilograms</option>
-                                            <option value="4">Greater than 25 kilograms</option>
+                                            <option value="4">Over 25 kilograms up to and including 150 kilograms</option>
+                                            <option value="4">Over 150 kilograms</option>
                                         </select>
                                     </div>
                                 </div>
@@ -189,7 +190,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="label-question">
-                            <label for="serialNumber">What is the serial number?</label>
+                            <label for="serialNumber"><span class="mandatory" title="This field is mandatory.">*</span> What is the serial number? <span class="wb-inv">(required)</span></label>
                         </p>
                         <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control input-alpha-50" maxlength="50">
                     </div>
@@ -198,31 +199,12 @@
                     <div class="col-md-12 mrgn-tp-md">
                         <p class="label-question">
                             <label for="nickname">Do you have a nickname or other brief description of this drone?
-                                <span class="fld-example">A nickname or description (such as where the drone is kept) may help you identify this drone more easily in your account.</span> </label>
+                                <span class="fld-example mrgn-tp-sm">A nickname or description (such as where the drone is kept) may help you identify this drone more easily in your account. This will not appear on a certificate of registration.</span> </label>
                         </p>
                         <input name="nickname" id="nickname" type="text" size="50" class="form-control" maxlength="50">
                     </div>
                 </div>
-                <!--<div class="row">
-      <div class="col-md-12">
-        <fieldset>
-          <legend class="label-question">Have you made any modifications to this drone, such that it may no longer conform to the manufacturer's <strong>Safety Assured Flight Envelope (SAFE)</strong> <strong class="required wb-inv">(required)</strong>
-          <span class="fld-example">A <strong>Safety Assured Flight Envelope</strong> is a declaration from the manufacturer about the maximum speeds of the drone, weather conditions in which it can operate, and what operations may be done over people.</span>
-          
-          </legend>
-          <div class="radio">
-            <label for="uaModifications-yes">
-              <input type="radio" name="uaModifications" value="radio" id="uaModifications-yes">
-              Yes</label>
-          </div>
-          <div class="radio">
-            <label for="uaModifications-no">
-              <input type="radio" name="uaModifications" value="radio" id="uaModifications-no">
-              No</label>
-          </div>
-        </fieldset>
-      </div>
-    </div>-->
+
             </div>
             <div class="nav-button">
                 <button class="btn btn-primary" type="submit">Continue</button>

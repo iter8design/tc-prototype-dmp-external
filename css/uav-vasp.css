@@ -493,6 +493,11 @@ details.alert[open].alert-info {
     width: 100%;
 }
 
+.cn-vrtl-line {
+    border-left: 5px solid #5B6677;
+    padding-left: 10px;
+}
+
 .drone-description {
     padding-top: 2px;
     font-size: 80%;
