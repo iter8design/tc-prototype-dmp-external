@@ -58,7 +58,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -135,7 +136,7 @@
                                         </span>
                                     </a>
                                     <div style="width:100%">
-                                        <div class="step-label-bottom">VALIDATE THE DRONE USED</div>
+                                        <div class="step-label-bottom">VALIDATE THE DRONE REGISTRATION</div>
                                     </div>
                                 </li>
 
@@ -221,7 +222,8 @@
 
             <h2>
                 <span class="hd-pre" id="type">Advanced</span>
-                Skills checklist</h2>
+                Skills checklist
+            </h2>
             <p>For each of the following skills, indicate whether the pilot candidate has met or not met the requirement.</p>
             <section class="panel panel-checklist">
                 <header class="panel-heading">
@@ -464,6 +466,7 @@
 
             <div class="nav-button">
                 <button class="btn btn-primary" type="submit">Continue</button>
+                <button class="btn btn-default mrgn-lft-md" type="submit">Save and resume later</button>
                 <a href="submitFlightReviewResults-step2.html" class="btn btn-link mrgn-lft-md">Go back</a>
             </div>
 
@@ -528,16 +531,16 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
-//Set the name of the checklist based on the type of flight review selected
-$("input:radio[name=type]").on("click", function() {
-$("#type").text($(this).data("label"));
-});
+            //Set the name of the checklist based on the type of flight review selected
+            $("input:radio[name=type]").on("click", function() {
+                $("#type").text($(this).data("label"));
+            });
 
-// Hide the row comments initially and set the event handler to display when a radio button selection is made
-$(".showHide").hide();
-$(".panel-checklist input:radio").on("change", function() {
-$(this).parent().parent().find(".showHide").fadeIn(300);
-});
+            // Hide the row comments initially and set the event handler to display when a radio button selection is made
+            $(".showHide").hide();
+            $(".panel-checklist input:radio").not('[id$="met"]').on("change", function() {
+                $(this).parent().parent().find(".showHide").fadeIn(300).find('textarea').finderfocus();
+            });
 
 
             // Attach a datepicker to the above input element
@@ -575,6 +578,7 @@ $(this).parent().parent().find(".showHide").fadeIn(300);
             delimiter: '-',
             datePattern: ['Y', 'm', 'd']
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

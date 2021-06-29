@@ -151,7 +151,7 @@
                                         </span>
                                     </a>
                                     <div style="width:100%">
-                                        <div class="step-label-bottom">VALIDATE THE DRONE USED</div>
+                                        <div class="step-label-bottom">VALIDATE THE DRONE REGISTRATION</div>
                                     </div>
                                 </li>
 
@@ -551,15 +551,8 @@
 
             // Hide the row comments initially and set the event handler to display when a radio button selection is made
             $(".showHide").hide();
-            $(".panel-checklist input:radio").on("change", function() {
-                $(this).parent().parent().find(".showHide").fadeIn(300);
-            });
-
-
-            $(".showHide").hide();
-            $(".panel-checklist input:radio").on("change", function() {
-                console.log('show it');
-                $(this).parent().parent().find(".showHide").fadeIn(300);
+            $(".panel-checklist input:radio").not('[id$="met"]').on("change", function() {
+                $(this).parent().parent().find(".showHide").fadeIn(300).focus();
             });
 
 
