@@ -57,7 +57,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -108,16 +109,16 @@
         </h1>
         <p>This drone was registered on <strong>April 8, 2018</strong>.</p>
 
-   
+
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default box-shadow">
 
                     <section class="brdr-rds-0">
-<header class="panel-heading bg-grey-light">
-                                <h3 class="large mrgn-tp-sm mrgn-bttm-sm">DJI Phantom 4 Pro</h3>
-                                <span id="editable-desc" class="drone-description display-block text-wordwrap" data-title="Nickname or brief description:">The zippity doo dah drone</span>
-                            </header>
+                        <header class="panel-heading bg-grey-light">
+                            <h3 class="large mrgn-tp-sm mrgn-bttm-sm">DJI Phantom 4 Pro</h3>
+                            <span class="drone-description display-block text-wordwrap">The zippity doo dah drone</span>
+                        </header>
 
                         <div class="row">
                             <div class="col-md-4">
@@ -134,7 +135,8 @@
                                     <strong class="large">C-8728372818</strong>
                                 </div>
                                 <div class="mrgn-lft-md mrgn-bttm-md">
-                                    <a href="../pdfs/Certificate of Registration.pdf" class="small" id="view-pdf" data-update-pdf="1"><i class="fas fa-file-pdf mrgn-rght-sm"></i>View certificate of registration (PDF)</a></div>
+                                    <a href="../pdfs/Certificate of Registration.pdf" class="small" id="view-pdf" data-update-pdf="1"><i class="fas fa-file-pdf mrgn-rght-sm"></i>View certificate of registration (PDF)</a>
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <p class="mrgn-lft-md mrgn-rght-md">The manufacturer has indicated that this drone may be safely operated in the following situations:</p>
@@ -157,7 +159,8 @@
 
         <div class="nav-button">
             <a href="editDroneRegistration.html" class="btn btn-primary">Edit</a>
-            <a href="registerDrone-serviceInitiation.html" class="btn btn-default mrgn-lft-md">Deregister</a> </div>
+            <a href="registerDrone-serviceInitiation.html" class="btn btn-default mrgn-lft-md">Deregister</a>
+        </div>
 
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to View drones</a>
@@ -172,7 +175,8 @@
 
             <footer class="modal-footer" style="display:none">
 
-                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">Close</a></footer>
+                <a href="#" class="popup-modal-dismiss btn btn-default pull-left" style="display:none">Close</a>
+            </footer>
         </section>
 
         <!-- InstanceEndEditable -->
@@ -230,47 +234,8 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/bootstrap/tooltip.js"></script>
-    <script src="../../js/tc/bootstrap/popover.js"></script>
-    <script src="../../js/tc/bootstrap/dropdown.js"></script>
-    <script src="../../js/tc/bootstrap3-editable/js/bootstrap-editable.js"></script>
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-
-            /* $('#editable-serial').editable({
-                showbuttons: true,
-                placement: 'bottom',
-                toggle: 'manual',
-                tpl: '<input type="text" size="45" id="edit-serial-num" maxlength-="50">'
-            });
-
-            $('#lnk-update-serial-num').on("click", function(e) {
-                e.stopPropagation();
-                $('#editable-serial').editable('toggle');
-                setTimeout(function() {
-                    $("#edit-serial-num").focus();
-                }, 200);
-
-            });
-
-            $('#editable-desc').editable({
-                showbuttons: true,
-                placement: 'right',
-                toggle: 'manual',
-                tpl: '<input type="text" size="45" id="edit-description" maxlength="50">'
-            });
-
-            $('#lnk-update-description').on("click", function(e) {
-                e.stopPropagation();
-                $('#editable-desc').editable('toggle');
-                setTimeout(function() {
-                    $("#edit-description").focus();
-                }, 200);
-
-            });
-            */
-
-
             $("#view-pdf").on("click", function(event) {
                 event.preventDefault();
                 var pdfUpdate = $(this).data("update-pdf");
