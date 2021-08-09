@@ -502,6 +502,7 @@ details.alert[open].alert-info {
     padding-top: 2px;
     font-size: 80%;
     color: #666;
+    overflow-wrap: break-word;
 }
 
 .toc_title {
