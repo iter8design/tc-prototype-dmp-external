@@ -1,5 +1,9 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/OPS - Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/OPS - Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -25,14 +29,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css" />
@@ -54,7 +58,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -78,37 +83,43 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">Review your payment</h1>
+
+        <p>Please review your payment below. You may only use Visa®, Mastercard®, or American Express® debit or credit cards (prepaid, postpaid, or gift cards) or an Interac® Online debit card offered by a <a href="https://www.interac.ca/en/consumers/products/interac-debit/e-commerce/#fi-list-interac-online" target="_blank" title="This link will open in a new window">participating financial institution</a> for payment.</p>
+        <div class="alert alert-info">
+            <p>You cannot use Interac® Flash only debit cards (such as offered by Desjardins)</p>
+        </div>
+
         <form name="pay" method="get" action="pay.html">
-            <div class="table-responsive">
-                <table class="table-condensed table">
-                    <thead>
-                        <tr>
-                            <th class="width60">Description</th>
-                            <th class="width10 text-right">Price</th>
-                            <th class="width10 text-right">Quantity</th>
-                            <th class="width10 text-right">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Complex Exam</td>
-                            <td class="text-right">$50.00</td>
-                            <td class="text-right">1</td>
-                            <td class="text-right">$50.00</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr class="mrgn-tp-md">
-                            <td colspan="3" class="bg-grey">Subtotal</td>
-                            <td class="bg-grey text-right">$50.00</td>
-                        </tr>
-                        <tr class="mrgn-tp-md">
-                            <td colspan="3" class="bg-grey large"><strong>Total</strong></td>
-                            <td class="bg-grey text-right"><strong>$50.00</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
+
+            <table class="table-condensed table">
+                <thead>
+                    <tr>
+                        <th class="width60">Description</th>
+                        <th class="width10 text-right">Price</th>
+                        <th class="width10 text-right">Quantity</th>
+                        <th class="width10 text-right">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Complex Exam</td>
+                        <td class="text-right text-nowrap">$50.00</td>
+                        <td class="text-right text-nowrap">1</td>
+                        <td class="text-right text-nowrap">$50.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="mrgn-tp-md">
+                        <td colspan="3" class="bg-grey">Subtotal</td>
+                        <td class="bg-grey text-right text-nowrap">$50.00</td>
+                    </tr>
+                    <tr class="mrgn-tp-md">
+                        <td colspan="3" class="bg-grey large"><strong>Total</strong></td>
+                        <td class="bg-grey text-right text-nowrap"><strong>$50.00</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+
 
             <section class="cn-certification">
                 <i class="fas fa-exclamation-circle fa-2x text-yellow"></i>
@@ -154,51 +165,14 @@
             </div>
         </div>
     </footer>
-    <!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="http://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div id="transactFooter" class="landscape"></div><div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
--->
+
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
