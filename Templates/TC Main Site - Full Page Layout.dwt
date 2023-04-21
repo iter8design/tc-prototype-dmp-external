@@ -34,7 +34,7 @@
 		
 		<![endif]-->
 <noscript>
-<link rel="stylesheet" href="../wet-boew/css/noscript.min.css" />
+<link rel="stylesheet" href="../wet-boew/css/noscript.min.css" >
 </noscript>
 <!-- TemplateBeginEditable name="CustomJSLibraries" -->
 <!-- TemplateEndEditable -->
@@ -45,7 +45,7 @@
   <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
   <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
 </ul>
-<header role="banner">
+<header >
   <div id="wb-bnr" class="container">
     <div class="row">
       <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -71,7 +71,7 @@
     </div>
   </div>
 </header>
-<main role="main" property="mainContentOfPage" class="container"> <!-- TemplateBeginEditable name="Content" -->
+<main  property="mainContentOfPage" class="container"> <!-- TemplateBeginEditable name="Content" -->
   <h1 property="name" id="wb-cont">Heading</h1>
   <!-- TemplateEndEditable -->
   <div class="pagedetails">
@@ -85,7 +85,7 @@
     </dl>
   </div>
 </main>
-<footer role="contentinfo" id="wb-info">
+<footer  id="wb-info">
   <div id="transactFooter" class="landscape"></div><div class="brand">
     <div class="container">
       <div class="row">
@@ -106,8 +106,8 @@
     </div>
   </div>
 </footer>
-<!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
+<!--<footer  id="wb-info">
+<nav class="container wb-navcurr">
 <h2 class="wb-inv">About government</h2>
 <ul class="list-unstyled colcount-sm-2 colcount-md-3">
 <li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>

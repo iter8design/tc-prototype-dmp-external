@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css">
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -51,19 +51,27 @@
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
-    <header role="banner">
+    <header>
         <div id="wb-bnr" class="container">
             <div class="row">
-                <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_30/assets/sig-blk-en.svg">
-                    </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
-                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
                     <h2 class="wb-inv">Language selection</h2>
-                    <ul class="list-inline margin-bottom-none">
-                        <li><a lang="fr" href="#">Français</a></li>
+                    <ul class="list-inline mrgn-bttm-0">
+                        <li>
+                            <a lang="fr" href="#">
+                                <span class="hidden-xs">Français</span>
+                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            </a>
+                        </li>
                     </ul>
                 </section>
+                <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                    <img src="https://cdts.service.canada.ca/app/cls/WET/gcweb/v4_0_47/wet-boew/assets/sig-blk-en.svg" alt="Government of Canada" property="logo">
+                    <span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                    <meta property="name" content="Government of Canada">
+                    <meta property="areaServed" typeof="Country" content="Canada">
+                    <link property="logo" href="https://cdts.service.canada.ca/app/cls/WET/gcweb/v4_0_47/wet-boew/assets/wmms-blk.svg">
+                </div>
             </div>
         </div>
         <div class="app-bar">
@@ -74,7 +82,7 @@
                         <a class="app-name" href="#">Transport Canada <br>
                             Drone Management Portal</a>
                     </section>
-                    <nav class="col-sm-5 hidden-xs hidden-print" role="navigation">
+                    <nav class="col-sm-5 hidden-xs hidden-print">
                         <h2 class="wb-inv">Account menu</h2>
                         <ul class="app-list-account list-unstyled">
                             <li><a href="accountSettings.html" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
@@ -84,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <nav role="navigation" id="wb-bc" property="breadcrumb">
+        <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
                 <div class="row">
@@ -99,7 +107,7 @@
             </div>
         </nav>
     </header>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-building"></i> Sign up for a business account: step 2</h1>
 
@@ -459,7 +467,7 @@
 
         </div>
     </main>
-    <footer role="contentinfo" id="wb-info">
+    <footer id="wb-info">
         <div id="transactFooter" class="landscape"></div>
         <div class="brand">
             <div class="container">

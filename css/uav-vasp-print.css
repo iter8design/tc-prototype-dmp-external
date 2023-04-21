@@ -10,6 +10,10 @@
         width: 100%;
         margin: 0;
         float: none;
+        color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: white !important;
     }
 
     h1[class^="hd"] {
@@ -30,5 +34,11 @@
 
     .table-responsive {
         overflow: visible;
+    }
+
+    @page {
+        size: A3;
+        margin-left: -5cm;
+        margin-right: -5cm;
     }
 }
