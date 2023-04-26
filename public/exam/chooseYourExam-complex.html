@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -172,9 +173,20 @@
                             <li>In controlled and uncontrolled airspace with visual line-of-sight (VLOS):
                                 <ul>
                                     <li>over or near people within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) if flying a drone that meets the appropriate manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> safety assurance declaration</li>
+                                    <li>under 400 <abbr title="feet">ft</abbr> (122 <abbr title="meters">m</abbr>) <abbr title="AGL">above ground level</abbr></li>
+
+
                                 </ul>
                             </li>
-                            <li><a href="#dlg_bvlos" class="wb-lbx" title="What does this mean?">Localized beyond visual line-of-sight operations (BVLOS)</a></li>
+                            <li>In uncontrolled airspace with visual line-of-sight (VLOS) using a <a href="#dlg_visualObserver">visual observer</a>
+                            </li>
+                            <!--<li><a href="#dlg_bvlos" class="wb-lbx" title="What does this mean?">Localized beyond visual line-of-sight operations (BVLOS)</a></li>-->
+                            <li>Sheltered operations around buildings and structures that might hide the drone from a pilot's view
+                                <ul>
+                                    <li>horizontally near structures within 200 <abbr title="feet">ft</abbr> (60 <abbr title="meters">m</abbr>) </li>
+                                    <li>vertically above structures within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) </li>
+                                </ul>
+                            </li>
                         </ul>
 
                         <div class="text-center mrgn-tp-sm info">
@@ -184,13 +196,16 @@
                         </div>
                         <p>You may fly: </p>
                         <ul>
-                            <li>In uncontrolled airspace with visual line-of-sight (VLOS):
+                            <li>In controlled and uncontrolled airspace with visual line-of-sight (VLOS):
                                 <ul>
                                     <li>at least 500 <abbr title="feet">ft</abbr> (150 <abbr title="meters">m</abbr>) away from people</li>
-                                    <li>at least 5.6 <abbr title="kilometers">km</abbr> (3 nautical miles) away from an airport</li>
-                                    <li>at least 1.9 <abbr title="kilometers">km</abbr> (1 nautical mile) away from a heliport</li>
+                                    <!--<li>at least 5.6 <abbr title="kilometers">km</abbr> (3 nautical miles) away from an airport</li>
+                                    <li>at least 1.9 <abbr title="kilometers">km</abbr> (1 nautical mile) away from a heliport</li> -->
+                                    <!--<li>over or near people within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) if flying a drone that meets the appropriate manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> safety assurance declaration and approved design plan</li> -->
+                                    <li>under 400 <abbr title="feet">ft</abbr> (122 <abbr title="meters">m</abbr>) <abbr title="AGL">above ground level</abbr></li>
                                 </ul>
                             </li>
+
 
                         </ul>
                     </div>
@@ -219,7 +234,8 @@
 
                         <p>You may fly: </p>
                         <ul>
-                            <li>In uncontrolled airspace at least 500 <abbr title="feet">ft</abbr> (150 <abbr title="meters">m</abbr>) away from people</li>
+
+                            <li>With all applicable rules for advanced operations</li>
                             <li>In controlled airspace with visual line-of-sight (VLOS):
                                 <ul>
                                     <li>over or near people (within 100 <abbr title="feet">ft</abbr> / (30 <abbr title="meters">m</abbr> ) if flying a drone that meets the appropriate manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> safety assurance declaration</li>
@@ -227,7 +243,14 @@
 
                                 </ul>
                             </li>
-                            <li>Beyond visual line-of-sight (BVLOS) using drones up to 150<abbr title="kilograms">kg</abbr></li>
+                            <li>In uncontrolled airspace at least 500 <abbr title="feet">ft</abbr> (150 <abbr title="meters">m</abbr>) away from people</li>
+                            <li>Beyond visual line-of-sight (BVLOS)
+                                <ul>
+                                    <li>In uncontrolled airspace for operations away from <a href="#dlg_populated" class="wb-lbx">populated areas</a> if flying a drone that meets the appropriate manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> safety assurance declaration</li>
+                                    <li>In uncontrolled airspace for operations over <a href="#dlg_sparselyPopulated" clas="wb-lbx">sparsely populated areas</a> if flying a drone that meets the appropriate manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> safety assurance declaration and approved design plan</li>
+                                    <li>under 400 <abbr title="feet">ft</abbr> (122 <abbr title="meters">m</abbr>) <abbr title="AGL">above ground level</abbr></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="panel-footer">
@@ -375,10 +398,7 @@
                 selectedPanel.find(".btn-primary").addClass("btn-lg");
             }
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
