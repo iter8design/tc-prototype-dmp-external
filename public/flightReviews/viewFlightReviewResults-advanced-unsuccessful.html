@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Submit flight review results: Verify the pilot’s eligibility - Drone Management Portal</title>
+    <title>Flight review results FR9999999999 - Drone Management Portal</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="../../css/cdtsapps.css">
     <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
     <link rel="stylesheet" href="../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../css/uav-vasp-print.css">
     <link rel="stylesheet" href="../../css/utils.css">
     <link rel="stylesheet" href="../../css/plugins.css">
-    <link rel="stylesheet" href="../../css/wizard.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -100,8 +100,8 @@
                     <ol class="breadcrumb">
                         <li><a href="../welcome.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Submit flight review results</a></li>
-                        <li>Verify the pilot’s eligibility</li>
+                        <li><a href="viewFlightReviews.html">View flight review results</a></li>
+                        <li>Flight review FR9999999999</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -110,149 +110,111 @@
     </header>
     <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont">
-            <span class="hd-pre">{First name} {Last name}</span>
-            <span class="hd-icon"><i class="fas fa-paper-plane"></i></span>
-            <span class="hd-title">Submit flight review results</span>
-        </h1>
-
-        <div class="row">
-            <div class="col-md-12">
-                <section>
-                    <div class="wizard">
-                        <div class="wizard-inner">
-                            <div class="completion-line"></div>
-
-                            <ul class="nav nav-tabs">
-
-                                <li role="presentation" class="active">
-                                    <a href="#">
-                                        <span class="round-tab">
-                                            <span class="wb-inv">Step</span><span class="step-label">1</span>
-                                        </span>
-                                    </a>
-                                    <div style="width:100%">
-                                        <div class="step-label-bottom">VERIFY PILOT ELIGIBILITY</div>
-                                    </div>
-                                </li>
-
-                                <li role="presentation" class="">
-                                    <a href="#">
-                                        <span class="round-tab">
-                                            <span class="wb-inv">Step</span><span class="step-label">2</span>
-                                        </span>
-                                    </a>
-                                    <div style="width:100%">
-                                        <div class="step-label-bottom">VALIDATE THE DRONE REGISTRATION</div>
-                                    </div>
-                                </li>
-
-                                <li role="presentation" class="">
-                                    <a href="#">
-                                        <span class="round-tab">
-                                            <span class="wb-inv">Step</span><span class="step-label">3</span>
-                                        </span>
-                                    </a>
-                                    <div style="width:100%">
-                                        <div class="step-label-bottom">ENTER FLIGHT REVIEW RESULTS</div>
-                                    </div>
-                                </li>
-
-
-                                <li role="presentation" class="">
-                                    <a href="#">
-                                        <span class="round-tab">
-                                            <span class="wb-inv">Step</span><span class="step-label">4</span>
-                                        </span>
-                                    </a>
-                                    <div style="width:100%">
-                                        <div class="step-label-bottom">FLIGHT REVIEW SUMMARY</div>
-                                    </div>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+        <div class="page-header">
+            <div class="row wb-eqht">
+                <div class="col-md-8 col-sm-6">
+                    <h1 property="name" id="wb-cont" class="mrgn-0 pstn-bttm-xs">
+                        <span class="hd-pre">{First name} {Last name}</span>
+                        <span class="hd-icon"><i class="fas fa-paper-plane"></i></span>
+                        <span class="hd-title">Flight review FR9999999999</span>
+                    </h1>
+                </div>
+                <div class="col-md-4 col-sm-6 text-right">
+                    <div class="pddng-tp-sm mrgn-bttm-sm large"><i class="fas fa-times-square text-danger"></i> Unsuccessful </div>
+                </div>
             </div>
         </div>
-
-
-        <h2>Verify the pilot’s eligibility</h2>
-        <p>Enter the candidate's pilot certificate number and Transport Canada account number from their pilot certificate and press the <strong>Verify pilot</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed.</p>
-
-        <form method="get" action="submitFlightReviewResults-step2.html">
-            <div class="row">
-                <div class="col-md-12">
-                    <label for="pilotCertificate">Pilot certificate number:</label>
-                    <div class="input-group"> <span class="input-group-addon" id="suffix">PC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
-                    </div>
-                </div>
+        <h2>{Flight school name}</h2>
+        <p>This flight review occurred on July 13, 2018 and the results were submitted on July 13, 2018 by Drew Bouchard. The following piloting skills were observed:</p>
+        <div class="row row-header mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <h2 class="medium">Skills checklist</h2>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <label for="tcAccountNum">Transport Canada account number:</label>
-                    <div class="input-group"> <span class="input-group-addon" id="TCNumberSuffix">TC</span>
-                        <input type="text" class="form-control input-numeric-10-tc" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
-                    </div>
-                </div>
+            <div class="col-md-2 col-sm-6 col-xs-6 hidden-sm hidden-xs">
+                <div class="text-center fnt-wght-bld pddng-tp-md">Met</div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify pilot</button>
-                </div>
+            <div class="col-md-2 col-sm-6 col-xs-6 hidden-sm hidden-xs">
+                <div class="text-center fnt-wght-bld pddng-tp-md">Not met</div>
             </div>
+        </div>
+        <div class="row mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-1">Describe the site survey process</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <div class="row bg-grey  mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-7">Describe emergency procedures that apply to flying a <abbr title="Remotely Piloted Aircraft System">RPAS</abbr>, including lost-link procedures and procedures to followin in the event of a fly-away, including who to contact</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
 
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10">
+                <div class="text-center"><i class="fas fa-times-square text-danger"></i><span class="visible-sm visible-xs">Not met</span> </div>
+            </div>
+        </div>
+        <div class="row mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-10">Describe the method by which to inform Transport Canada of an incident or accident</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-2">Successfully perform pre-flight checks of their <abbr title="Remotely Piloted Aircraft System">RPAS</abbr></div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10">
+                <div class="text-center"> <i class="fas fa-times-square text-danger"></i><span class="visible-sm visible-xs">Not met</span> </div>
+            </div>
+        </div>
+        <div class="row mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-3">Perform a take-off</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-4">Demonstrate the ability to navigate around obstacles</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <div class="row mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-5">Demonstrate the ability to recognize distances</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <div class="row bg-grey mrgn-lft-sm mrgn-rght-sm">
+            <div class="col-md-8 col-md-push-0 col-xs-8 col-xs-push-2" id="skill-6">Perform a landing</div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-8">
+                <div class="text-center"> <i class="fas fa-check-circle text-green"></i><span class="visible-sm visible-xs">Met</span> </div>
+            </div>
+            <div class="col-md-2 col-md-pull-0 col-xs-2 col-xs-pull-10"> </div>
+        </div>
+        <h2 class="mrgn-bttm-0">Notes </h2>
+        <span class="fld-example">Notes are displayed in the language in which they were entered.</span>
 
-
-            <section class="well mrgn-tp-lg" id="result">
-                <h3 class="wb-inv">Candidate verification</h3>
-                <div class="row">
-
-                    <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-times-circle text-red fa-3x opct-80"></i></div>
-                    <div class="col-md-11">
-                        <p>The following person is not eligible for a flight review.</p>
-
-
-                        <div class="large mrgn-bttm-md">
-
-                            <p>Matt Pullman <br>
-                                123 Elm St <br>
-                                Ottawa, ON K1K 1K1</p>
-
-                            <div class="label-form">Date of birth:</div>
-                            <div>January 15, 2001</div>
-                        </div>
-
-                        <p>A flight review may not be conducted until this person has passed an <strong>Advanced or Complex (Level 1) Exam</strong>.</p>
-
-
-                    </div>
-                </div>
-
-
-
-
-
-
-            </section>
-
-
-        </form>
+        <p class="mrgn-tp-md">Sed id lacus felis. Maecenas id purus metus. Maecenas id convallis metus, sit amet lobortis dolor. Vivamus semper ipsum ac metus vulputate blandit at mollis felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam eget congue erat, vitae bibendum nunc.</p>
+        <!--<p> <a href="#" class="btn btn-default"><i class="fas fa-file-pdf"></i> View flight review results (PDF)</a> </p> -->
         <hr>
-        <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
+        <p><a href="viewFlightReviews.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to View flight review results</a></p>
+        <!-- InstanceEndEditable -->
         <div class="row">
             <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
                 <dl id="wb-dtmd">
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2021-05-06
+                            <!-- #BeginDate format:IS1 -->2023-04-28
                             <!-- #EndDate -->
                         </time>
-                        <span class="version">(V9.9.9)</span>
+                         <span class="version">(V9.9.9)</span>
                     </dd>
                 </dl>
 
@@ -295,23 +257,6 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../js/tc/cleave/cleave.min.js"></script>
-    <script>
-        $(document).on("wb-ready.wb", function(event) {
-
-
-        });
-
-        new Cleave('.input-numeric-10', {
-            blocks: [10],
-            numericOnly: true
-        });
-
-        new Cleave('.input-numeric-10-tc', {
-            blocks: [10],
-            numericOnly: true
-        });
-    </script>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
