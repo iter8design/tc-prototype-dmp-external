@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Précédent (touche gauche)",
 	first: "Premier",
 	last: "Dernier",
-	page: "Page",
+	page: "Aller à: Page",
 	"srch-menus": "Recherche et menus",
 	email: "Courriel",
 	"menu-close": "Fermer le menu",
@@ -94,6 +94,8 @@ wb.i18nDict = {
 	},
 	pos: "Position actuelle :",
 	dur: "Temps total :",
+	msgYoutubeNotLoad: "La vidéo a éprouvé des problèmes de chargement",
+	msgYoutubeVdLoad: "Chargement de la vidéo youtube",
 
 	/* Share widget */
 	"shr-txt": "Partagez",
@@ -184,6 +186,7 @@ wb.i18nDict = {
 	info1000: "&#160;",
 	lenMenu: "Afficher _MENU_ entrées",
 	filter: "Filtrer les articles",
+	tbFilterInst: "Ce tableau offre une fonctionnalité de triage via les boutons situés dans la ligne d'entêtes de colonnes avec seulement une instance visible à la fois.",
 
 	/* Geomap */
 	"geo-mapctrl": "@geo-mapctrl@",
@@ -198,7 +201,8 @@ wb.i18nDict = {
 	"geo-allyttl": "Instructions : comment naviguer dans la carte",
 	"geo-tgllyr": "Basculer l'affichage de la couche",
 	"geo-hdnlyr": "Cette couche est présentement cachée.",
-	"geo-bmapurl": "//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg",
+	"geo-bmap-url": "//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBCT3978/MapServer/WMTS/",
+	"geo-bmap-matrix-set": "default028mm",
 	"geo-bmapttl": "BaseMaps_CBCT3978",
 	"geo-bmapurltxt": "//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBCT_TXT_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg",
 	"geo-attrlnk": "//geogratis.gc.ca/geogratis/CBM_CBC?lang=fr",
@@ -213,6 +217,7 @@ wb.i18nDict = {
 	"geo-aoi-south": "Sud",
 	"geo-aoi-west": "Ouest",
 	"geo-aoi-instructions": "Délimiter un territoire sur la carte ou entrer les coordonnées ci-dessous, puis cliquer sur le bouton &#171;&#160;Ajouter&#160;&#187;.",
+	"geo-aoi-title": "Délimiter un territoire sur la carte ou entrer les coordonnées",
 	"geo-aoi-btndraw": "Tracer",
 	"geo-aoi-btnclear": "Enlever",
 	"geo-geoloc-btn": "Zoom sur votre position actuelle",
@@ -224,7 +229,8 @@ wb.i18nDict = {
 	"wb-disable": "Passer à la version HTML simplifiée",
 	"wb-enable": "Passer à la version standard",
 	"disable-notice-h": "Avis : Version HTML simplifiée",
-	"disable-notice": "Vous naviguez présentement sur la version HTML simplifiée de cette page. Certaines fonctionnalités peuvent être déactivées.",
+	"disable-notice": "Vous naviguez présentement sur la version HTML simplifiée de cette page. Certaines fonctionnalités peuvent être désactivées.",
+	"skip-prefix": "Passer à :",
 
 	/* Dismissable content */
 	"dismiss": "Écarter",
@@ -295,11 +301,12 @@ $.extend( $.validator.messages, {
 	creditcardtypes: "Veuillez fournir un numéro de carte de crédit valide.",
 	ipv4: "Veuillez fournir une adresse IP v4 valide.",
 	ipv6: "Veuillez fournir une adresse IP v6 valide.",
-	require_from_group: "Veuillez fournir au moins {0} de ces champs.",
+	require_from_group: $.validator.format( "Veuillez fournir au moins {0} de ces champs." ),
 	nifES: "Veuillez fournir un numéro NIF valide.",
 	nieES: "Veuillez fournir un numéro NIE valide.",
 	cifES: "Veuillez fournir un numéro CIF valide.",
-	postalCodeCA: "Veuillez fournir un code postal valide."
+	postalCodeCA: "Veuillez fournir un code postal valide.",
+	pattern: "Format non valide."
 } );
 return $;
 }));

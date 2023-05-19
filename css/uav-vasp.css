@@ -8,6 +8,18 @@ main {
     padding: 0px 0px;
 }
 
+#wb-bc .breadcrumb {
+    margin-top: 0px;
+}
+
+#wb-dtmd {
+    margin-top: 0px;
+}
+
+#wb-bc ol {
+    padding: 1px 13px
+}
+
 /* Template overrides */
 a:visited {
     color: #284162;
@@ -38,6 +50,10 @@ fieldset {
 header .btn-primary {
     background-color: #335075;
     border-color: #335075;
+}
+
+header .brand {
+    padding-top: 10px;
 }
 
 h1 {
@@ -87,6 +103,10 @@ details.alert[open].alert-info {
     background-color: #dbedfe;
 }
 
+.alert-dismissible .close {
+    right: 15px;
+}
+
 .equal {
     display: -webkit-flex;
     display: flex;
@@ -116,6 +136,10 @@ textarea.fieldError,
     box-shadow: 0 0 1px #a00;
 }
 
+.pagedetails {
+    display: none;
+}
+
 .page-header {
     margin-top: 5px;
     margin-bottom: 16.75px;
@@ -131,6 +155,11 @@ textarea.fieldError,
 .panel {
     width: 100%;
     /* height: 100%; */
+    border-color: #ddd;
+}
+
+.panel-default > .panel-heading {
+    border-color: #ddd;
 }
 
 .panel-primary > .panel-heading {
@@ -263,7 +292,6 @@ textarea.fieldError,
     font-size: 12px;
     text-align: right;
     padding-right: 0px;
-    margin-top: 1.4em;
     line-height: 1.4;
 }
 
@@ -369,6 +397,148 @@ textarea.fieldError,
     color: #d3080c;
 }
 
+.alert-success .label-success,
+.label-success[href]:active,
+.label-success[href]:focus,
+.label-success[href]:hover,
+details.alert.alert-success,
+details.alert.alert-success[open] {
+    background: #d8eeca;
+    border-color: #278400;
+}
+
+.alert-danger,
+.alert-info,
+.alert-success,
+.alert-warning,
+.label-danger,
+.label-danger[href]:active,
+.label-danger[href]:focus,
+.label-danger[href]:hover,
+.label-default,
+.label-default[href]:active,
+.label-default[href]:focus,
+.label-default[href]:hover,
+.label-info,
+.label-info[href]:active,
+.label-info[href]:focus,
+.label-info[href]:hover,
+.label-primary,
+.label-primary[href]:active,
+.label-primary[href]:focus,
+.label-primary[href]:hover,
+.label-success,
+.label-success[href]:active,
+.label-success[href]:focus,
+.label-success[href]:hover,
+.label-warning,
+.label-warning[href]:focus,
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+    color: #000;
+}
+
+.alert,
+.label {
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 0 0 10px;
+}
+
+.alert {
+    margin-left: 0;
+    padding-right: 15px;
+    box-shadow: 3px 3px 5px #888;
+}
+
+.alert.alert-floating {
+    padding: 0px;
+}
+
+.alert-warning.alert-floating > * {
+    margin-left: auto;
+}
+
+.alert-success,
+.label-success,
+.label-success[href]:active,
+.label-success[href]:focus,
+.label-success[href]:hover,
+details.alert.alert-success,
+details.alert.alert-success[open] {
+    background: #d8eeca;
+    border-color: #278400;
+
+}
+
+.alert-warning,
+.label-warning,
+.label-warning[href]:active,
+.label-warning[href]:focus,
+.label-warning[href]:hover,
+details.alert.alert-warning,
+details.alert.alert-warning[open] {
+    background: #f9f4d4;
+    border-color: #f90;
+}
+
+.alert-danger,
+.label-danger,
+.label-danger[href]:active,
+.label-danger[href]:focus,
+.label-danger[href]:hover,
+details.alert.alert-danger,
+details.alert.alert-danger[open] {
+    background: #f3e9e8;
+    border-color: #d3080c;
+}
+
+.alert-success,
+.alert-info,
+.alert-warning,
+.alert-danger {
+    border-image: none;
+}
+
+.alert-danger > :first-child:before {
+    color: #d3080c;
+    content: "\e101";
+}
+
+.alert-success > :first-child:before {
+    color: #278400;
+    content: "\e084";
+}
+
+.alert-success::before,
+.alert-danger::before,
+.alert-warning::before,
+.alert-warning::before {
+    content: none;
+}
+
+.alert > :first-child {
+    margin-left: 1.2em;
+    margin-top: auto;
+}
+
+.alert h2 {
+    font-size: 21px;
+}
+
+.alert > :first-child:before {
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-left: -1.3em;
+    position: absolute;
+}
+
+
+
+.alert-info::before {
+    content: none;
+}
+
 .alert-floating.alert-warning > :first-child:before,
 .alert-floating.alert-info > :first-child:before {
     content: "";
@@ -391,7 +561,7 @@ textarea.fieldError,
 }
 
 .alert-floating h2 {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .alert-floating.alert-warning h2:before {
@@ -604,7 +774,7 @@ i.fa-comments {
 }
 
 .info {
-    border-left: solid 3px #31708f;
+    border-left: solid 6px #31708f;
     color: #000;
     background-color: #EBF2FA;
     padding: 10px 15px;
@@ -699,6 +869,10 @@ i.fa-comments {
 
 .panel-footer > i {
     color: #38414d;
+}
+
+.panel-footer {
+    border-top: 1px solid #ddd;
 }
 
 
