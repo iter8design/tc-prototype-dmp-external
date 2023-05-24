@@ -404,6 +404,11 @@ tr.separator-bttm th {
     overflow: hidden;
 }
 
+.pull-front {
+    position: relative;
+    z-index: 1;
+}
+
 /*------------------------------------*\
     Text alignment
 \*------------------------------------*/
@@ -569,6 +574,17 @@ tr.separator-bttm th {
     word-wrap: break-word;
     word-break: break-all;
     white-space: normal;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.text-truncte {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /*------------------------------------*\
@@ -606,6 +622,10 @@ tr.separator-bttm th {
 
 .text-green {
     color: #093;
+}
+
+.text-info {
+    color: #1C538C;
 }
 
 
@@ -659,6 +679,10 @@ tr.separator-bttm th {
 
 .bg-fail {
     background-color: #EBF3F6;
+}
+
+.bg-success {
+    background-color #FFC !important;
 }
 
 .bg-grey {
