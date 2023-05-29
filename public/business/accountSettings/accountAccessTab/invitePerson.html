@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -42,6 +43,7 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" href="../../../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -225,6 +227,8 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
+    <script src="../../../../js/tc/intl-tel-input/js/utils.js"></script>
     <script src="../../../../js/tc/cleave/cleave.min.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
@@ -245,11 +249,30 @@
                 });
             }
 
-        });
+            //The AJAX call here is only required for French locales
+            $.ajax({
+                dataType: "json",
+                url: "../../../../js/tc/intl-tel-input/langs/fr.json",
+                success: function(data) {
+                    $("#phone").intlTelInput({
+                        //localizedCountries: data,
+                        initialCountry: "ca",
+                        preferredCountries: ["ca", "us"],
+                        formatOnInit: true,
+                        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                            if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
+                                return "999-999-9999";
+                            } else {
+                                return selectedCountryPlaceholder;
+                            }
 
+                        }
+                    });
+                }
+            });
+
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
