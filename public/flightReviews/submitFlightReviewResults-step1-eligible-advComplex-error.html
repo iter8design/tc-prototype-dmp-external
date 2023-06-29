@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>Submit flight review results: step 1 of 3 - Drone Management Portal</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../css/utils.css">
+    <link rel="stylesheet" href="../../css/plugins.css">
+    <link rel="stylesheet" href="../../css/wizard.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css">
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" type="text/css" href="../../js/tc/datePicker-master/css/datepicker.css">
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header>
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline mrgn-bttm-0">
+                        <li>
+                            <a lang="fr" href="#">
+                                <span class="hidden-xs">Français</span>
+                                <abbr title="Français" class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">fr</abbr>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                    <img src="https://cdts.service.canada.ca/app/cls/WET/gcweb/v4_0_47/wet-boew/assets/sig-blk-en.svg" alt="Government of Canada" property="logo">
+                    <span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+                    <meta property="name" content="Government of Canada">
+                    <meta property="areaServed" typeof="Country" content="Canada">
+                    <link property="logo" href="https://cdts.service.canada.ca/app/cls/WET/gcweb/v4_0_47/wet-boew/assets/wmms-blk.svg">
+                </div>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-7">
+                        <h2 class="wb-inv">Transport Canada Drone Management Portal</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            Drone Management Portal</a>
+                    </section>
+                    <nav class="col-sm-5 hidden-xs hidden-print">
+                        <h2 class="wb-inv">Account menu</h2>
+                        <ul class="app-list-account list-unstyled">
+                            <li><a href="../accountSettings/accountSettings.html" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account settings</a></li>
+                            <li><a href="../signedOut.html" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sign out</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="../welcome.html">Home</a></li>
+                        <!-- InstanceBeginEditable name="Breadcrumbs" -->
+                        <li><a href="#">Submit flight review results</a></li>
+                        <li>Verify the pilot’s eligibility</li>
+                        <!-- InstanceEndEditable -->
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main property="mainContentOfPage" class="container">
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont">
+            <span class="hd-pre">{First name} {Last name}</span>
+            <span class="hd-icon"><i class="fas fa-paper-plane"></i></span>
+            <span class="hd-title">Submit flight review results: step 1 of 3</span>
+        </h1>
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i>Please indicate whether you have verified the person's name and age and by using government-issued identification.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because the government-issued identification does not match the pilot certificate provided, the flight review results may not be entered at this time. Please <a href="#">contact us</a> for more information.</li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>Please indicate whether you have verified that the person has a valid RPAS medical certificate or category 1 or 3 medical certificate.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because you indicated that the person does not have a valid RPAS medical certificate or category 1 or 3 medical certificate, the flight review may not be conducted at this time.</li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>Pleases indicate whether the person has provided proof of completion of ground school and flight training from a drone flight school, manufacturer or third-party organization.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because you indicated that the person has not provided proof of completion of ground school and flight training from a drone flight school, manufacturer or third-party organization, the flight review may not be conducted at this time.</li>
+                <li><a href="#flightTestDate"><i class="fa-li fa fa-angle-right"></i>Please enter the flight review date.</a></li>
+
+                <li><a href="#flightTestDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered may not occur in the future.</a></li>
+                <li><a href="#flightTestDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered may only occur after January 9, 2019.</a></li>
+                <li><a href="#flightTestDate"><i class="fa-li fa fa-angle-right"></i>The flight review date entered must be in the YYYY-MM-DD format.</a></li>
+
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="wizard">
+                        <div class="wizard-inner">
+                            <div class="completion-line"></div>
+                            <nav>
+                                <ul class="nav nav-tabs">
+
+                                    <li role="presentation" class="in-progress" title="Step 1 - VERIFY PILOT ELIGIBILITY - In progress">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">1</span> <span class="wb-inv">VERIFY PILOT ELIGIBILITY</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">VERIFY PILOT ELIGIBILITY</div>
+                                        </div>
+                                    </li>
+
+                                    <li role="presentation" class="i" title="Step 2 - ENTER FLIGHT REVIEW RESULTS - Incomplete">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">2</span> <span class="wb-inv">ENTER FLIGHT REVIEW RESULTS</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">ENTER FLIGHT REVIEW RESULTS</div>
+                                        </div>
+                                    </li>
+
+                                    <li role="presentation" class="" title="Step 3 - Flight review summary - Incomplete">
+                                        <a href="#">
+                                            <span class="round-tab">
+                                                <span class="wb-inv">Step</span><span class="step-label">3</span> <span class="wb-inv">FLIGHT REVIEW SUMMARY</span>
+                                            </span>
+                                        </a>
+                                        <div>
+                                            <div class="step-label-bottom">FLIGHT REVIEW SUMMARY</div>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+
+        <h2>Verify the pilot’s eligibility</h2>
+        <p>Enter the candidate's pilot certificate number and Transport Canada account number from their pilot certificate and press the <strong>Verify pilot</strong> button. If you do not have a copy of the pilot certificate, you will need to obtain this from the pilot candidate in order to proceed.</p>
+
+        <form method="get" action="submitFlightReviewResults-step1-eligible.html#result">
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="pilotCertificate">Pilot certificate number:</label>
+                    <div class="input-group"> <span class="input-group-addon" id="suffix">PC</span>
+                        <input type="text" class="form-control input-numeric-10" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="tcAccountNum">Transport Canada account number:</label>
+                    <div class="input-group"> <span class="input-group-addon" id="TCNumberSuffix">TC</span>
+                        <input type="text" class="form-control input-numeric-10-tc" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button name="btnSearch" type="submit" class="btn btn-primary">Verify pilot</button>
+                </div>
+            </div>
+        </form>
+        <form method="get" action="submitFlightReviewResults-step2-complex.html">
+            <section class="well mrgn-tp-lg" id="result">
+                <h3 class="wb-inv">Candidate verification</h3>
+                <div class="row">
+
+                    <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-check-circle text-green fa-3x opct-80"></i></div>
+                    <div class="col-md-11">
+                        <p>The following person is eligible for either an <strong>Advanced</strong> or <strong>Complex (Level 1)</strong> flight review.</p>
+                        <div class="large">
+
+                            <p>Matt Pullman <br>
+                                123 Elm St <br>
+                                Ottawa, ON K1K 1K1</p>
+
+                            <div class="label-form">Date of birth:</div>
+                            <div>January 15, 2001</div>
+                        </div>
+
+                        <p class="label-question mrgn-tp-lg">Which type of flight review will you be performing?</p>
+
+                        <fieldset class="mrgn-tp-0 pddng-tp-0">
+                            <legend class="wb-inv">Which type of flight review will you be performing?</legend>
+                            <div class="radio">
+                                <label for="typeReview-advanced">
+                                    <input type="radio" name="typeReview" value="advanced" id="typeReview-advanced">
+                                    Advanced</label>
+                            </div>
+                            <div class="radio">
+                                <label for="typeReview-complex">
+                                    <input type="radio" name="typeReview" value="complex" id="typeReview-complex">
+                                    Complex (Level 1)</label>
+                            </div>
+                        </fieldset>
+
+                        <div id="cn-type-common" class="showHide">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question">Have you verified using <a href="#dlg-id" class="wb-lbx">government-issued identification</a> that John Doe:</p>
+                                    <ul class="mrgn-tp-md">
+                                        <li>is at least <span class="min-age">16</span> years of age</li>
+                                        <li>has the correct spelling of their name on their pilot certificate</li>
+                                    </ul>
+                                    <section id="dlg-id" class="mfp-hide modal-dialog modal-content overlay-def">
+                                        <header class="modal-header">
+                                            <h2 class="modal-title">What is government-issued identification?</h2>
+                                        </header>
+                                        <div class="modal-body">
+                                            <p>Identification must be a valid (not expired) piece of government-issued (federal/provincial/territorial/state government authority or the equivalent body abroad) identification that provides their name and date of birth. This includes:</p>
+                                            <ul>
+                                                <li> a driver's license that is issued by a province or territory or the equivalent abroad; </li>
+                                                <li>a passport;</li>
+                                                <li> a birth certificate or baptismal certificate, certified by the issuing authority, or a duly notarized copy. If the date of birth is not shown on a baptismal certificate, it must be supported by a statutory declaration in which the candidate declares the date of birth; </li>
+                                                <li>a Certificate of Registration of Birth Abroad issued by the Department of Citizenship and Immigration; </li>
+                                                <li>a citizenship certificate; </li>
+                                                <li> a permanent resident card; </li>
+                                                <li>an aviation personnel permit or license, showing the date of birth, issued by the state of which the candidate is a citizen;</li>
+                                                <li>a military identification; </li>
+                                                <li>a Certificate of Indian Status; or an identification card issued by the federal, provincial or territorial government.</li>
+                                            </ul>
+
+                                        </div>
+                                        <footer class="modal-footer"> <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a> </footer>
+                                    </section>
+                                    <span class="fld-example"></span>
+                                    <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                        <legend class="wb-inv">Have you verified using government-issued identification that John Doe is Canadian citizen or permanent resident, at least <span class="min-age">16</span> years of age, resides at the address indicated with the name correctly spelled </legend>
+                                        <div class="radio">
+                                            <label for="verified-yes">
+                                                <input type="radio" name="verified" value="radio" id="verified-yes">
+                                                Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="verified-no">
+                                                <input type="radio" name="verified" value="radio" id="verified-no">
+                                                No</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question">Does the drone being used for the flight review have a valid registration number on it and a valid Certificate of Registration?</p>
+                                    <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                        <legend class="wb-inv"></legend>
+                                        <div class="radio">
+                                            <label for="registered-yes">
+                                                <input type="radio" name="verified" value="radio" id="registered-yes">
+                                                Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="registered-no">
+                                                <input type="radio" name="verified" value="radio" id="registered-no">
+                                                No</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+
+                            <div id="cn-type-complex" class="showHide">
+
+
+                                <p class="label-question mrgn-tp-lg">Have you verified that Matt Pullman has a valid RPAS medical certificate or Category 1 or 3 medical certificate?</p>
+                                <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                    <legend class="wb-inv">Have you verified that Matt Pullman has a valid RPAS medical certificate or Category 1 or 3 medical certificate? </legend>
+                                    <div class="radio">
+                                        <label for="medical-yes">
+                                            <input type="radio" name="medical" value="radio" id="medical-yes">
+                                            Yes</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="medical-no">
+                                            <input type="radio" name="medical" value="radio" id="medical-no">
+                                            No</label>
+                                    </div>
+                                </fieldset>
+
+                                <p class="label-question mrgn-tp-lg">Has Matt Pullman provided <a href="#dlg-grndSchool" class="wb-lbx">proof of completion</a> of ground school and flight training from a drone flight school, manufacturer or third-party organization?</p>
+
+                                <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                    <legend class="wb-inv">Has Matt Pullman provided proof of completion of ground school and flight training from a drone flight school, manufacturer or third-party organization?</legend>
+                                    <div class="radio">
+                                        <label for="groundSchool-yes">
+                                            <input type="radio" name="groundSchool" value="radio" id="groundSchool-yes">
+                                            Yes</label>
+
+                                    </div>
+                                    <div class="radio">
+                                        <label for="groundSchool-no">
+                                            <input type="radio" name="groundSchool" value="radio" id="groundSchool-no">
+                                            No</label>
+                                    </div>
+                                </fieldset>
+
+
+
+
+
+                                <section id="dlg-grndSchool" class="mfp-hide modal-dialog modal-content overlay-def">
+                                    <header class="modal-header">
+                                        <h2 class="modal-title">What is proof of completion?</h2>
+                                    </header>
+                                    <div class="modal-body">
+                                        <p>Proof of completion may be a certificate or letter of recommendation issued by the organization with the pilot candidate's full name and date of completion.</p>
+                                    </div>
+                                    <footer class="modal-footer"> <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a> </footer>
+                                </section>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question mrgn-tp-md">When did the flight review occur?</p>
+                                    <div class=" mrgn-lft-sm mrgn-tp-md">
+                                        <label for="flightTestDate">Flight review date (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</label>
+                                        <br />
+                                        <input name="flightTestDate" type="text" id="flightTestDate" size="10" class="form-control display-inline input-date fieldError">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- This row is only displayed if the flight reviewer has been affiliated to multiple flight schools -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question mrgn-tp-md">Which flight school is this flight review for?</p>
+                                    <div class="mrgn-lft-sm mrgn-tp-md">
+                                        <label for="flightSchool" class="wb-inv">Flight school:</label>
+
+                                        <select name="type" id="flightSchool" class="form-control">
+                                            <option value="1" selected="selected">{Flight school name 1}</option>
+                                            <option value="2">{Flight school name 2}</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+                <a href="submitFlightReviewResults-serviceInitiation.html" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
+        </form>
+
+        <hr>
+        <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
+        <div class="row">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2021-05-06
+                            <!-- #EndDate -->
+                        </time>
+                        <span class="version">(V9.9.9)</span>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="wb-info">
+        <div id="transactFooter" class="landscape"></div>
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+                        <h2 class="wb-inv">About this Web application</h2>
+                        <ul>
+                            <li><a href="#">Contact information</a></li>
+                            <li><a href="../termsConditions.html">Terms and conditions</a></li>
+                            <li><a href="../privacy.html">Privacy</a></li>
+                        </ul>
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../js/tc/datePicker-master/js/datepicker.js"></script>
+
+
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+            $(".showHide").hide();
+
+            reviewType = $("input:radio[name=typeReview]:checked").val();
+            if (reviewType == "advanced") {
+                $("#cn-type-common").show();
+                $("#cn-type-complex").hide();
+            }
+            if (reviewType == "complex") {
+                $("#cn-type-common").show();
+                $("#cn-type-complex").show();
+            }
+
+            if (reviewType == null) {
+                $("#cn-type-common, #cn-type-complex").hide();
+            }
+
+            //Set the name of the checklist based on the type of flight review selected
+            $("input:radio[name=typeReview]").on("click", function() {
+                $("#cn-type-common").fadeIn(300);
+
+                reviewType = $(this).val();
+
+                if (reviewType == "advanced") {
+                    minAge = "16";
+                    $("#cn-type-complex").hide();
+                    $(".min-age").text(minAge);
+                }
+
+                if (reviewType == "complex") {
+                    minAge = "18";
+                    $("#cn-type-complex").show();
+                    $(".min-age").text(minAge);
+                }
+
+
+            });
+        });
+
+        // Attach a datepicker to the above input element
+        datePickerController.createDatePicker({
+            formElements: {
+                "flightTestDate": "%Y-%m-%d"
+            },
+            rangeHigh: new Date()
+        });
+
+        new Cleave('.input-numeric-10', {
+            blocks: [10],
+            numericOnly: true
+        });
+
+        new Cleave('.input-numeric-10-tc', {
+            blocks: [10],
+            numericOnly: true
+        });
+    </script>
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
