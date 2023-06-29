@@ -44,6 +44,7 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" type="text/css" href="../../js/tc/datePicker-master/css/datepicker.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -116,21 +117,6 @@
             <span class="hd-title">Submit flight review results: step 1 of 3</span>
         </h1>
 
-        <div class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
-            <ol class="fa-ul">
-                <li><a href="#pilotCertificate"><i class="fa-li fa fa-angle-right"></i>Please enter the candidate's pilot certificate number.</a></li>
-                <li><a href="#tcAccountNum"><i class="fa-li fa fa-angle-right"></i>Please enter the candidate's Transport Canada account number.</a></li>
-                <li><a href="#pilotCertificate"><i class="fa-li fa fa-angle-right"></i>The pilot certificate number entered must be 10 digits long.</a></li>
-                <li><a href="#tcAccountNum"><i class="fa-li fa fa-angle-right"></i>The Transport Canada account number entered must be 10 digits long.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>A pilot candidate could not be found with the pilot certificate and Transport Canada account numbers entered. Please verify that the numbers entered are correct.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>Flight review results may not be submitted for yourself.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>An unsuccessful flight review occurred on Friday, July 23, 2023 for this person. A flight review may not be done at this time as there is a minimum 24 hour waiting period.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>A flight review may not be conducted until this person has passed an <strong>Advanced</strong> exam.</li>
-            </ol>
-        </div>
-
-
         <div class="row">
             <div class="col-md-12">
                 <section>
@@ -193,7 +179,7 @@
                 <div class="col-md-12">
                     <label for="pilotCertificate">Pilot certificate number:</label>
                     <div class="input-group"> <span class="input-group-addon" id="suffix">PC</span>
-                        <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
+                        <input type="text" class="form-control input-numeric-10" aria-describedby="pilotCertificate suffix" id="pilotCertificate" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
@@ -201,7 +187,7 @@
                 <div class="col-md-12">
                     <label for="tcAccountNum">Transport Canada account number:</label>
                     <div class="input-group"> <span class="input-group-addon" id="TCNumberSuffix">TC</span>
-                        <input type="text" class="form-control input-numeric-10-tc fieldError" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
+                        <input type="text" class="form-control input-numeric-10-tc" aria-describedby="tcAccountNum TCNumberSuffix" id="tcAccountNum" size="11" maxlength="11" style="width: auto;">
                     </div>
                 </div>
             </div>
@@ -211,6 +197,133 @@
                 </div>
             </div>
         </form>
+        <form method="get" action="submitFlightReviewResults-step2.html">
+            <section class="well mrgn-tp-lg" id="result">
+                <h3 class="wb-inv">Candidate verification</h3>
+                <div class="row">
+
+                    <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-check-circle text-green fa-3x opct-80"></i></div>
+                    <div class="col-md-11">
+                        <p>The following person is eligible for either an <strong>Advanced</strong> or <strong>Complex (Level 1)</strong> flight review.</p>
+                        <div class="large mrgn-bttm-lg">
+
+                            <p>Matt Pullman <br>
+                                123 Elm St <br>
+                                Ottawa, ON K1K 1K1</p>
+
+                            <div class="label-form">Date of birth:</div>
+                            <div>January 15, 2001</div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <p>You do not hold a <strong>Pilot Certificate - Level 1 Complex Operations with a flight reviewer rating</strong> and may only perform an Advanced flight review for this person.</p>
+
+                        </div>
+
+                        <div id="cn-type-common">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question">Have you verified using <a href="#dlg-id" class="wb-lbx">government-issued identification</a> that John Doe:</p>
+                                    <ul class="mrgn-tp-md">
+                                        <li>is at least <span class="min-age">16</span> years of age</li>
+                                        <li>has the correct spelling of their name on their pilot certificate</li>
+                                    </ul>
+                                    <section id="dlg-id" class="mfp-hide modal-dialog modal-content overlay-def">
+                                        <header class="modal-header">
+                                            <h2 class="modal-title">What is government-issued identification?</h2>
+                                        </header>
+                                        <div class="modal-body">
+                                            <p>Identification must be a valid (not expired) piece of government-issued (federal/provincial/territorial/state government authority or the equivalent body abroad) identification that provides their name and date of birth. This includes:</p>
+                                            <ul>
+                                                <li> a driver's license that is issued by a province or territory or the equivalent abroad; </li>
+                                                <li>a passport;</li>
+                                                <li> a birth certificate or baptismal certificate, certified by the issuing authority, or a duly notarized copy. If the date of birth is not shown on a baptismal certificate, it must be supported by a statutory declaration in which the candidate declares the date of birth; </li>
+                                                <li>a Certificate of Registration of Birth Abroad issued by the Department of Citizenship and Immigration; </li>
+                                                <li>a citizenship certificate; </li>
+                                                <li> a permanent resident card; </li>
+                                                <li>an aviation personnel permit or license, showing the date of birth, issued by the state of which the candidate is a citizen;</li>
+                                                <li>a military identification; </li>
+                                                <li>a Certificate of Indian Status; or an identification card issued by the federal, provincial or territorial government.</li>
+                                            </ul>
+
+                                        </div>
+                                        <footer class="modal-footer"> <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a> </footer>
+                                    </section>
+                                    <span class="fld-example"></span>
+                                    <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                        <legend class="wb-inv">Have you verified using government-issued identification that John Doe is Canadian citizen or permanent resident, at least <span class="min-age">16</span> years of age, resides at the address indicated with the name correctly spelled </legend>
+                                        <div class="radio">
+                                            <label for="verified-yes">
+                                                <input type="radio" name="verified" value="radio" id="verified-yes">
+                                                Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="verified-no">
+                                                <input type="radio" name="verified" value="radio" id="verified-no">
+                                                No</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question">Does the drone being used for the flight review have a valid registration number on it and a valid Certificate of Registration?</p>
+                                    <fieldset class="mrgn-tp-0 pddng-tp-0">
+                                        <legend class="wb-inv"></legend>
+                                        <div class="radio">
+                                            <label for="registered-yes">
+                                                <input type="radio" name="verified" value="radio" id="registered-yes">
+                                                Yes</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="registered-no">
+                                                <input type="radio" name="verified" value="radio" id="registered-no">
+                                                No</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question mrgn-tp-md">When did the flight review occur?</p>
+                                    <div class=" mrgn-lft-sm mrgn-tp-md">
+                                        <label for="flightTestDate">Flight review date (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</label>
+                                        <br />
+                                        <input name="flightTestDate" type="text" id="flightTestDate" size="10" class="form-control display-inline input-date">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- This row is only displayed if the flight reviewer has been affiliated to multiple flight schools -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="label-question mrgn-tp-md">Which flight school is this flight review for?</p>
+                                    <div class="mrgn-lft-sm mrgn-tp-md">
+                                        <label for="flightSchool" class="wb-inv">Flight school:</label>
+
+                                        <select name="type" id="flightSchool" class="form-control">
+                                            <option value="1" selected="selected">{Flight school name 1}</option>
+                                            <option value="2">{Flight school name 2}</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Continue</button>
+                <a href="submitFlightReviewResults-serviceInitiation.html" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
+        </form>
+
         <hr>
         <a href="../welcome-flightReviewer.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
         <div class="row">
@@ -266,10 +379,20 @@
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script src="../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../js/tc/datePicker-master/js/datepicker.js"></script>
+
+
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+        });
 
+        // Attach a datepicker to the above input element
+        datePickerController.createDatePicker({
+            formElements: {
+                "flightTestDate": "%Y-%m-%d"
+            },
+            rangeHigh: new Date()
         });
 
         new Cleave('.input-numeric-10', {
@@ -281,7 +404,10 @@
             blocks: [10],
             numericOnly: true
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

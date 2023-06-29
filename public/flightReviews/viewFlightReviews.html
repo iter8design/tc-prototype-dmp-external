@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -27,14 +28,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css">
@@ -113,20 +114,31 @@
             <span class="hd-title">View flight review results</span>
         </h1>
 
+        <h2>{Flight school operating name}</h2>
         <p>The following flight review results have been submitted:</p>
-        <section class="panel panel-default panel-datatable">
+        <div class="panel panel-default panel-datatable">
             <header class="panel-heading pddng-tp-0">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <form class="form-inline" method="get">
                             <label for="filter" class="wb-inv">Display:</label>
+
                             <div class="input-group mrgn-tp-sm">
 
+                                <label for="filter" class="wb-inv">Flight reviews submitted</label>
                                 <select class="form-control" id="filter">
-                                    <option value="0">All flight reviews</option>
+                                    <optgroup label="{Flight school operating name}"></optgroup>
+                                    <option value="0">All flight reviews for {Flight school operating name}</option>
                                     <option value="">Flight reviews submitted within the last 7 days</option>
                                     <option value="" selected>Flight reviews submitted within the last 30 days</option>
                                     <option value="">Flight reviews submitted within the last 90 days</option>
+
+                                    <optgroup label="{Flight school operating name}"></optgroup>
+                                    <option value="0">All flight reviews for {Flight school operating name}</option>
+                                    <option value="">Flight reviews submitted within the last 7 days</option>
+                                    <option value="" selected>Flight reviews submitted within the last 30 days</option>
+                                    <option value="">Flight reviews submitted within the last 90 days</option>
+
                                 </select>
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="submit">Go</button>
@@ -135,7 +147,7 @@
                         </form>
 
                     </div>
-                    <div class="col-md-6 text-right text-left-sm text-left-xs">
+                    <div class="col-md-3 text-right text-left-sm text-left-xs">
                         <div class="form-inline">
                             <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
                                 <div class="tableFilter"></div>
@@ -153,48 +165,64 @@
                     <thead>
                         <tr>
                             <th scope="col">Reference #</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Contact information</th>
+                            <th scope="col">Pilot name</th>
+
+
                             <th scope="col" class="text-center">Flight review date <br>
                                 <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr>
                             </th>
                             <th scope="col" class="text-center">Submitted date <br>
                                 <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr>
                             </th>
+                            <th scope="col">Type</th>
                             <th scope="col" class="text-center">Results</th>
                         </tr>
                     </thead>
                     <tr>
-                        <td><a href="viewFlightReviewResults-successful.html">FR9999999999</a></td>
+                        <td><a href="viewFlightReviewResults-advanced-successful.html">FR9999999999</a></td>
                         <td>Bergeron, Nate</td>
+
+
+                        <td class="text-center">2023-07-13</td>
+                        <td class="text-center">2023-07-13</td>
                         <td>
-                            <address class="mrgn-bttm-0">
-                                123 Elm St. <br>
-                                Ottawa, ON K1K 9J2
-                            </address>
+                            Advanced
                         </td>
-                        <td>613-777-2893<br>
-                            nbergeron@gmail.com</td>
-                        <td class="text-center">2018-07-13</td>
-                        <td class="text-center">2018-07-13</td>
                         <td><i class="fas fa-check-square text-green"></i> Successful</td>
                     </tr>
                     <tr>
-                        <td><a href="viewFlightReviewResults-unsuccessful.html">FR9999999999</a></td>
-                        <td>Leonards, Jeff</td>
+                        <td><a href="viewFlightReviewResults-advanced-unsuccessful.html">FR9999999999</a></td>
+                        <td>Bergeron, Nate</td>
+
+
+                        <td class="text-center">2023-07-12</td>
+                        <td class="text-center">2023-07-12</td>
                         <td>
-                            <address class="mrgn-bttm-0">
-                                256 Oak Ave. <br>
-                                Ottawa, ON K2C 8J2
-                            </address>
+                            Advanced
                         </td>
-                        <td>613-423-2834<br>
-                            jleonards@hotmail.com</td>
-                        <td class="text-center">2018-07-03</td>
-                        <td class="text-center">2018-07-03</td>
                         <td><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
                     </tr>
+                    <tr>
+                        <td><a href="viewFlightReviewResults-complex-unsuccessful.html">FR9999999999</a></td>
+                        <td>Leonards, Jeff</td>
+
+
+                        <td class="text-center">2023-07-04</td>
+                        <td class="text-center">2023-07-04</td>
+                        <td>Complex (Level 1)</td>
+                        <td><i class="fas fa-check-square text-green"></i> Successful</td>
+                    </tr>
+                    <tr>
+                        <td><a href="viewFlightReviewResults-complex-unsuccessful.html">FR9999999999</a></td>
+                        <td>Leonards, Jeff</td>
+
+
+                        <td class="text-center">2023-07-03</td>
+                        <td class="text-center">2023-07-03</td>
+                        <td>Complex (Level 1)</td>
+                        <td><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
+                    </tr>
+
                 </table>
             </div>
             <footer class="panel-footer mrgn-0">
@@ -203,7 +231,7 @@
                     <div class="col-md-6 text-right text-left-sm text-left-xs displayOptions"></div>
                 </div>
             </footer>
-        </section>
+        </div>
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a> <!-- InstanceEndEditable -->
         <div class="row">
@@ -254,11 +282,11 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script type="text/javascript">
+    <script>
         $(document).on("wb-ready.wb", function(event) {
 
             /* Datatable */
@@ -275,10 +303,7 @@
                 "margin-bottom": "0px"
             });
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

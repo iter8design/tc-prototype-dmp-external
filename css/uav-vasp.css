@@ -451,6 +451,11 @@ details.alert.alert-success[open] {
     box-shadow: 3px 3px 5px #888;
 }
 
+.alert.alert-info {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .alert.alert-floating {
     padding: 0px;
 }
