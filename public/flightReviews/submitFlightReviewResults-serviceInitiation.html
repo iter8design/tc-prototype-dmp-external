@@ -255,8 +255,8 @@
         $(document).on("wb-ready.wb", function(event) {
             $(".showHide").hide();
 
-            var showText = "Examples of valid identification";
-            var displayToggle = "(<a href='#' id='view-examples'>" + showText + "</a>)";
+            var showText = "(Examples of valid identification)";
+            var displayToggle = "<a href='#' id='view-examples'>" + showText + "</a>";
             $("#cn-id-examples").before(displayToggle);
             $(document).on("click", "#view-examples", function(event) {
                 $(this).next("ul").fadeIn(300);
@@ -264,7 +264,10 @@
                 event.preventDefault();
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
