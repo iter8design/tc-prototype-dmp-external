@@ -118,6 +118,7 @@ span.round-tab i {
 
 .wizard .nav-tabs > li a,
 .wizard .nav-tabs > li.incomplete--no-nav > div:first-child,
+.wizard .nav-tabs > li.in-progress > div:first-child,
 .wizard .nav-tabs > li.not-applicable > div:first-child,
 .wizard .nav-tabs > li.complete > div:first-child {
     width: 45px;
