@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>Validate a certificate of registration</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <!-- Meta data-->
+    <!-- Load closure template scripts -->
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/soyutils.js"></script>
+    <script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/rn/cdts/compiled/wet-en.js"></script>
+
+    <noscript>
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/refTop.html -->
+    </noscript>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refTop({}));
+    </script>
+    <link rel="stylesheet" href="../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../css/utils.css">
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    <div id="def-top">
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/top-en.html -->
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defTop = document.getElementById("def-top");
+        defTop.outerHTML = wet.builder.top({
+            "lngLinks": [{
+                "lang": "fr",
+                "href": "#",
+                "text": "Français"
+            }],
+            "breadcrumbs": [{
+                "title": "canada.ca",
+                "href": "https://www.canada.ca/en/index.html"
+            }, {
+                "title": "Transport Canada",
+                "href": "#"
+            }, {
+                "title": "Aviation",
+                "href": "#"
+            }, {
+                "title": "Drone safety",
+                "href": "#"
+            }]
+        });
+    </script>
+    <main role="main" property="mainContentOfPage" class="container wb-prettify all-pre">
+
+        <div class="region region-header">
+
+            <h1 id="wb-cont"><span>Validate a certificate of registration</span>
+            </h1>
+
+            <p class="gc-byline"><strong>From: <a href="/en">Transport Canada</a></strong></p>
+        </div>
+
+        <p>To check the validity of a certificate of registration, enter the 10 digit registration number for the drone that is on the certificate of registration or marked on the drone:</p>
+
+
+        <form action="validateCoR-valid.html" method="get" class="mrgn-bttm-lg">
+            <div class="form-group">
+
+                <label for="referenceNumber" class="wb-inv">Reference number</label>
+                <div class="input-group"> <span class="input-group-addon" id="prefix">C-</span>
+                    <input type="text" class="form-control input-numeric-10" aria-describedby="prefix" name="referenceNumber" id="referenceNumber" size="10" maxlength="10" style="width: auto;">
+                </div>
+            </div>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Check registration number</button>
+            </div>
+        </form>
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="well mrgn-tp-lg" id="result">
+                    <h3 class="wb-inv">Certificate of registration valid</h3>
+                    <div class="row">
+
+                        <div class="col-md-1 col-sm-2 col-xs-2 text-center"><i class="fas fa-check-circle text-green fa-3x opct-80"></i></div>
+                        <div class="col-md-6">
+                            <p>The following drone was registered on <strong>May 23, 2024</strong>:</p>
+                            <div class="large mrgn-bttm-lg">
+
+                                <p class="h2">C-9999999999</p>
+
+                                <div class="label-form">Make/model:</div>
+                                <div>{Make} {Model}</div>
+
+                                <div class="label-form">Serial number:</div>
+                                <div>{Serial number / "None entered"}</div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <p>If this drone is yours, sign-in to view your certificate of registration.</p>
+                            <button class="btn btn-call-to-action">Sign-in to the Drone Management Portal</button>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="def-preFooter">
+            <!-- Write closure fall-back static file -->
+            <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/preFooter-en.html -->
+        </div>
+        <!-- Write closure template -->
+        <script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                "dateModified": "2021-03-21"
+            });
+        </script>
+    </main>
+    <div id="def-footer">
+        <!-- Write closure fall-back static file -->
+        <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_28/cdts/static/footer-en.html -->
+    </div>
+    <!-- Write closure template -->
+    <script>
+        var defFooter = document.getElementById("def-footer");
+        defFooter.outerHTML = wet.builder.footer({});
+    </script>
+    <!-- Write closure template -->
+    <script>
+        document.write(wet.builder.refFooter({}));
+    </script>
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+
+            $("#inpt-filter").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#faq details").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+
+                if ($("#inpt-filter").val().length > 0) {
+                    $("#faq h2, #faq h3").css("display", "none");
+                } else {
+                    $("#faq h2, #faq h3").css("display", "block");
+                }
+
+            });
+
+
+        });
+    </script>
+</body></html>
