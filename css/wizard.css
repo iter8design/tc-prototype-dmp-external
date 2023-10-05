@@ -76,7 +76,8 @@ span.round-tab i {
     -webkit-border-radius: 50%;
 }
 
-.wizard li.complete span.round-tab {
+.wizard li.complete span.round-tab,
+.wizard li.complete--no-nav span.round-tab {
     background-color: #e1e4e7;
     border: 5px solid;
     border-color: #e1e4e7;
@@ -100,8 +101,9 @@ span.round-tab i {
 }
 
 .wizard li.in-progress span.round-tab i,
-.wizard li.complete span.round-tab i {
-    color: #ffcc00;
+.wizard li.complete span.round-tab,
+.wizard li.complete--no-nav span.round-tab i {
+    color: #000000;
 }
 
 .wizard li.in-progress span.step-label {
@@ -120,7 +122,8 @@ span.round-tab i {
 .wizard .nav-tabs > li.incomplete--no-nav > div:first-child,
 .wizard .nav-tabs > li.in-progress > div:first-child,
 .wizard .nav-tabs > li.not-applicable > div:first-child,
-.wizard .nav-tabs > li.complete > div:first-child {
+.wizard .nav-tabs > li.complete > div:first-child,
+.wizard .nav-tabs > li.complete--no-nav > div:first-child {
     width: 45px;
     height: 45px;
     margin: 20px auto;
