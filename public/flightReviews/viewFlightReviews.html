@@ -114,7 +114,7 @@
             <span class="hd-title">View flight review results</span>
         </h1>
 
-        <h2>{Flight school operating name}</h2>
+        <!--<h2>{Flight school operating name}</h2>-->
         <p>The following flight review results have been submitted:</p>
         <div class="panel panel-default panel-datatable">
             <header class="panel-heading pddng-tp-0">
@@ -127,17 +127,17 @@
 
                                 <label for="filter" class="wb-inv">Flight reviews submitted</label>
                                 <select class="form-control" id="filter">
-                                    <optgroup label="{Flight school operating name}"></optgroup>
-                                    <option value="0">All flight reviews for {Flight school operating name}</option>
+                                    <!--<optgroup label="{Flight school operating name}"></optgroup>-->
+                                    <option value="0">All flight reviews</option>
                                     <option value="">Flight reviews submitted within the last 7 days</option>
                                     <option value="" selected>Flight reviews submitted within the last 30 days</option>
                                     <option value="">Flight reviews submitted within the last 90 days</option>
 
-                                    <optgroup label="{Flight school operating name}"></optgroup>
+                                    <!-- <optgroup label="{Flight school operating name}"></optgroup>
                                     <option value="0">All flight reviews for {Flight school operating name}</option>
                                     <option value="">Flight reviews submitted within the last 7 days</option>
                                     <option value="" selected>Flight reviews submitted within the last 30 days</option>
-                                    <option value="">Flight reviews submitted within the last 90 days</option>
+                                    <option value="">Flight reviews submitted within the last 90 days</option>-->
 
                                 </select>
                                 <span class="input-group-btn">
@@ -166,6 +166,7 @@
                         <tr>
                             <th scope="col">Reference #</th>
                             <th scope="col">Pilot name</th>
+                            <th scope="col">Flight shool</th>
 
 
                             <th scope="col" class="text-center">Flight review date <br>
@@ -181,46 +182,48 @@
                     <tr>
                         <td><a href="viewFlightReviewResults-advanced-successful.html">FR9999999999</a></td>
                         <td>Bergeron, Nate</td>
-
+                        <td>Remotely Piloted Aircraft Systems Operations & Training Corporation (RPASOTC)</td>
 
                         <td class="text-center">2023-07-13</td>
                         <td class="text-center">2023-07-13</td>
                         <td>
                             Advanced
                         </td>
-                        <td><i class="fas fa-check-square text-green"></i> Successful</td>
+                        <td class="nowrap"><i class="fas fa-check-square text-green"></i> Successful</td>
                     </tr>
                     <tr>
                         <td><a href="viewFlightReviewResults-advanced-unsuccessful.html">FR9999999999</a></td>
                         <td>Bergeron, Nate</td>
-
+                        <td>Remotely Piloted Aircraft Systems Operations & Training Corporation (RPASOTC)</td>
 
                         <td class="text-center">2023-07-12</td>
                         <td class="text-center">2023-07-12</td>
                         <td>
                             Advanced
                         </td>
-                        <td><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
+                        <td class="nowrap"><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
                     </tr>
                     <tr>
                         <td><a href="viewFlightReviewResults-complex-unsuccessful.html">FR9999999999</a></td>
                         <td>Leonards, Jeff</td>
+                        <td>Remotely Piloted Aircraft Systems Operations & Training Corporation (RPASOTC)</td>
 
 
                         <td class="text-center">2023-07-04</td>
                         <td class="text-center">2023-07-04</td>
                         <td>Complex (Level 1)</td>
-                        <td><i class="fas fa-check-square text-green"></i> Successful</td>
+                        <td class="nowrap"><i class="fas fa-check-square text-green"></i> Successful</td>
                     </tr>
                     <tr>
                         <td><a href="viewFlightReviewResults-complex-unsuccessful.html">FR9999999999</a></td>
                         <td>Leonards, Jeff</td>
+                        <td>Remotely Piloted Aircraft Systems Operations & Training Corporation (RPASOTC)</td>
 
 
                         <td class="text-center">2023-07-03</td>
                         <td class="text-center">2023-07-03</td>
                         <td>Complex (Level 1)</td>
-                        <td><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
+                        <td class="nowrap"><i class="fas fa-times-square text-danger"></i> Unsuccessful</td>
                     </tr>
 
                 </table>
