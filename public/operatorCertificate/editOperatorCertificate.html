@@ -100,7 +100,8 @@
                     <ol class="breadcrumb">
                         <li><a href="../welcome.html">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li>View operator certificate</li>
+                        <li><a href="#">View operator certificate</a></li>
+                        <li>Update accountable executive</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -111,147 +112,46 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont">
             <span class="hd-pre">{First name} {Last name}</span>
-            <span class="hd-icon"><i class="fas fa-address-card"></i></span>
-            <span class="hd-title">View operator certificate</span>
+            <span class="hd-icon"><i class="fas fa-user-edit"></i> </span>
+            <span class="hd-title">Update accountable executive</span>
         </h1>
 
-        <div class="info visible-print-block">
+        <h2>RPAS Operator Certificate #OC9999999999</h2>
 
-            <h2>Browser printing not available</h2>
-            <div class="row">
-                <div class="col-md-1 width4"><i class="fa fa-info-circle fa-2x hidden-xs hidden-sm text-info"></i></div>
-                <div class="col-md-11">
+        <h3>Accountable executive</h3>
+        <p>The accountable executive is the person responsible for the operations manual, training programs, and safety processes. This person may be contacted by Transport Canada to request any supporting documentation to ensure compliance with the responsibilities of this certificate.</p>
 
-                    <p class="mrgn-tp-sm mrgn-bttm-0">
-                    <p>The operator certificate may not be printed using the browser and must be printed using the PDF version to be recognized as a valid Canadian aviation document.
-                    </p>
-                    <p>Please select one of the <abbr title="Portable Document Format">PDF</abbr> links at the bottom of the web page.</p>
-
+        <form method="get" action="viewOperatorCertificate-confirmUpdate.html">
+            <fieldset>
+                <legend class="wb-invisible"><span class="wb-invisible">Accountable executive information</span></legend>
+                <div class="form-group">
+                    <label for="firstName"><span class="mandatory" title="This field is mandatory">*</span>First (given) name: <strong class="required wb-inv">(required)</strong></label>
+                    <input name="firstName" type="text" id="firstName" value="John" size="35" maxlength="50" class="form-control" autocomplete="given-name" value="John" />
                 </div>
-            </div>
 
-        </div>
-
-        <div class="row hidden-print">
-
-            <div class="col-md-12">
-                <section class="panel panel-default mrgn-bttm-md">
-                    <header class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 col-xs-4">
-                                <img src="../../img/operatorCertificate.svg" class="img-responsive full-width mrgn-tp-md" alt="">
-                            </div>
-                            <div class="col-md-10 col-sm-8 col-xs-8">
-                                <h2>RPAS Operator Certificate #
-                                    <span class="h2 mrgn-tp-md display-block"><strong>OC9999999999</strong></span>
-                                </h2>
-                            </div>
-
-                        </div>
-                    </header>
-                    <div class="panel-body">
-                        <p>{Aenean ac consequat dui, et mattis nunc. Quisque faucibus velit dui, eget elementum dolor dictum sed. Nunc ac ultricies ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tempus scelerisque tincidunt. Curabitur pulvinar auctor ultrices. Vivamus vehicula porttitor est a consequat. Aliquam erat volutpat. Vivamus et blandit erat, vel gravida metus. Nullam non tellus enim.}</p>
-
-                        <div class="row">
-                            <div class="col-md-6">
-
-                                <p><strong>Issued to:</strong></p>
-
-                                John Doe
-                                <address class="mrgn-tp-0">
-                                    123 Elm Street <br>
-                                    Ottawa, ON K1K 1K1
-                                </address>
-
-                                <p><strong>Accountable executive:</strong></p>
-
-                                <p>John Doe <br>
-                                    613-999-9999 <br>
-                                    johndoe@email.com <br></p>
-
-                                <a href="editOperatorCertificate.html" class="btn btn-primary"><i class="fas fa-user-edit"></i> Update accountable executive</a>
-                            </div>
-                            <div class="col-md-6">
-                                <p><strong>Date issued (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>):</strong><br>
-                                    2024-07-13
-                                </p>
-                                <p>
-                                    <strong>Transport Canada account number:</strong><br>
-                                    TC9999999999
-                                </p>
-
-                            </div>
-
-                        </div>
-                        <h3 class="hd-section mrgn-tp-md">Rules and regulations</h3>
-                        <div class="row" id="cn-rules">
-                            <div class="col-md-12">
-
-
-                                <div class="col-md-6">
-
-                                    <ul>
-                                        <li>maintain an adequate organizational structure</li>
-                                        <li>identify, assess, and mitigate risks</li>
-                                        <li>comply with training program requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.219 <span class="wb-inv">(this link will open in a new window)</span></a></li>
-                                        <li>comply with maintenance requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.217 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
-                                        <li>conduct operations safely (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.218 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
-                                    </ul>
-
-
-                                </div>
-
-
-                            </div>
-
-                        </div>
+                <div class="form-group">
+                    <label for="lastName"><span class="mandatory" title="This field is mandatory">*</span>Last (family) name: <strong class="required wb-inv">(required)</strong></label>
+                    <input name="lastName" type="text" id="lastName" value="Doe" size="35" maxlength="50" class="form-control" autocomplete="family-name" value="Doe" />
+                </div>
+                <div class="form-group">
+                    <label for="email"><span class="mandatory" title="This field is mandatory">*</span>Email address (username@example.com): <strong class="required wb-inv">(required)</strong></label>
+                    <input name="email" type="email" id="email" value="jdoe@domain.com" size="50" maxlength="150" class="form-control full-width" autocomplete="email" value="johndoe@email.com" />
+                </div>
+                <div class="form-group ">
+                    <label for="phone"><span class="mandatory" title="This field is mandatory">*</span>Telephone number: <strong class="required wb-inv">(required)</strong></label>
+                    <div class="form-group form-inline">
+                        <input name="phone" id="phone" type="text" size="17" class="form-control input-phone" autocomplete="tel-national" maxlength="17" value="613-999-9999">
+                        <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
                     </div>
-                    <footer class="panel-footer">
-                        <div class="row">
-                            <div class="col-md-7 col-sm-12">
-                                <div class="mrgn-tp-sm">
-                                    <a href="#"><img src="../../img/operatorCertificate.svg" width="50" alt="" class="mrgn-rght-md">View operator certificate (PDF, 0.3 <abbr title="Megabyte">MB</abbr>)</a>
-
-                                    <!--<div class="mrgn-tp-md">
-                                    <a href="#"><img src="../../img/wallet.svg" width="50" alt="" class="mrgn-rght-md" />View wallet-size pilot certificate (PDF, 0.35 <abbr title="Megabyte">MB</abbr>)</a>-->
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-
-                    </footer>
-                </section>
-            </div>
-        </div>
-
-        <div class="info hidden-print">
-
-            <h2 id="pdf"><abbr title="Portable Document Format">PDF</abbr> readers</h2>
-            <div class="row">
-                <div class="col-md-1 width4"><i class="fa fa-info-circle fa-2x hidden-xs hidden-sm text-info"></i></div>
-                <div class="col-md-11">
-
-                    <p>To access the Portable Document Format (PDF) version you must have a PDF reader installed. If you do not already have such a reader, there are numerous PDF readers available for free download or for purchase on the Internet:</p>
-                    <ul>
-                        <li><a rel="external" href="http://get.adobe.com/reader/otherversions/">Adobe Reader</a></li>
-                        <li><a rel="external" href="http://www.foxitsoftware.com/pdf/reader/">Foxit Reader</a></li>
-                        <li><a rel="external" href="http://www.foolabs.com/xpdf/download.html">Xpdf</a></li>
-                        <li><a rel="external" href="http://www.visagesoft.com/products/pdfreader/">eXPert PDF Reader</a></li>
-                    </ul>
-
-
                 </div>
+
+            </fieldset>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <a href="viewOperatorCertificate.html" class="btn btn-link mrgn-lft-md">Cancel</a>
             </div>
+        </form>
 
-        </div>
-
-
-
-        <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a>
 
         <!-- InstanceEndEditable -->
         <div class="row">
@@ -324,7 +224,10 @@
                 }
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
