@@ -188,14 +188,13 @@
                             <div class="col-md-12">
 
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
 
                                     <ul>
                                         <li>maintain an adequate organizational structure</li>
-                                        <li>identify, assess, and mitigate risks</li>
-                                        <li>comply with training program requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.219 <span class="wb-inv">(this link will open in a new window)</span></a></li>
-                                        <li>comply with maintenance requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.217 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
-                                        <li>conduct operations safely (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.218 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
+                                        <li>conduct training (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.219</a>)</li>
+                                        <li>maintain remotely piloted aircraft systems that are properly equipped for the type of operation </li>
+                                        <li>conduct maintenance activites in accordance with the manufacturer's instructions</li>
                                     </ul>
 
 
@@ -317,7 +316,7 @@
                 // Find the CARs reference number and build the link
                 var regNumberMatches = $(this).html().matchAll(regexCARsReference);
                 for (let match of regNumberMatches) {
-                    var url = baseURL + match.toString().substring(5, 11);
+                    var url = baseURL + match.toString().substring(5, 12);
                     link = "<a href=" + url + " title='" + txtNewWindow + "'>" + match + "</a>";
                     // Wrap the reference with the new link
                     $(this).html($(this).html().replace(match, link));

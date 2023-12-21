@@ -194,16 +194,14 @@
                             <div class="col-md-12">
 
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
 
                                     <ul>
                                         <li>maintain an adequate organizational structure</li>
-                                        <li>identify, assess, and mitigate risks</li>
-                                        <li>comply with training program requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.219 <span class="wb-inv">(this link will open in a new window)</span></a></li>
-                                        <li>comply with maintenance requirements (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.217 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
-                                        <li>conduct operations safely (as per <a href="#" target="_blank" titl="This link will open in a new window">CAR 901.218 <span class="wb-inv">(this link will open in a new window)</span></a>)</li>
+                                        <li>conduct training (as per <a href="#" target="_blank" title="This link will open in a new window">CAR 901.219</a>)</li>
+                                        <li>maintain remotely piloted aircraft systems that are properly equipped for the type of operation </li>
+                                        <li>conduct maintenance activites in accordance with the manufacturer's instructions</li>
                                     </ul>
-
 
                                 </div>
 
@@ -314,13 +312,13 @@
             //Set these based on resource key values
             var baseURL = "https://lois-laws.justice.gc.ca/eng/regulations/SOR-96-433/FullText.html#s-";
             var txtNewWindow = "This link will open in a new window";
-            var regexCARsReference = /[CAR]+.\d\d\d\.\d\d/ig;
+            var regexCARsReference = /[CAR]+.\d\d\d\.\d\d\d/ig;
 
             $("#cn-rules li").each(function() {
                 // Find the CARs reference number and build the link
                 var regNumberMatches = $(this).html().matchAll(regexCARsReference);
                 for (let match of regNumberMatches) {
-                    var url = baseURL + match.toString().substring(5, 11);
+                    var url = baseURL + match.toString().substring(5, 12);
                     link = "<a href=" + url + " title='" + txtNewWindow + "'>" + match + "</a>";
                     // Wrap the reference with the new link
                     $(this).html($(this).html().replace(match, link));
