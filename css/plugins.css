@@ -203,7 +203,6 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 
 .select2-container--bootstrap .select2-dropdown {
     text-wrap: none;
-    white-space: nowrap;
     /* width: auto !important; */
     overflow: visible !important;
 }
