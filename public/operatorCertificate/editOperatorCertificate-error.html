@@ -44,6 +44,7 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" href="../../js/tc/intl-tel-input/css/intlTelInput.css">
     <!-- InstanceEndEditable -->
 </head>
 
@@ -222,14 +223,61 @@
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
+    <script src="../../js/tc/intl-tel-input/js/utils.js"></script>
+
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            $(document).on("wb-ready.wb", function(event) {
+                //Set these based on resource key values
+                var baseURL = "https://lois-laws.justice.gc.ca/eng/regulations/SOR-96-433/FullText.html#s-";
+                var txtNewWindow = "This link will open in a new window";
+                var regexCARsReference = /[CAR]+.\d\d\d\.\d\d/ig;
+
+                $("#cn-rules li").each(function() {
+                    // Find the CARs reference number and build the link
+                    var regNumberMatches = $(this).html().matchAll(regexCARsReference);
+                    for (let match of regNumberMatches) {
+                        var url = baseURL + match.toString().substring(5, 11);
+                        link = "<a href=" + url + " title='" + txtNewWindow + "'>" + match + "</a>";
+                        // Wrap the reference with the new link
+                        $(this).html($(this).html().replace(match, link));
+                    }
+                });
+            });
+
+
+            if ($(".input-phone").length) {
+                new Cleave('.input-phone', {
+                    delimiter: '-',
+                    blocks: [3, 3, 4],
+                    numericOnly: true
+                });
+            }
+
+            if ($(".input-phone-extension").length) {
+                new Cleave('.input-phone-extension', {
+                    blocks: [5],
+                    numericOnly: true
+                });
+            }
+
+            $("#phone").intlTelInput({
+                initialCountry: "ca",
+                preferredCountries: ["ca", "us"],
+                formatOnInit: true,
+                customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+                    if ((selectedCountryData.iso2 == "ca") || (selectedCountryData.iso2 == "us")) {
+                        return "999-999-9999";
+                    } else {
+                        return selectedCountryPlaceholder;
+                    }
+
+                }
+            });
 
         });
-
-    </script>
-    <!-- InstanceEndEditable -->
+    </script>EndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
