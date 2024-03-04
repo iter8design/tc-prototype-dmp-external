@@ -126,7 +126,7 @@
                 <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>The first (given) name entered may not be greater than 50 characters.</a></li>
                 <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>The last (family) name entered may not be greater than 50 characters.</a></li>
                 <li><a href="#phone"><i class="fa-li fa fa-angle-right"></i>The telephone number entered must be in the 999-999-9999 format.</a></li>
-                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered may not be more than 8 digits long.</a></li>
+                <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered may not be more than 5 digits long.</a></li>
                 <li><a href="#phone_ext"><i class="fa-li fa fa-angle-right"></i>The telephone number extension entered must be numeric.</a></li>
             </ol>
         </div>
@@ -164,7 +164,7 @@
                     <label for="phone"><span class="mandatory" title="This field is mandatory">*</span>Telephone number: <strong class="required wb-inv">(required)</strong></label>
                     <div class="form-group form-inline">
                         <input name="phone" id="phone" type="text" size="17" class="form-control input-phone fieldError" autocomplete="tel-national" maxlength="17" value="613-999-9999">
-                        <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension fieldError" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext.">
+                        <input name="phone_extension" id="phone_ext" type="text" size="5" class="form-control input-phone-extension fieldError" autocomplete="tel-extension" maxlength="5" title="Telephone number extension" placeholder="Ext.">
                     </div>
                 </div>
 
@@ -264,5 +264,8 @@
             });
 
         });
+
     </script>
-</body></html>
+</body>
+
+</html>
