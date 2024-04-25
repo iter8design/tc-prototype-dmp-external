@@ -25,14 +25,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../wet-boew/css/noscript.min.css">
@@ -149,6 +149,7 @@
                             <option value="4">Rotary wing</option>
                         </select>
                     </div>
+
                     <!--<div class="form-group">
                         <label for="mtow"><span class="mandatory" title="This field is mandatory.">*</span>Operating weight: <span class="fld-example">This is the weight of the drone <strong>including any payload, safety equipment or accessories</strong> that is on board or connected.</span><span class="wb-inv">(required)</span></label>
                         <select name="mtow" id="mtow" class="form-control">
@@ -167,6 +168,23 @@
                             <span class="fld-example">A nickname or description (such as where the drone is kept) may help you identify this drone more easily in your account.</span> </label>
 
                         <input name="nickname" id="nickname" type="text" size="50" class="form-control" maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+
+                        <fieldset class="mrgn-tp-sm">
+                            <legend>Will you be flying this drone exclusively at a Model Aeronautics Association of Canada (MAAC) club location?</legend>
+                            <div class="radio">
+                                <label for="maac-yes">
+                                    <input type="radio" name="maac" value="radio" id="maac-yes" checked>
+                                    Yes</label>
+                            </div>
+                            <div class="radio">
+                                <label for="maac-no">
+                                    <input type="radio" name="maac" value="radio" id="maac-no">
+                                    No</label>
+                            </div>
+                        </fieldset>
                     </div>
 
                 </div>
@@ -224,7 +242,7 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
