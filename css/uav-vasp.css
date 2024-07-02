@@ -988,11 +988,6 @@ h2.panel-title {
     border-radius: 5px;
 }
 
-.panel-disabled .panel-body .panel-body-warning p,
-.body-warning p {
-    margin: 0px;
-}
-
 .panel.panel-horizontal {
     display: table;
     width: 100%;
