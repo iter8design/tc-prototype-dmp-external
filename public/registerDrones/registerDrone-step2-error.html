@@ -323,6 +323,9 @@
                 }
             });
 
+            // Manual override to ensure a label is read when the select2 dropdown is focused by keyboard
+            $(".selection").find("[role='combobox']").removeAttr("aria-labelledby").attr("aria-label", $("label[for=makeModelList]").text());
+
             $('#makeModelList').on('select2:select', function(e) {
                 $("#cn-ua-details-pane").show();
                 $("#makeModelNotListed").prop("checked", false);
